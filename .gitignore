@@ -10,6 +10,7 @@ Thumbs.db
 .vscode/
 .idea/
 .venv/
+.local/
 
 # Temporary test outputs
 tmp/

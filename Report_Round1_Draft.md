@@ -1,4 +1,4 @@
-> **เอกสารประวัติ — รายงานรอบที่ 1 (ส่ง 22 สิงหาคม 2569)**: เป็นร่างตามการส่งงานรอบแรก ไม่ใช่รายงานฉบับสมบูรณ์หรือแหล่งตัวเลข benchmark ล่าสุด. รายงานล่าสุดอยู่ที่ Final_Report.md และ SQA_Final_Report.pdf.
+> **เอกสารประวัติ — รายงานรอบที่ 1 (ส่ง 22 สิงหาคม 2569)**: เป็นร่างจากการส่งงานรอบแรก ไม่ใช่รายงานฉบับสมบูรณ์หรือแหล่งตัวเลข benchmark ล่าสุด. รายงานฉบับส่งหลักคือ [SQA_Final_Report.docx](SQA_Final_Report.docx) และ [SQA_Final_Report.pdf](SQA_Final_Report.pdf); [Final_Report.md](Final_Report.md) เป็นเอกสาร Markdown ประกอบ.
 
 # รายงานโครงการรอบที่ 1 (Phase 1 Report)
 

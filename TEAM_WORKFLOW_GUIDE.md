@@ -86,7 +86,8 @@ FDR ในตารางคำนวณจากจำนวน BUG_DETECTED �
 | วิธีใช้ DeepSeek | [Deepseek-v4_flash/README.md](Deepseek-v4_flash/README.md) |
 | วิธีใช้ Gemini | [Gemini-3_8_flash/README.md](Gemini-3_8_flash/README.md) |
 | Docker และ Defects4J | [docker/README_DOCKER.md](docker/README_DOCKER.md) |
-| รายงาน/สไลด์/เดโม | [Final_Report.md](Final_Report.md), [PRESENTATION_SLIDES.md](PRESENTATION_SLIDES.md), [DEMO_GUIDE.md](DEMO_GUIDE.md) |
+| รายงานฉบับส่งหลัก | [SQA_Final_Report.docx](SQA_Final_Report.docx), [SQA_Final_Report.pdf](SQA_Final_Report.pdf) |
+| เอกสาร Markdown ประกอบ/สไลด์/เดโม | [Final_Report.md](Final_Report.md), [PRESENTATION_SLIDES.md](PRESENTATION_SLIDES.md), [DEMO_GUIDE.md](DEMO_GUIDE.md) |
 
 ใช้ master benchmark สำหรับ FDR/coverage; ใช้ manifest เป็นหลักฐาน generation/verification; ใช้ prompt, configuration และ logs สำหรับทำซ้ำการสร้าง suite
 
@@ -250,7 +251,7 @@ MIO budget, IPO suite size และ AI token/time เป็น generation metri
 
 ## 10. ตรวจรายงานและเตรียมเดโม
 
-ก่อนคัดลอกตัวเลข ให้ตรวจ snapshot date, denominator, จำนวน suite, detections และ coverage จาก master summary/JSON แล้วเทียบ [Final_Report.md](Final_Report.md), DOCX/PDF ฉบับส่ง, [สไลด์](PRESENTATION_SLIDES.md), [DEMO_GUIDE.md](DEMO_GUIDE.md), README และ workbook
+ก่อนคัดลอกตัวเลข ให้ตรวจ snapshot date, denominator, จำนวน suite, detections และ coverage จาก master summary/JSON แล้วเทียบ [รายงานฉบับส่งหลัก DOCX](SQA_Final_Report.docx), [รายงานฉบับส่งหลัก PDF](SQA_Final_Report.pdf), [Markdown ประกอบ](Final_Report.md), [สไลด์](PRESENTATION_SLIDES.md), [DEMO_GUIDE.md](DEMO_GUIDE.md), README และ workbook
 
 ลำดับเดโมที่แนะนำ:
 

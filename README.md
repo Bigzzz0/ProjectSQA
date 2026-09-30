@@ -60,7 +60,15 @@
 ```text
 ProjectSQA/
 ├── README.md                          # เอกสารหลักแนะนำโปรเจกต์และข้อกำหนด
-├── Report_Round1_Draft.md             # รายงานการส่งมอบรอบที่ 1
+├── SQA_Final_Report.docx              # รายงานฉบับส่งหลัก (Word)
+├── SQA_Final_Report.pdf               # รายงานฉบับส่งหลัก (PDF)
+├── Final_Report.md                    # เอกสาร Markdown ประกอบรายงานฉบับส่ง
+├── PRESENTATION_SLIDES.md             # เนื้อหาสไลด์นำเสนอ
+├── DEMO_GUIDE.md                      # คู่มือเดโมและทำซ้ำ
+├── TEAM_WORKFLOW_GUIDE.md             # คู่มือการทำงานและตำแหน่งส่งมอบ
+├── Report_Round1_Draft.md             # เอกสารประวัติการส่งงานรอบที่ 1
+├── docs/reference/                    # เอกสารโจทย์และแหล่งอ้างอิง
+├── archive/legacy/                    # ไฟล์เก่าที่เก็บไว้เพื่ออ้างอิง ไม่ใช้เป็น suite ปัจจุบัน
 ├── results/                           # ไดเรกทอรีเก็บผลลัพธ์การทดลอง
 │   ├── benchmark_results.csv          # ผลรันดิบของ runner; ใช้ master_benchmark_summary.csv เป็นตารางสรุปหลัก
 │   └── <Project>/<Bug_ID>/            # ไฟล์ผลลัพธ์ละเอียดรายบั๊ก (.json)
@@ -194,9 +202,10 @@ python -m venv .venv
 
 ## 📑 เอกสารส่งมอบและผลการวิเคราะห์ระดับพรีเมียม (Final Deliverables)
 
-* 📄 **[รายงานโครงการ (Final Report)](Final_Report.md)**: บทวิธีวิจัยและผลจาก benchmark รอบที่ประเมินครบแล้ว
-* 📄 **[รายงานฉบับสมบูรณ์ (DOCX)](SQA_Final_Report.docx)**: ไฟล์ Word สำหรับอ่านและแก้ไข
-* 📕 **[รายงานฉบับสมบูรณ์ (PDF)](SQA_Final_Report.pdf)**: ไฟล์ PDF สำหรับอ่านและส่ง
+* 📄 **[รายงานฉบับส่งหลัก (DOCX)](SQA_Final_Report.docx)**: ไฟล์ Word ฉบับสมบูรณ์สำหรับอ่านและแก้ไข
+* 📕 **[รายงานฉบับส่งหลัก (PDF)](SQA_Final_Report.pdf)**: ไฟล์ PDF ฉบับเดียวกับ Word สำหรับส่งงาน
+* 📝 **[เอกสาร Markdown ประกอบรายงาน](Final_Report.md)**: สำเนาข้อความสำหรับอ่านและอ้างอิง ไม่ใช่ไฟล์ฉบับส่งหลัก
+* 📘 **[โจทย์รายวิชา](docs/reference/SQA_Project_2026_Assignment.pdf)**: เอกสารข้อกำหนดงานรอบที่ 2
 * 🎯 **[สไลด์นำเสนอ (Presentation Deck)](PRESENTATION_SLIDES.md)**: โครงสไลด์พร้อมแหล่งตัวเลขที่ต้องตรวจจาก snapshot ล่าสุด
 * 🎬 **[คู่มือสาธิตและทำซ้ำ (Live Demo & Reproduction Guide)](DEMO_GUIDE.md)**: ขั้นตอนสาธิต Docker และตรวจหลักฐาน run log
 * 📊 **[สมุดงาน Excel (Master Benchmark Workbook)](results/Master_Benchmark_Results.xlsx)**: สรุปและข้อมูลดิบ พร้อมชีท coverage, FDR, MIO budget, AI generation, ensemble และ data dictionary
