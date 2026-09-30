@@ -1,3 +1,5 @@
+> **เอกสารแผน/คู่มือจากรอบก่อน — ไม่ใช่ขั้นตอนปัจจุบัน**: เก็บไว้เป็นประวัติการทำงานและการตั้งค่าเดิม ตัวเลขหรือคำสั่งภายในอาจไม่ตรงกับ benchmark snapshot ล่าสุด ให้ใช้ MIO_Algorithm/README.md, MIO_Algorithm/Result_Round2/budget_comparison.md และ docker/README_DOCKER.md เป็นแนวทางปัจจุบัน.
+
 # 📘 คู่มือปฏิบัติงาน Member 2: การทดลอง MIO Algorithm (EvoSuite) บน Defects4J 17 โปรเจกต์
 
 **ผู้รับผิดชอบหลัก:** Member 2: นายแทนคุณ พันธ์นิกุล (Algorithm Lead 2 - MIO Specialist)  

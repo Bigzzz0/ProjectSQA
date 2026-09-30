@@ -39,7 +39,7 @@ docker start defects4j_sqa
 ```powershell
 docker exec defects4j_sqa defects4j info -p Math -b 2
 ```
-> **💡 สิ่งที่อาจารย์จะเห็น:** ข้อมูลทางการของข้อบกพร่อง Math-2 (คลาส `HypergeometricDistribution`, Root cause เป็น Integer Overflow ในการคำนวณ Variance/Mean)
+> **💡 สิ่งที่อาจารย์จะเห็น:** ข้อมูล Defects4J ของ Math-2 และคลาส `HypergeometricDistribution`; ตัวอย่างบั๊กเกี่ยวกับ integer overflow ในการคูณค่าที่ใช้คำนวณ numerical mean ก่อน cast เป็น `double`.
 
 ---
 

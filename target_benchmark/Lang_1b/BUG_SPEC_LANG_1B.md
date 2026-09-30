@@ -1,7 +1,7 @@
 # 📋 รายละเอียดบั๊กเป้าหมาย: Apache Commons-Lang 1 (Lang-1b)
 
 > **เอกสารจัดทำโดย:** Member 4 (Infrastructure & Data Analysis Lead)  
-> **วัตถุประสงค์:** ส่งมอบข้อมูลคลาสเป้าหมายและบั๊กมาตรฐาน (Ground Truth) ให้แก่ Member 1 (IPO), Member 2 (MIO), และ Member 3 (AI Claude & Gemini) นำไปใช้สร้าง Unit Test
+> **วัตถุประสงค์:** ส่งมอบข้อมูลคลาสเป้าหมายและบั๊กมาตรฐาน (Ground Truth) ให้แก่ Member 1 (IPO), Member 2 (MIO), และ Member 3 (AI DeepSeek & Gemini) นำไปใช้สร้าง Unit Test
 
 ---
 
@@ -60,14 +60,14 @@ public static Number createNumber(final String str) throws NumberFormatException
 
 ## 4. คำแนะนำสำหรับเพื่อนในแต่ละสายงาน
 
-### 🔹 สำหรับ Member 1 (Algorithm Lead 1 - IPO / Microsoft PICT)
+### 🔹 สำหรับ Member 1 (Algorithm Lead 1 - Native IPO)
 * **เป้าหมาย:** สกัด Input Space ของเมธอด `createNumber(String str)` ออกเป็น Parameters & Values
 * **ตัวอย่าง Parameters ใน `model.txt`:**
   * `Prefix`: `None`, `Plus`, `Minus`, `ZeroX`, `MinusZeroX`, `Hash`
   * `ValueType`: `Integer`, `Decimal`, `Scientific`, `HexDigits`, `Alphanumeric`
   * `Suffix`: `None`, `f`, `F`, `d`, `D`, `l`, `L`, `Invalid`
   * `Length`: `Empty`, `SingleChar`, `Normal`, `ExceedLong`
-* นำ Matrix Combinations ที่ได้จาก PICT ไปสร้างเป็นไฟล์ `NumberUtilsIPOTest.java`
+* นำ Pairwise Combinations จาก Native IPO ไปสร้างเป็นไฟล์ `NumberUtilsIPOTest.java`
 
 ### 🔹 สำหรับ Member 2 (Algorithm Lead 2 - MIO / EvoSuite)
 * **เป้าหมาย:** กำหนด Target Class ในการสั่งรัน EvoSuite:
@@ -78,10 +78,10 @@ public static Number createNumber(final String str) throws NumberFormatException
   ```
 * ดึงไฟล์เทสที่ได้มาบันทึกเป็น `NumberUtils_ESTest.java` พร้อมบันทึกผล Coverage ในรายงาน
 
-### 🔹 สำหรับ Member 3 (AI Prompt Engineer - Claude & Gemini)
+### 🔹 สำหรับ Member 3 (AI Prompt Engineer - DeepSeek & Gemini)
 * **เป้าหมาย:** นำซอร์สโค้ดของ `NumberUtils.java` ไปใส่ใน Master Prompt
 * **ชื่อคลาสสำหรับ Test Case ที่ต้องการ:**
-  * Claude: `NumberUtilsClaudeTest.java` (วางที่ `Claude-sonnet_5/TestCode/`)
+  * DeepSeek: `NumberUtilsDeepseekTest.java` (วางที่ `Deepseek-v4_flash/TestCode/`)
   * Gemini: `NumberUtilsGeminiTest.java` (วางที่ `Gemini-3_8_flash/TestCode/`)
 * **ข้อกำหนดทางเทคนิค:**
   * ต้องประกาศ `package org.apache.commons.lang3.math;`

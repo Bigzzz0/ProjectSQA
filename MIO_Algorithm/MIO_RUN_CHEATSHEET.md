@@ -1,3 +1,5 @@
+> **เอกสารแผน/คู่มือจากรอบก่อน — ไม่ใช่ขั้นตอนปัจจุบัน**: เก็บไว้เป็นประวัติการทำงานและการตั้งค่าเดิม ตัวเลขหรือคำสั่งภายในอาจไม่ตรงกับ benchmark snapshot ล่าสุด ให้ใช้ MIO_Algorithm/README.md, MIO_Algorithm/Result_Round2/budget_comparison.md และ docker/README_DOCKER.md เป็นแนวทางปัจจุบัน.
+
 # ⚡ MIO Algorithm: Multi-Terminal Run Cheat Sheet (คู่มือคำสั่งรันจริงแบบแบ่งหน้าต่าง)
 
 **สำหรับ:** Member 2 (นายแทนคุณ พันธ์นิกุล - MIO / EvoSuite Specialist)  

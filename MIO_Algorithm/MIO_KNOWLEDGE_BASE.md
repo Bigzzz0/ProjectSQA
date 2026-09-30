@@ -1,3 +1,5 @@
+> **เอกสารอ้างอิง/แบบฝึกหัด**: เนื้อหานี้ใช้ศึกษาทฤษฎีหรือเป็น prompt ช่วยวิเคราะห์ ไม่ใช่หลักฐานว่าได้สร้าง suite หรือรันการทดลองตามข้อความในเอกสาร ให้ตรวจผลปัจจุบันที่ MIO_Algorithm/README.md และ results/master_descriptive_stats.json.
+
 # 📚 คู่มือข้อควรรู้และการแปลผลเชิงวิชาการ MIO Algorithm (Academic Knowledge Base)
 
 **สำหรับ:** Member 2 (นายแทนคุณ พันธ์นิกุล - MIO / EvoSuite Specialist)  
@@ -231,7 +233,7 @@ sequenceDiagram
   $$\text{Branch Coverage (\%)} = \left(\frac{\text{Covered Branches}}{\text{Total Branches}}\right) \times 100\%$$
 
 > ℹ️ **ข้อสังเกตเชิงเทคนิคเกี่ยวกับการรายงานค่า Coverage ของ EvoSuite:**  
-> เมื่อเรารัน EvoSuite ด้วยการระบุเป้าหมายผสม `-Dcriterion=LINE:BRANCH` ค่าสถิติที่บันทึกลงในไฟล์ `statistics.csv` และสรุปใน `evosuite_budget_summary.csv` จะเป็น **Multi-criterion Combined Coverage** (เปอร์เซ็นต์รวมของเป้าหมายบรรทัดและกิ่งที่พิชิตได้ต่อเป้าหมายทั้งหมด) ซึ่งสคริปต์ `batch_evosuite.py` จะบันทึกค่านั้นเป็นตัวแทนหลักสำหรับทั้ง Line และ Branch Coverage
+> ใน budget summary ของโครงการ ค่า criterion `LINE:BRANCH` ถูกเก็บเป็น **coverage aggregate ค่าเดียว** และ schema เก่าทำให้ค่าดังกล่าวปรากฏซ้ำในช่อง line/branch. ห้ามตีความเป็น Line Coverage หรือ Branch Coverage ที่วัดแยกกัน; ดูนิยามและผลล่าสุดใน [MIO budget report](./Result_Round2/budget_comparison.md). Benchmark master วัด Line/Branch แยกจาก Defects4J coverage summary.
 
 ---
 
@@ -379,7 +381,7 @@ python scripts/run_benchmark.py --technique mio --project Chart --bug 1
 > ไฟล์ Scaffolding คือไฟล์ควบคุมสภาพแวดล้อมจำลอง (Sandbox) ของ EvoSuite เพื่อป้องกันไม่ให้โค้ดเทสไปลบไฟล์จริงในเครื่อง หรือเปิด Socket กวนระบบเครือข่าย ทั้งสองไฟล์นี้จะทำงานคู่กันเสมอ
 
 ### Q3: เราต้องรัน `run_benchmark.py` เองทุกบั๊กหรือไม่?
-> **ไม่ต้องรันเองทุกบั๊กครับ!** หน้าที่หลักของ Member 2 คือรันเจนเนอเรตเทสเคสด้วย [MIO_RUN_CHEATSHEET.md](./MIO_RUN_CHEATSHEET.md) แล้วเก็บสถิติลง `evosuite_budget_summary.csv` และส่งมอบไฟล์ใน `TestCode/`  
+> **ไม่ต้องรันเองทุกบั๊กครับ!** งาน generation ของ Member 2 และหลักฐานล่าสุดอยู่ใน [MIO README](./README.md), [รายงาน Search Budget](./Result_Round2/budget_comparison.md) และ [รายงาน Generation Failure](./MIO_FAILURE_ANALYSIS_REPORT.md); MIO_RUN_CHEATSHEET.md เป็นเอกสารแผนเก่าที่ไม่ควรใช้รันงาน<br>
 > ส่วนการสั่งรันวัดผลรวมทั้งโครงการจะเป็นหน้าที่ของ **Member 4 (Infra Lead)** ที่จะรันแบตช์ใหญ่เทียบผลของสมาชิกทุกคนพร้อมกันครับ!
 
 ---

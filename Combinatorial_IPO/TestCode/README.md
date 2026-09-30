@@ -1,88 +1,22 @@
-# Combinatorial IPO - Published JUnit Test Suites
+# IPO suites ที่ยืนยันบน Defects4J fixed version
 
-โฟลเดอร์นี้รวบรวม **ชุดทดสอบ JUnit 4 ทั้งหมด (173 Verified Suites / 181 ไฟล์ Java)** ที่ผ่านการสังเคราะห์ด้วยอัลกอริทึม **Native IPO (2-Way Pairwise Testing)** และผ่านการคอมไพล์พร้อมทดสอบจริง (Verified) บน Defects4J Fixed Version เรียบร้อยแล้ว 100%
+โฟลเดอร์นี้เก็บ JUnit suites ที่ผ่านการตรวจบน fixed version และมีรายการอ้างอิงใน `Results/verified_suites_manifest.json`.
 
----
+## สถานะจาก manifest ล่าสุด
 
-## 1. ข้อมูลสถิติเชิงประจักษ์ (Empirical Metrics)
+- 277 suite records ระดับ target class
+- ครอบคลุม 257 Defects4J bug IDs ใน 15 โปรเจกต์
+- 2,224 verified methods
+- ทุก record ใน manifest มีสถานะ `FIXED_VERIFIED` และข้อมูล suite/hash อยู่ใน manifest
 
-* **จำนวน Verified Test Suites:** **173 Suites**
-* **จำนวนไฟล์ซอร์สโค้ด Java:** **181 ไฟล์ (`*_IPOTest.java`)**
-* **จำนวนเมธอดเป้าหมายที่ครอบคลุม:** **1,175 Methods**
-* **จำนวนเคสทดสอบเดี่ยว (`@Test`):** **42,398 Test Cases**
-* **จำนวนบรรทัดโค้ดทั้งหมด (LOC):** **405,456 บรรทัด**
-* **การรับประกัน Pair Coverage:** **100.0% ทุกเมธอด (1,175 / 1,175 methods)** ไม่มี missing pair
-* **ความถูกต้องของผลลัพธ์ (Flakiness):** **0% Flaky Tests** ทุกเทสรันผ่านฉลุยบน Fixed Version
+หนึ่งบั๊กอาจมีหลาย target classes และมีหลาย suite records. ใน benchmark กลางจึงรวมผลระดับบั๊ก–เทคนิค: IPO มี suite สำหรับ 257 จาก 854 บั๊ก, วัด coverage ได้ 252, พบ `COMPILE_ERROR` 5 และไม่มี suite 597. ผล summary อยู่ใน [master dataset](../../results/master_benchmark_summary.csv).
 
----
+ตัวเลขเก่าที่พบในเอกสารก่อนหน้า เช่น 173 suites, 181 Java files, 42,398 tests และ 405,456 LOC เป็น baseline รอบก่อน ไม่ใช่จำนวนปัจจุบัน. ใช้ manifest เป็นแหล่งตรวจรับ suite; ไม่คำนวณยอดจากไฟล์ในโฟลเดอร์โดยไม่ตรวจ hash.
 
-## 2. โครงสร้างและการจัดเก็บไฟล์ (Directory Layout)
-
-ชุดทดสอบจัดเก็บแยกตาม **Bug Target Directory** สอดคล้องกับมาตรฐานของ Defects4J โดยตรง:
-
-```text
-TestCode/
-├── Chart_18b/
-│   └── org/jfree/data/DefaultKeyedValues2D_IPOTest.java
-├── Closure_18b/
-│   └── com/google/javascript/jscomp/Compiler_IPOTest.java
-├── Codec_1b/
-│   ├── org/apache/commons/codec/language/Caverphone_IPOTest.java
-│   └── org/apache/commons/codec/language/Metaphone_IPOTest.java
-├── Compress_14b/
-│   └── org/apache/commons/compress/archivers/tar/TarUtils_IPOTest.java
-├── Jsoup_42b/
-│   └── org/jsoup/nodes/FormElement_IPOTest.java
-├── Lang_1b/
-│   └── org/apache/commons/lang3/math/NumberUtils_IPOTest.java
-├── Math_99b/
-│   └── org/apache/commons/math/util/MathUtils_IPOTest.java
-└── ... (รวม 173 suites ใน 13 โปรเจกต์)
-```
-
----
-
-## 3. การกระจายตัวรายโปรเจกต์ (13 โปรเจกต์ใน Defects4J)
-
-| โปรเจกต์ | จำนวน Suites | เมธอดเด่นที่ครอบคลุม |
-|---|:---:|---|
-| **Commons Math** | **31 suites** | `MathUtils`, `FastMath`, `Complex`, `Fraction`, `Variance`, `ChiSquareTest` |
-| **Commons Compress** | **30 suites** | `TarUtils`, `SevenZFile`, `ArArchiveInputStream`, `ZipArchiveInputStream` |
-| **Commons Lang** | **28 suites** | `NumberUtils`, `WordUtils`, `FastDatePrinter`, `ArrayUtils`, `StringUtils` |
-| **Jsoup** | **26 suites** | `Attribute`, `ParseSettings`, `TokenQueue`, `XmlDeclaration`, `FormElement` |
-| **Commons Codec** | **12 suites** | `DoubleMetaphone`, `Base64InputStream`, `Caverphone`, `Metaphone`, `StringUtils` |
-| **Commons Collections** | **12 suites** | `ExtendedProperties`, `CollectionUtils`, `MultiValueMap`, `SetUniqueList` |
-| **Closure Compiler** | **11 suites** | `Compiler`, `ProcessCommonJSModules`, `SourceFile` |
-| **Joda Time** | **6 suites** | `FieldUtils`, `DateTimeZone`, `GJChronology` |
-| **Commons Cli** | **5 suites** | `Option`, `GroupImpl`, `HelpFormatter` |
-| **Commons Csv** | **4 suites** | `CSVFormat`, `ExtendedBufferedReader` |
-| **Jackson Databind** | **4 suites** | `StdKeyDeserializer`, `TypeFactory` |
-| **JFreeChart** | **3 suites** | `DefaultKeyedValues2D`, `ValueMarker`, `BoxAndWhiskerCategoryDataset` |
-| **Google Gson** | **1 suite** | `ISO8601Utils` |
-
----
-
-## 4. วิธีการนำชุดทดสอบไปรันด้วยตนเอง (Manual Execution via Defects4J)
-
-คุณสามารถนำไฟล์เทสตัวใดตัวหนึ่งไปทดสอบรันใน Docker Container ด้วย Defects4J ได้โดยตรง:
+## ตรวจสอบ suite
 
 ```powershell
-# ตัวอย่าง: รันเทส Math_99b
-docker --context default exec sqa-defects4j bash -c "
-  cd /tmp && rm -rf /tmp/manual_run && defects4j checkout -p Math -v 99f -w /tmp/manual_run
-  cp /workspace/Combinatorial_IPO/TestCode/Math_99b/org/apache/commons/math/util/MathUtils_IPOTest.java /tmp/manual_run/src/test/java/org/apache/commons/math/util/
-  cd /tmp/manual_run && defects4j compile && defects4j test -t org.apache.commons.math.util.MathUtils_IPOTest
-"
+docker exec defects4j_sqa python3 /workspace/Combinatorial_IPO/Code/runner/all_class_pipeline.py --mode validate
 ```
 
----
-
-## 5. การตรวจสอบความสมบูรณ์ผ่าน Manifest (Manifest Verification)
-
-ข้อมูลเมทาดาต้า, Checksum SHA-256 และ Pair Coverage ของทุกชุดทดสอบในโฟลเดอร์นี้ ถูกบันทึกไว้ใน:
-* **`Combinatorial_IPO/Results/verified_suites_manifest.json`**
-
-ตรวจสอบความถูกต้องของชุดทดสอบทั้งหมดได้ด้วยคำสั่ง:
-```powershell
-python Combinatorial_IPO/Code/runner/all_class_pipeline.py --mode validate
-```
+การตรวจ suite กับ fixed version ไม่เท่ากับการประเมิน fault detection. ผล FDR และ coverage ของ benchmark กลางดูใน master CSV และ run logs ที่อ้างจากคอลัมน์ `Run_Log`.

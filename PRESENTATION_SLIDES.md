@@ -56,6 +56,7 @@
 - IPO Native สร้าง pairwise combinations จาก factor/value model ของคลาสเป้าหมาย
 - ผลที่ใช้ประเมินต้องอยู่ใน verified_suites_manifest.json และ hash ต้องตรง
 - verified manifest มี 277 suite records ระดับคลาส ครอบคลุม 257 bug IDs
+- IPO inventory มี 1,070 class records ขณะที่ master catalog มี 1,073 modified-class entries; ส่วนต่าง 3 รายการยังไม่ reconcile จึงไม่อ้างว่า IPO audit ครอบคลุมทุก class entry
 - มี suite ประเมินได้ 257/854 คู่; 252 วัด coverage ได้, compile error 5, `NO_SUITE` 597
 - ตรวจพบ 37 บั๊ก (FDR 14.40% ของ 257 คู่ที่ประเมิน); `FLAKY_OR_REGRESSION` 18 และ `NOT_DETECTED` 197
 - Line/branch coverage เฉลี่ย 26.76%/18.67% (n=252); `NO_SUITE` แบ่งเป็น generation/verification error 37 และ skipped/not ready 560 คู่
@@ -121,9 +122,10 @@ $$FDR_{\text{evaluated}} = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{suite
 | **`NOT_DETECTED`** | Pass 100% ทั้งบน `b` และ `f` (ไม่กระตุ้นจุดบั๊ก) | ❌ ไม่นับ |
 | **`FLAKY_OR_REGRESSION`** | Fail ทั้งบน `b` และ `f` (Assertion ผิดจากสเปกจริง) | ❌ ไม่นับ |
 | **`COMPILE_ERROR`** | Syntax error หรือขาด Classpath | ❌ ไม่นับ |
-| **`TIMEOUT`** | ทำงานค้างเกิน 4 วินาที | ❌ ไม่นับ |
+| **`TIMEOUT`** | คำสั่ง Defects4J coverage/test ที่ runner เรียกเกิน 240 วินาที (แยกจาก `@Test(timeout = 4000)`) | ❌ ไม่นับ |
 
 > **ตัวหาร:** ใช้จำนวน bug–technique rows ที่มี suite และถูกประเมิน รวม `COMPILE_ERROR`, `FLAKY_OR_REGRESSION` และ `TIMEOUT` (ถ้ามี); รายงาน `BUG_DETECTED ÷ 854` เป็นอัตราเทียบ catalog เพิ่มเติม ส่วน `NO_SUITE` ไม่ใช่ผลทดสอบ
+> **ข้อจำกัด:** runner จำแนกจากผล buggy/fixed และไม่ได้ยืนยันเชิงความหมายว่า failure มาจาก root cause ที่รายงานไว้ของ Defects4J
 
 ---
 

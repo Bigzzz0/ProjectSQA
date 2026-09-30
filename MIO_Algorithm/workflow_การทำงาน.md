@@ -1,3 +1,5 @@
+> **เอกสารแผน/คู่มือจากรอบก่อน — ไม่ใช่ขั้นตอนปัจจุบัน**: เก็บไว้เป็นประวัติการทำงานและการตั้งค่าเดิม ตัวเลขหรือคำสั่งภายในอาจไม่ตรงกับ benchmark snapshot ล่าสุด ให้ใช้ MIO_Algorithm/README.md, MIO_Algorithm/Result_Round2/budget_comparison.md และ docker/README_DOCKER.md เป็นแนวทางปัจจุบัน.
+
 # 📋 Workflow การทำงานสำหรับ MIO Algorithm (All-Bugs & All-Classes Master Plan)
 
 **โครงการ:** CP353201 Software Quality Assurance  
@@ -208,4 +210,3 @@ flowchart LR
 3. `Gson` (18 บั๊ก: ~3 ชม.) $\rightarrow$ `python MIO_Algorithm/Code/batch_evosuite.py --project Gson`
 
 > 💡 **ข้อแนะนำ:** คุณสามารถเริ่มจาก **ด่านที่ 1 (`Lang-1b`)** ตอนนี้ได้เลย เพื่อดูผลลัพธ์แรกด้วยตาตัวเองครับ!
-

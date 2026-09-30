@@ -120,7 +120,7 @@ Resolves how an instance method's receiver object (`this`) can be constructed de
 
 All outputs reside in `Results/`:
 - `baseline/baseline_manifest.json`: Frozen reference baseline containing the 173 verified suites at commit `a11795acc5`.
-- `inventory.json`: Audit status for all 1,070 modified class instances across the 854 bug targets. Identifies ready classes and missing adapters.
+- `inventory.json`: IPO inventory snapshot: 1,070 class records. The Defects4J master catalog contains 1,073 modified-class entries; these counts differ and should not be treated as the same inventory until reconciled.
 - `verified_suites_manifest.json`: Single source of truth for all published, fixed-verified test suites. Contains SHA-256 hashes, toolchain hashes, and method-level pair coverage statistics.
 - `generation_manifest.json`: Summary log of batch generation runs.
 - `routing_manifest.json`: Structured backlog identifying missing adapters and recommending target approaches for Member 4 or alternative generators.

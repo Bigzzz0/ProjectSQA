@@ -1,3 +1,5 @@
+> **เอกสารแผน/คู่มือจากรอบก่อน — ไม่ใช่ขั้นตอนปัจจุบัน**: เก็บไว้เป็นประวัติการทำงานและการตั้งค่าเดิม ตัวเลขหรือคำสั่งภายในอาจไม่ตรงกับ benchmark snapshot ล่าสุด ให้ใช้ MIO_Algorithm/README.md, MIO_Algorithm/Result_Round2/budget_comparison.md และ docker/README_DOCKER.md เป็นแนวทางปัจจุบัน.
+
 # 📋 แผนการดำเนินงานการทดลอง MIO Algorithm (Step-by-Step Execution Plan)
 
 **โครงการ:** CP353201 Software Quality Assurance (ปีการศึกษา 1/2569)  

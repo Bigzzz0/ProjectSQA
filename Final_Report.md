@@ -63,6 +63,7 @@ Coverage รวมทุก modified target class จาก aggregate summary �
 ### 1.3 ขอบเขตงานวิจัย (Scope & Delimitations)
 1. **คลังโปรแกรมทดสอบ (Benchmark Suite):** ใช้ **Defects4J 3.0.1-7-g8c16da82** ตาม checkout ที่ติดตั้งใน container ซึ่งประกอบด้วย **17 โครงการโอเพนซอร์สและ 854 active bugs** (Defects4J contributors, n.d.)
 2. **ขอบเขตการสร้างชุดทดสอบ (Defect-Targeted Classes):** ยึดตาม `classes.modified` ที่ระบุใน Ground Truth ของแต่ละบั๊ก โดยมีคลาสเป้าหมายรวม **1,073 คลาส (577 Unique Classes)** โดยไม่ทำการสร้างชุดทดสอบกระจายไปยังคลาสภายนอกที่ไม่เกี่ยวข้องกับบั๊ก เพื่อให้เป็น Defect-Targeted Test Generation ที่เป็นธรรม
+   **ข้อจำกัดของ inventory IPO:** catalog Defects4J มี 1,073 modified-class entries แต่ `Combinatorial_IPO/Results/inventory.json` มี 1,070 class records. ความต่าง 3 รายการยังไม่ได้ reconcile จึงรายงานผล IPO ตาม verified manifest และ bug-level benchmark (277 suites/257 bug IDs) โดยไม่กล่าวอ้างว่าการ audit IPO ครอบคลุม class entries ทั้งหมด.
 3. **การวัดผล Coverage:** ใช้ Defects4J coverage workflow และ aggregate summary สำหรับทุก modified target class; รวมจำนวน covered และ total ก่อนคำนวณเปอร์เซ็นต์
 4. **เวอร์ชันภาษาและมาตรฐานการรัน:** Defects4J CLI ใช้ Java 11; มี Java 8 ติดตั้งสำหรับขั้นตอน MIO ที่กำหนดให้ใช้ JDK 8; ใช้ JUnit 4 ตาม suite ที่ส่งมอบ
 
@@ -197,11 +198,13 @@ graph TD
 $$FDR_{\text{technique}} = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evaluated\_bugs}}} \right) \times 100\%$$
 
 #### ก. นิยาม 5 สถานะการตรวจจับข้อบกพร่อง (Bug-Level Classification)
-1. **`BUG_DETECTED` (ตรวจพบข้อบกพร่องจริง):** ชุดทดสอบเกิด Failure อย่างน้อย 1 Method บนเวอร์ชันที่มีบั๊ก (`b`) ตรงตามพฤติกรรมข้อบกพร่อง และ **ต้องผ่านการทดสอบ 100% (Pass) บนเวอร์ชันที่แก้บั๊กแล้ว (`f`)** ถือว่าระบุข้อบกพร่องได้แม่นยำ ปราศจาก False Positive ($D=1$)
-2. **`NOT_DETECTED` (ไม่พบข้อบกพร่อง):** ชุดทดสอบผ่าน 100% ทั้งบนเวอร์ชัน `b` และ `f` (ชุดทดสอบไม่สามารถเข้าถึงหรือกระตุ้นตรรกะที่ผิดพลาดได้)
-3. **`FLAKY_OR_REGRESSION` (ผลไม่จำเพาะต่อบั๊กหรือมี regression):** ชุดทดสอบมี Failure บนเวอร์ชัน `f` ไม่ว่าจะเกิด Failure บน `b` ด้วยหรือไม่ จึงไม่ถือเป็นการตรวจพบบั๊กเป้าหมายที่ยืนยันได้
-4. **`COMPILE_ERROR` (คอมไพล์ไม่ผ่าน):** ซอร์สโค้ดของชุดทดสอบมีข้อผิดพลาดเชิงไวยากรณ์ หรือเรียกใช้ Class/Method ที่ไม่มีอยู่จริง
-5. **`TIMEOUT` (ทำงานเกินเวลา):** ชุดทดสอบใช้เวลาทำงานเกิน 4 วินาทีใน Method ใด Method หนึ่ง
+1. **`BUG_DETECTED` (ตรวจพบข้อบกพร่องตามเกณฑ์ปฏิบัติการ):** มี failure อย่างน้อยหนึ่งรายการบนเวอร์ชัน buggy (`b`) และไม่มี failure บนเวอร์ชัน fixed (`f`).
+2. **`NOT_DETECTED` (ไม่พบ failure แยกเวอร์ชัน):** ชุดทดสอบผ่านทั้งบน `b` และ `f`; ผลนี้ไม่ได้แสดงการตรวจพบข้อบกพร่อง.
+3. **`FLAKY_OR_REGRESSION` (ผลไม่จำเพาะต่อบั๊กหรือมี regression):** ชุดทดสอบมี failure บนเวอร์ชัน `f` ไม่ว่าจะเกิด failure บน `b` ด้วยหรือไม่ จึงไม่นับเป็นการตรวจพบ.
+4. **`COMPILE_ERROR` (คอมไพล์ไม่ผ่าน):** การคอมไพล์ suite ล้มเหลว ไม่ว่าจะเกิดจาก syntax, type, dependency หรือสาเหตุอื่นที่รายงานไว้ใน log.
+5. **`TIMEOUT` (เกินเวลา):** คำสั่ง Defects4J coverage/test ที่ runner เรียกเกิน timeout 240 วินาที. Timeout นี้ต่างจาก `@Test(timeout = 4000)` ที่อาจกำหนดไว้ใน test method.
+
+การจำแนกเป็นเกณฑ์ปฏิบัติการจากความต่างระหว่าง buggy/fixed revisions; runner ไม่ได้ยืนยันเชิงความหมายว่า failure เกิดจาก root cause ที่ระบุในรายงาน Defects4J จึงควรพิจารณาข้อจำกัดนี้เมื่อตีความ FDR.
 
 #### ข. กฎความซื่อตรงของตัวหาร (Denominator Integrity Rule)
 > **⚠️ หลักการวิชาการที่สำคัญ:**  

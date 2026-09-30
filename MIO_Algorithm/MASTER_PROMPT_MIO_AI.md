@@ -1,3 +1,5 @@
+> **เอกสารอ้างอิง/แบบฝึกหัด**: เนื้อหานี้ใช้ศึกษาทฤษฎีหรือเป็น prompt ช่วยวิเคราะห์ ไม่ใช่หลักฐานว่าได้สร้าง suite หรือรันการทดลองตามข้อความในเอกสาร ให้ตรวจผลปัจจุบันที่ MIO_Algorithm/README.md และ results/master_descriptive_stats.json.
+
 # 🤖 Master Prompt AI: คลังพร้อมต์ผู้เชี่ยวชาญสำหรับศึกษาและวิเคราะห์ MIO Algorithm
 ## (Comprehensive AI Prompts for Studying Many Independent Objective Algorithm in SBST)
 
@@ -29,9 +31,9 @@
 บริบทของฉัน:
 - ฉันเป็นนักศึกษาภาควิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น (วิชา CP353201 Software Quality Assurance)
 - ฉันรับผิดชอบขั้นตอนวิธี MIO (Many Independent Objective) algorithm ที่คิดค้นโดย Dr. Andrea Arcuri (2017/2018) ซึ่งทำงานอยู่ภายใน EvoSuite Framework (เวอร์ชัน 1.0.6)
-- ฉันได้ทำการทดลองสร้างชุดทดสอบบน Defects4J Benchmark ทั้งหมด 17 โปรเจกต์ (854 บั๊ก / 1,073 คลาสเป้าหมาย) 
-- มีการทดลองตามเกณฑ์ 1.7: วัด Search Budget 3 ระดับ (30s, 60s, 120s) ร่วมกับ Random Seeds (101, 102, 103) รวม 9 รันต่อคลาส
-- ค่าเฉลี่ย Coverage ภาพรวมที่ได้: 30s ได้ 65.73%, 60s ได้ 68.73%, และ 120s ได้ 70.82%
+- ขอบเขตโครงการคือ Defects4J 17 โปรเจกต์ (854 บั๊ก / 1,073 modified-class entries); MIO benchmark มี suite สำหรับ 834 บั๊ก และ 20 บั๊กเป็น NO_SUITE จาก generation failure.
+- การทดลอง budget มีระดับ 30s, 60s, 120s และ seeds 101, 102, 103; จำนวน records ใช้ได้ต่างกันตาม budget จึงต้องระบุ n ทุกครั้ง
+- Coverage criterion เฉลี่ยใน generation summary: 30s = 65.73% (n=1,023), 60s = 68.73% (n=1,015), 120s = 70.82% (n=989). เป็นค่ารวม LINE:BRANCH ค่าเดียว ไม่ใช่ line/branch แยก; benchmark master ให้ Line/Branch 63.85%/56.51% (n=797)
 
 กติกาและข้อกำหนดในการตอบของคุณ:
 1. ใช้ชื่อเต็มที่ถูกต้องคือ "Many Independent Objective (MIO)" ห้ามเรียกผิดเป็น Mutation Insertion Optimization หรือ Many-Objective Sorting Algorithm เด็ดขาด
@@ -137,18 +139,18 @@ public class PaymentService {
   * Execution Time เฉลี่ย: 68.29 วินาที
 - Budget 60 วินาที:
   * Mean Combined Coverage: 68.73% ± 31.29% (เพิ่มขึ้น +3.00%)
-  * การทดสอบทางสถิติ Mann-Whitney U Test: U = 488,691.5, p = 0.0217 (p < 0.05 มีนัยสำคัญทางสถิติ)
+  * การทดสอบทางสถิติ Wilcoxon signed-rank แบบจับคู่ 30s กับ 60s: n=1,006, nonzero pairs=738, p หลัง Holm=3.386 × 10⁻⁸⁴
   * Execution Time เฉลี่ย: 90.62 วินาที
 - Budget 120 วินาที:
   * Mean Combined Coverage: 70.82% ± 30.40% (เพิ่มขึ้น +2.09% จาก 60s)
-  * การทดสอบทางสถิติ Mann-Whitney U Test: U = 481,796.5, p = 0.1202 (p > 0.05 ไม่มีนัยสำคัญทางสถิติ)
+  * การทดสอบทางสถิติ Wilcoxon signed-rank แบบจับคู่ 60s กับ 120s: n=981, nonzero pairs=687, p หลัง Holm=1.541 × 10⁻⁶⁷
   * Execution Time เฉลี่ย: 194.41 วินาที
 
-ช่วยเขียน "บทอภิปรายผลการทดลอง (Empirical Discussion)" ในระดับวิชาการคุณภาพสูงสำหรับใส่ในเล่มรายงาน โดยครอบคลุม:
-1. การอธิบายพฤติกรรมของ MIO ในช่วง 30s ไป 60s ว่าทำไมถึงมีนัยสำคัญทางสถิติ (การเปลี่ยนผ่านจาก Exploration สู่ Exploitation)
-2. การอธิบายปรากฏการณ์ "กฎแห่งการลดลงของผลตอบแทนส่วนเพิ่ม (Law of Diminishing Returns)" ในช่วง 60s ไป 120s ว่าทำไมให้เวลาเพิ่มขึ้น 1 เท่าตัวแต่ได้ Coverage เพิ่มเพียง 2% และไม่มีนัยสำคัญทางสถิติ
-3. การวิเคราะห์สาเหตุทางวิศวกรรมซอฟต์แวร์ว่า "ทำไมโค้ดอีกประมาณ 29-30% ถึงไม่สามารถ Cover ได้แม้จะให้เวลาถึง 120 วินาที?" (เช่น Dead Code, Private Reflection, Complex External Dependencies, Environmental Limitations)
-4. สรุปข้อเสนอแนะเชิงปฏิบัติ (Practical Recommendations) สำหรับนักพัฒนาซอฟต์แวร์ว่าควรเลือกใช้ Budget เท่าไรจึงคุ้มค่าที่สุดระหว่างเวลาและคุณภาพ
+ช่วยเขียน "บทอภิปรายผลการทดลอง (Empirical Discussion)" ภาษาเชิงวิชาการด้านวิศวกรรมซอฟต์แวร์ โดยยึดสถิติที่ระบุและอธิบายข้อจำกัด ไม่สร้างข้ออ้างเหตุและผลที่ไม่มีหลักฐาน โดยครอบคลุม:
+1. อธิบายผลเปรียบเทียบ 30s กับ 60s จาก paired test; แยกผลทางสถิติออกจากสมมติฐานเชิงกลไก Exploration/Exploitation
+2. อธิบายว่าค่าเฉลี่ยเพิ่มน้อยลงจาก +3.00 เป็น +2.09 จุดเปอร์เซ็นต์ แต่ paired test 60s กับ 120s ยังมีนัยสำคัญหลัง Holm; ระบุ cohort และหลีกเลี่ยงการอ้างว่าไม่มีนัยสำคัญ
+3. เสนอคำอธิบายที่เป็นไปได้ของ objectives ที่ยังไม่ครอบคลุม พร้อมระบุว่าต้องใช้หลักฐานเพิ่มเติมเพื่อยืนยันสาเหตุ; อย่าอนุมานจากค่า aggregate criterion ว่าเป็นสัดส่วน line coverage
+4. สรุป trade-off ระหว่าง budget, coverage criterion และเวลา โดยไม่ฟันธง budget ที่ดีที่สุดทั่วไปจาก cohort นี้เพียงชุดเดียว
 ```
 
 ---
@@ -199,5 +201,5 @@ public class PaymentService {
 ## 💡 วิธีการใช้งาน Master Prompt ให้ได้ผลลัพธ์ดีที่สุด (Best Practices)
 
 1. **ส่ง Prompt 0 ก่อนเสมอ:** ไม่ว่าจะคุยกับโมเดลตัวไหน (Claude 3.7 / ChatGPT 4o / Gemini 2.5 / DeepSeek V3) ให้ส่ง **Prompt 0** ไปเปิดหัวก่อน เพื่อล็อกกรอบการคิดของ AI ไม่ให้หลงทางหรือตอบแบบกว้างเกินไป
-2. **แนบไฟล์โค้ดจริงร่วมด้วย:** เมื่อใช้ **Prompt 3** หรือ **Prompt 5** คุณสามารถแนบไฟล์ เช่น [NumberUtils_ESTest.java](file:///e:/Coding/ProjectSQA/MIO_Algorithm/TestCode/Lang_1b/org/apache/commons/lang3/math/NumberUtils_ESTest.java) หรือไฟล์ [MIO_FAILURE_ANALYSIS_REPORT.md](./MIO_FAILURE_ANALYSIS_REPORT.md) เข้าไปในแชทด้วย เพื่อให้ AI ตอบโดยอิงจากหลักฐานจริงในโปรเจกต์ของคุณ
+2. **แนบไฟล์โค้ดจริงร่วมด้วย:** เมื่อใช้ **Prompt 3** หรือ **Prompt 5** คุณสามารถแนบไฟล์ เช่น [NumberUtils_ESTest.java](./TestCode/Lang_1b/NumberUtils_ESTest.java) หรือไฟล์ [MIO_FAILURE_ANALYSIS_REPORT.md](./MIO_FAILURE_ANALYSIS_REPORT.md) เข้าไปในแชทด้วย เพื่อให้ AI ตอบโดยอิงจากหลักฐานจริงในโปรเจกต์ของคุณ
 3. **สอบถามแบบเจาะจงทีละข้อ:** แทนที่จะโยนพร้อมต์ทั้งหมดไปพร้อมกัน ให้เลือกใช้ทีละ Prompt ตามหัวข้อที่คุณกำลังเตรียมงาน เช่น กำลังเขียนรายงานให้อ่าน Prompt 6 หรือกำลังจะซ้อมพรีเซนต์ให้ใช้ Prompt 5

@@ -1,3 +1,5 @@
+> **เอกสารประวัติ — รายงานรอบที่ 1 (ส่ง 22 สิงหาคม 2569)**: เป็นร่างตามการส่งงานรอบแรก ไม่ใช่รายงานฉบับสมบูรณ์หรือแหล่งตัวเลข benchmark ล่าสุด. รายงานล่าสุดอยู่ที่ Final_Report.md และ SQA_Final_Report.pdf.
+
 # รายงานโครงการรอบที่ 1 (Phase 1 Report)
 
 **ชื่อโครงการ:** Project – AI-Assisted Testing vs. Automatic Test Case Generation Algorithms: A Benchmark and Test Coverage Evaluation  
@@ -88,4 +90,3 @@
 ### 4.3 ชุดข้อมูลการทดลอง (Evaluated Benchmark Dataset)
 
 งานวิจัยนี้ประเมินผลบนชุดข้อมูล **17 คลาสตัวแทนจาก 17 โปรเจกต์มาตรฐานใน Defects4J (The 17-Project Representative Benchmark)** ครอบคลุมโปรเจกต์หลากหลายประเภท ได้แก่ Mathematical Library (`Math`), Text & Data Parser (`Csv`, `Cli`), Compiler (`Closure`), Data Structures (`Collections`), JSON/XML Serialization (`Gson`, `JacksonCore`, `JacksonDatabind`, `JacksonXml`), DOM Engine (`Jsoup`, `JxPath`), Date/Time (`Time`), Encoding (`Codec`), Graphic (`Chart`), Core Utils (`Lang`), และ Test Framework (`Mockito`) โดยมีไฟล์คอนฟิกกลางควบคุมอยู่ที่ [`target_benchmark/catalog_17_projects.json`](target_benchmark/catalog_17_projects.json)
-

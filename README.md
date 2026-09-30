@@ -11,7 +11,7 @@
 | ลำดับ | รหัสนักศึกษา | ชื่อ - สกุล | บทบาทในโครงการ | หน้าที่หลัก & สิ่งที่ต้องส่งมอบ (Deliverables) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1 | 673380278-9 | นายปวริศช์ ประมวล | **Member 1: Algorithm Lead 1**<br>(IPO / Combinatorial Testing) | • วิเคราะห์ Input Space ของ Target Classes<br>• สร้าง Factor/Value-Domain Model และ Pairwise Combinations ด้วย Native IPO<br>• ใช้ PICT เฉพาะ Reference Baseline โดยไม่ถือว่า PICT เท่ากับ IPO<br>• แปลง Combinations เป็น JUnit 4 พร้อม Oracle จาก Defects4J Fixed Version<br>• **Output:** วางชุดที่ตรวจบน Fixed Version แล้วไว้ที่ `Combinatorial_IPO/TestCode/` |
-| 2 | 673380301-0 | นายแทนคุณ พันธ์นิกุล | **Member 2: Algorithm Lead 2**<br>(MIO / Search-Based Testing) | • สั่งรัน EvoSuite MIO บน Defects4J Classpath<br>• ทดลองปรับ Search Budget (30s, 60s, 120s) และรันซ้ำ 3-5 รอบ<br>• จัดการ EvoSuite Runtime และบันทึกค่าสถิติ Mean / SD<br>• **Output:** วางไฟล์ไว้ที่ `MIO_Algorithm/TestCode/` |
+| 2 | 673380301-0 | นายแทนคุณ พันธ์นิกุล | **Member 2: Algorithm Lead 2**<br>(MIO / Search-Based Testing) | • รัน EvoSuite ด้วย MIO บน Defects4J<br>• ประเมินงบค้นหา 30, 60 และ 120 วินาที โดยใช้ 3 seeds (101, 102, 103) ในการทดลอง budget<br>• ส่ง suite, configuration, generation summary และรายงานข้อจำกัด<br>• **Output:** `MIO_Algorithm/TestCode/` และ `MIO_Algorithm/Result_Round2/` |
 | 3 | 673380272-1 | นายธนภูมิ จันทรา | **Member 3: AI Prompt Engineer**<br>(DeepSeek V4 Flash & Gemini 3.8 Flash) | • ออกแบบ Master Prompt Architecture (CoT, Boundary Analysis)<br>• พัฒนาสคริปต์ยิง KKU IntelSphere API (`kku_generate.py`)<br>• สกัด JUnit 4 Test Code และบันทึก Token Usage / Generation Time<br>• **Output:** วางไฟล์ที่ `Deepseek-v4_flash/TestCode/` และ `Gemini-3_8_flash/TestCode/` |
 | 4 | 673380292-5 | นายศิฆรินทร์ อุปจันทร์ | **Member 4: Infrastructure & Data Lead**<br>(Defects4J & Repository Manager) | • จัดเตรียม Docker Environment (Multi-JDK, PICT, EvoSuite, Python)<br>• สกัด Target Classes และ Ground Truth บั๊กจาก Defects4J<br>• พัฒนา Universal Runner (`run_benchmark.py`) พร้อมระบบ Resume<br>• ประเมินผล Coverage, Fault Detection Rate และรวบรวมเล่มรายงาน |
 
@@ -34,7 +34,7 @@
 ### 2. ดรรชนีชี้วัดประสิทธิภาพ (Evaluation Metrics)
 1. **Target Class Line Coverage ($Coverage_{Line}$):** เปอร์เซ็นต์ความครอบคลุมของบรรทัดคำสั่งบน Target Class ที่วัดผ่าน Cobertura
 2. **Target Class Branch Coverage ($Coverage_{Branch}$):** เปอร์เซ็นต์ความครอบคลุมของกิ่งเงื่อนไขบน Target Class
-3. **Fault Detection Rate (FDR on Evaluated Sample):** อัตราการตรวจจับข้อบกพร่องจริง คำนวณจากการที่ชุดทดสอบ **Fail บนเวอร์ชัน Buggy (`b`)** ด้วยสาเหตุที่ตรงกับข้อบกพร่อง และ **Pass 100% บนเวอร์ชัน Fixed (`f`)**
+3. **Fault Detection Rate (FDR):** นับระดับบั๊ก โดยต้องมี test failure อย่างน้อยหนึ่งรายการบนเวอร์ชัน Buggy (`b`) และไม่มี failure บนเวอร์ชัน Fixed (`f`). ตัว runner ตรวจความต่างระหว่างเวอร์ชันจากผลทดสอบ ไม่ได้พิสูจน์เชิงสาเหตุว่า failure ทุกกรณีมาจาก root cause เดียวกับรายงานบั๊ก
 4. **Efficiency & Performance:** เวลาที่ใช้ในการสร้างชุดทดสอบ (Generation Time), ปริมาณ Token ที่ใช้ (สำหรับ AI), และจำนวนกรณีทดสอบที่สร้างขึ้น
 
 ---
@@ -62,7 +62,7 @@ ProjectSQA/
 ├── README.md                          # เอกสารหลักแนะนำโปรเจกต์และข้อกำหนด
 ├── Report_Round1_Draft.md             # รายงานการส่งมอบรอบที่ 1
 ├── results/                           # ไดเรกทอรีเก็บผลลัพธ์การทดลอง
-│   ├── benchmark_results.csv          # ตารางสรุปผลการทดลองรวมทั้งหมด
+│   ├── benchmark_results.csv          # ผลรันดิบของ runner; ใช้ master_benchmark_summary.csv เป็นตารางสรุปหลัก
 │   └── <Project>/<Bug_ID>/            # ไฟล์ผลลัพธ์ละเอียดรายบั๊ก (.json)
 ├── progress.json                      # สถานะการรันการทดลองระดับ Project-Bug-Technique (Resume State)
 ├── scripts/                           # สคริปต์ระบบอัตโนมัติ
@@ -90,7 +90,7 @@ ProjectSQA/
 │   ├── Models/                        # Factor/Domain Models ของ Native IPO
 │   ├── Result_Round1/                 # Combinations, Inputs, Oracle และ Manifest
 │   └── TestCode/                      # JUnit 4 ที่ผ่าน Fixed-Version Verification
-├── MIO_Algorithm/                     # อัลกอริทึมที่ 2: Mutation Insertion Optimization (MIO) via EvoSuite
+├── MIO_Algorithm/                     # อัลกอริทึมที่ 2: Many Independent Objective (MIO) ผ่าน EvoSuite
 │   ├── Code/                          # สคริปต์สั่งรัน EvoSuite MIO
 │   ├── Configuration/                 # คอนฟิก Search Budget (30s, 60s, 120s)
 │   ├── Result_Round1/ & Result_Round2/
@@ -113,7 +113,7 @@ ProjectSQA/
 
 ```bash
 # Clone Repository
-git clone https://github.com/YourGroup/ProjectSQA.git
+git clone https://github.com/Bigzzz0/ProjectSQA.git
 cd ProjectSQA
 
 # Build และเปิด Container
@@ -154,7 +154,7 @@ python3 scripts/run_member3_delivery.py
 | [บัญชี suite](results/suite_inventory.csv) | suite ที่พบและ hash สำหรับตรวจสอบย้อนกลับ |
 | [บัญชีตรวจช่อง NO_SUITE](results/suite_gap_audit.csv) | แยกไฟล์ที่ไม่มี Java candidate ออกจาก candidate ที่ยังไม่ผ่านการตรวจรับ |
 
-snapshot ปัจจุบันประเมิน suite ที่มีอยู่ครบ 2,797 คู่ และมี 619 คู่ `NO_SUITE`; `results_complete` และ `available_suite_evaluations_complete` เป็น `true` ณ 26 กันยายน 2026. ผลที่รันจบมี 160 `BUG_DETECTED`, 711 `NOT_DETECTED` และ 794 `FLAKY_OR_REGRESSION`; สถานะหลังถูกใช้เมื่อ fixed version มี failure แม้ buggy version จะผ่าน. ใน 29 คีย์จาก Member 3 มี 26 `COMPILE_ERROR` และ 3 `DONE` ที่ยัง fail บน fixed จึงไม่เพิ่ม `BUG_DETECTED`. ตัวเลข benchmark รอบเก่าถูกแทนที่แล้ว หากมีการแก้หรือเพิ่ม suite ให้รัน resume และสร้าง CSV, Excel, JSON และกราฟใหม่ก่อนใช้อ้างอิง
+ข้อมูลผลประเมินล่าสุดใน repository เป็น snapshot วันที่ 26 กันยายน 2026 (ตรวจเอกสาร 30 กันยายน): master มี 3,416 คีย์ไม่ซ้ำจาก 854 บั๊ก × 4 เทคนิค; suite ที่มีอยู่ 2,797 คู่ถูกประเมินครบ และ 619 คู่เป็น `NO_SUITE`. `results_complete` หมายถึงประเมิน suite ที่มีอยู่ครบ ไม่ได้หมายความว่ามี suite ครบทั้ง catalog. ใน 2,797 ผล มี 160 `BUG_DETECTED`, 711 `NOT_DETECTED`, 794 `FLAKY_OR_REGRESSION` และ 1,132 `COMPILE_ERROR`; ไม่มี `TIMEOUT` หรือสถานะค้างใน snapshot นี้. ใน 29 คีย์จาก Member 3 มี 26 `COMPILE_ERROR` และ 3 `FLAKY_OR_REGRESSION`. หากมีการแก้หรือเพิ่ม suite ให้ประเมินใหม่และสร้าง CSV, Excel, JSON และกราฟจาก snapshot เดียวกันก่อนใช้อ้างอิง
 
 หลัง runner จบหรือหยุดคิว ให้สร้าง snapshot และเอกสารผลใหม่ด้วยคำสั่งบน Windows host:
 

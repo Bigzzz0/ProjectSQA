@@ -1,106 +1,77 @@
-# คู่มือการใช้งาน Docker Environment & Universal Runner สำหรับ Defects4J
+# Docker และ Defects4J: คู่มือรัน benchmark
 
-คู่มือนี้บันทึกสภาพแวดล้อม Docker ที่ใช้ประเมินผลและข้อกำหนดก่อนเปิด container เพื่อให้สมาชิกตรวจสอบรุ่นเครื่องมือกับ snapshot ผลได้ตรงกัน
+ใช้ Docker environment ใน docker/docker-compose.yml เพื่อให้ Defects4J, Java และ EvoSuite ใช้รุ่นเดียวกับการทดลอง. Container ชื่อ defects4j_sqa, service ชื่อ defects4j-env, และ mount repository ที่ /workspace.
 
----
+## เครื่องมือใน container
 
-## 🛠️ สภาพแวดล้อมที่จัดเตรียมไว้ใน Container
+- Defects4J commit 8c16da8230843cdc918eaf4ddb449637f02b83c6 (3.0.1-7-g8c16da82)
+- OpenJDK 11 เป็นค่าเริ่มต้น; มี OpenJDK 8 สำหรับ MIO generation ที่ต้องใช้
+- EvoSuite 1.0.6 ใน /opt/evosuite/
+- PICT ติดตั้งใน environment เพื่อใช้เป็น reference tool; ผล PICT ไม่ใช่ Native IPO ใน benchmark หลัก
+- Python สำหรับ benchmark runner; analytics และรายงาน workbook สร้างบน host ตาม requirements-member4.txt
 
-1. **Multi-JDK Environment:** ติดตั้ง OpenJDK 8 และ 11; `JAVA_HOME` เริ่มที่ JDK 11 สำหรับ Defects4J CLI ส่วน MIO generation บางขั้นตอนกำหนด JDK 8
-2. **Defects4J Framework:** Dockerfile checkout commit `8c16da8230843cdc918eaf4ddb449637f02b83c6` (`3.0.1-7-g8c16da82`); Defects4J 3.x ใช้ Java 11
-3. **Microsoft PICT Tool:** คอมไพล์และติดตั้งไว้ที่ `/usr/local/bin/pict` (พร้อมให้ Member 1 รันได้ทันที)
-4. **EvoSuite Framework (Version 1.0.6):** จัดเตรียมไฟล์ `evosuite-1.0.6.jar` และ `evosuite-standalone-runtime-1.0.6.jar` ไว้ที่ `/opt/evosuite/` (พร้อมให้ Member 2 รัน MIO)
-5. **Python 3:** container มี `requests` และ `tabulate` สำหรับ runner บางส่วน; analytics บน host ใช้ dependencies จาก `requirements-member4.txt`
+## เปิดและตรวจ environment
 
-Dockerfile เริ่มจาก Ubuntu 20.04 และติดตั้ง dependencies, Defects4J commit ที่ตรึงไว้, PICT commit ที่ตรึงไว้ และ EvoSuite 1.0.6 พร้อมตรวจ SHA-256 ของ JAR. การ build ครั้งแรกดาวน์โหลดและ initialize project repositories ของ Defects4J จึงใช้พื้นที่และเวลามาก; ครั้งต่อไป Docker ใช้ build cache.
+รันจาก root ของ repository:
 
----
-
-## 🚀 ขั้นตอนการเปิดใช้งาน
-
-### 1. Build และสั่ง Start Container
-เปิด Terminal / PowerShell ในโฟลเดอร์หลักของโปรเจกต์ (`ProjectSQA/`):
-
-```bash
+~~~powershell
 docker compose -f docker/docker-compose.yml up -d --build
-```
+docker ps --filter "name=defects4j_sqa"
+docker exec defects4j_sqa defects4j pids
+docker exec defects4j_sqa defects4j info -p Math -b 2
+docker exec defects4j_sqa java -version
+docker exec defects4j_sqa git -C /opt/defects4j rev-parse HEAD
+~~~
 
-### 2. เข้าสู่ Terminal ของ Container
-```bash
+เข้าสู่ shell ของ container:
+
+~~~powershell
 docker exec -it defects4j_sqa bash
-```
+~~~
 
-### 3. ตรวจสอบความพร้อมของระบบ (Sanity Check)
-```bash
-# ตรวจว่ารายชื่อโปรเจกต์และบั๊กอ่านได้
-defects4j pids
-defects4j bids -p Lang | head
+## รัน benchmark
 
-# ตรวจสอบเวอร์ชัน Java (ค่าเริ่มต้นเป็น Java 11)
-java -version
+ทดสอบหนึ่งบั๊กและหนึ่งเทคนิค:
 
-# ตรวจสอบ Defects4J ที่ติดตั้ง
-git -C /opt/defects4j rev-parse HEAD
+~~~powershell
+docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --project Lang --bug 1 --techniques ipo
+~~~
 
-# ตรวจสอบคำสั่ง PICT ของ Member 1
-pict
+ประเมิน suite ที่มีอยู่ใน catalog ทั้งหมด และทำต่อจากผลที่บันทึกไว้:
 
-# ตรวจสอบ EvoSuite ของ Member 2
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-export PATH="$JAVA_HOME/bin:$PATH"
-java -jar /opt/evosuite/evosuite-1.0.6.jar --help
-```
+~~~powershell
+docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --all-bugs --resume
+~~~
 
----
+ตัวเลือก --sample-17 รัน 17 บั๊กตัวแทน (หนึ่งรายการต่อโปรเจกต์); ไม่ใช่ exhaustive benchmark. ก่อนรันชุดใหญ่ ตรวจ suite inventory และพื้นที่ดิสก์ให้พร้อม.
 
-## 💻 การสั่งรัน Benchmark ผ่าน Universal Runner (Member 4 Tool)
+## ผลลัพธ์และสถานะ
 
-เมื่อสมาชิกแต่ละสายงาน (Member 1, 2, 3) นำไฟล์เทสมาวางไว้ในโฟลเดอร์ `TestCode/` เรียบร้อยแล้ว สคริปต์ `scripts/run_benchmark.py` จะทำหน้าที่ประเมินผลอัตโนมัติ:
+Runner บันทึกผลดิบลง:
 
-### 1. โหมดทดสอบเดี่ยวเฉพาะบั๊ก (Single Bug Verification)
-สำหรับใช้ทดสอบระหว่างการพัฒนา เช่น ต้องการรันเฉพาะ `Lang` Bug 1:
-```bash
-python3 scripts/run_benchmark.py --project Lang --bug 1
-```
+- results/benchmark_results.csv
+- results/<Project>/<bug_id>/<technique>.json
+- progress.json สำหรับสถานะและ resume
 
-### 2. โหมด 17 Projects Benchmark (`--sample-17`)
-รันประเมินผลกลุ่มตัวแทน 17 โปรเจกต์ใน Defects4J:
-```bash
-python3 scripts/run_benchmark.py --sample-17
-```
-*ระบบจะวนลูปทดสอบโปรเจกต์ตัวแทนทั้ง 17 ตัว $\times$ 4 เทคนิค = 68 การทดลอง และสรุปผลออกมาเป็นตาราง*
+คอลัมน์ Run_Log ใน master dataset ชี้ไปยัง JSON run record ที่เก็บ suite hash, run ID, ผล buggy/fixed, coverage, เวลา และ error.
 
-### 3. โหมด Exhaustive Benchmark (`--all-bugs`)
-รันประเมินผลกับทุก Active Bug ใน Defects4J โดยดึงรายชื่อบั๊กจาก `defects4j bids` สดตอนรัน:
-```bash
-python3 scripts/run_benchmark.py --all-bugs
-```
+| สถานะ | ความหมาย |
+|---|---|
+| BUG_DETECTED | มี failure บน buggy และไม่มี failure บน fixed |
+| NOT_DETECTED | ไม่พบ failure ทั้งสองเวอร์ชัน |
+| FLAKY_OR_REGRESSION | มี failure บน fixed |
+| COMPILE_ERROR | test suite compile ไม่ผ่าน |
+| TIMEOUT | เกินเวลาในขั้นรัน |
+| NO_SUITE | ไม่มี suite ที่ส่งเข้าประเมิน; ไม่ใช่ผล test |
 
-### 4. โหมด Resume ทำงานต่อจากจุดเดิม (`--resume`)
-หากเกิดเหตุขัดข้อง (เช่น ไฟดับ, เครื่องค้าง, หรือเน็ตหลุด) ระบบจะอ่านสถานะล่าสุดจาก `progress.json` แล้วข้ามบั๊กที่ทำเสร็จแล้วเพื่อทำต่อทันที:
-```bash
-python3 scripts/run_benchmark.py --all-bugs --resume
-```
+Coverage ที่วัดไม่ได้ต้องเป็นค่าว่างและมีสถานะ/error ประกอบ ไม่ใช่ 0%. วิธีคำนวณและตัวหารดูใน results/DATA_DICTIONARY.md.
 
----
+## ปิด container
 
-## 📊 การอ่านและตรวจสอบผลลัพธ์ (Output Artifacts)
+หลังงานประเมินเสร็จ ปิด container ด้วย:
 
-เมื่อสคริปต์รันเสร็จ ผลลัพธ์จะถูกจัดเก็บเป็น 2 รูปแบบ:
+~~~powershell
+docker compose -f docker/docker-compose.yml down
+~~~
 
-1. **ไฟล์ผลลัพธ์ละเอียดรายบั๊ก (JSON format):**
-   เก็บไว้ที่ `results/<Project>/<Bug_ID>/<Technique>.json` เช่น:
-   * `results/Lang/1/ipo.json`
-   * `results/Lang/1/mio.json`
-   * `results/Lang/1/claude.json`
-   * `results/Lang/1/gemini.json`
-   ข้างในจะเก็บบันทึกค่า Line Coverage, Branch Coverage, สถานะ Fault Detection (`DEFECT_TRIGGERED` / `FLAKY` / `COMPILE_ERROR`) และ Execution Time
-2. **ตารางผลรวมทั้งหมด (CSV format):**
-   เก็บไว้ที่ `results/benchmark_results.csv` สามารถนำไปเปิดใน Excel หรือเขียนสคริปต์พล็อตเป็นกราฟแท่งเปรียบเทียบในเล่มรายงานได้ทันที
-
----
-
-## 🧹 การจัดการทรัพยากรเครื่อง (Resource & Disk Management)
-
-* สคริปต์ Runner จะสร้างโฟลเดอร์ทำงานชั่วคราวไว้ที่ `/tmp/d4j_eval/` ในระหว่างที่คอมไพล์และรันเทส
-* เมื่อประเมินผลแต่ละบั๊กเสร็จสิ้น สคริปต์จะสั่ง **ลบโฟลเดอร์ชั่วคราวทิ้งทันทีอัตโนมัติ** เพื่อไม่ให้พื้นที่ Hard Disk เต็ม (กินพื้นที่ดิสก์หมุนเวียนไม่เกิน 2-3 GB ตลอดการรัน)
+อย่าลบ volumes หรือผลลัพธ์ใน repository หากยังต้องใช้ run logs ต่อ.

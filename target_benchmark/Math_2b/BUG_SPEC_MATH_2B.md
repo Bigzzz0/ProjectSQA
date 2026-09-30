@@ -1,7 +1,7 @@
 # 📋 รายละเอียดบั๊กเป้าหมาย: Apache Commons-Math 2 (Math-2b)
 
 > **เอกสารจัดทำโดย:** Member 4 (Infrastructure & Data Analysis Lead)  
-> **วัตถุประสงค์:** ส่งมอบข้อมูลคลาสเป้าหมายและบั๊กมาตรฐาน (Ground Truth) ให้แก่ Member 1 (IPO), Member 2 (MIO), และ Member 3 (AI Claude & Gemini) นำไปใช้สร้าง Unit Test
+> **วัตถุประสงค์:** ส่งมอบข้อมูลคลาสเป้าหมายและบั๊กมาตรฐาน (Ground Truth) ให้แก่ Member 1 (IPO), Member 2 (MIO), และ Member 3 (AI DeepSeek & Gemini) นำไปใช้สร้าง Unit Test
 
 ---
 
@@ -86,4 +86,4 @@ public void testMath1021() {
 
 1. **Member 1 (IPO):** สร้าง Parameter Model ที่มีค่าตัวเลขขอบเขตใหญ่ (Large Boundary Values) สำหรับ $(N, m, n)$ เช่น ค่าใกล้เคียง $10^5, 10^6$ เพื่อให้เกิด Pairwise Combinations ที่ผลคูณเกิน $2^{31}-1$
 2. **Member 2 (MIO / EvoSuite):** กำหนด `-class org.apache.commons.math3.distribution.HypergeometricDistribution` ให้ EvoSuite สำรวจ Branch ของ `getNumericalMean()` และ `sample()`
-3. **Member 3 (AI Claude & Gemini):** ใส่เงื่อนไขใน Prompt ให้ AI สร้าง Test Case สำหรับ Extreme Large Value Boundary และ Assert ค่า $sample \ge 0$
+3. **Member 3 (AI DeepSeek & Gemini):** ใส่เงื่อนไขใน Prompt ให้ AI สร้าง Test Case สำหรับ Extreme Large Value Boundary และ Assert ค่า $sample \ge 0$

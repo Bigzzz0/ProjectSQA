@@ -1,78 +1,32 @@
-# DeepSeek V4 Flash - AI-Assisted Test Generation
+# DeepSeek V4 Flash — AI-assisted test generation
 
-**ผู้รับผิดชอบหลัก:** Member 3 (นายธนภูมิ จันทรา - AI Prompt Engineer & Test Automation)
+**ผู้รับผิดชอบ:** Member 3 — นายธนภูมิ จันทรา<br>
+**ช่องทางที่ใช้:** KKU IntelSphere API ผ่าน `scripts/kku_generate.py`<br>
+**Benchmark snapshot:** 26 กันยายน 2026
 
-> [!TIP]
-> **📖 คู่มือปฏิบัติงานและคำสั่งทีละขั้นตอน:** สามารถอ่านฉบับเต็มได้ที่ [TEAM_WORKFLOW_GUIDE.md (ส่วนของ Member 3)](../TEAM_WORKFLOW_GUIDE.md#-member-3-นายธนภูมิ-จันทรา-ai-prompt-engineer---deepseek--gemini)
+## ผลประเมิน benchmark กลาง
 
----
+| รายการ | ผลล่าสุด |
+|---|---:|
+| มี suite ให้ประเมิน | 853/854 |
+| `NO_SUITE` | 1 |
+| ประเมินเสร็จและวัด coverage ได้ | 192 |
+| `COMPILE_ERROR` | 661 |
+| `FLAKY_OR_REGRESSION` | 177 |
+| `NOT_DETECTED` | 4 |
+| `BUG_DETECTED` | 11 |
+| FDR ต่อ suite evaluations | 11/853 = 1.29% |
+| Line / Branch coverage เฉลี่ย | 78.02% / 70.22% (n=192) |
 
-## 📌 บทบาทและคำนิยามทางวิชาการ (Academic Context)
+สถานะ `BUG_DETECTED` ต้องมี failure บน buggy version และไม่มี failure บน fixed version. Compile errors และ flaky/regression ไม่ใช่ coverage 0%; ไม่มีค่า coverage ที่วัดได้ให้แสดง.
 
-* **เครื่องมือ (Tool):** **DeepSeek V4 Flash** ผ่านระบบ **KKU IntelSphere API** (`https://gen.ai.kku.ac.th`)
-* **บทบาทของ Member 3:** ออกแบบสถาปัตยกรรม Prompt (Prompt Engineering) ให้ AI ทำหน้าที่เป็น Principal SQA Engineer เพื่อวิเคราะห์โครงสร้างโค้ดแบบ White-Box Testing และสร้างชุดทดสอบ JUnit 4 สำหรับ **Target Modified Classes** ใน Defects4J
-* **เป้าหมาย:** สร้างชุดทดสอบที่มี Code Coverage สูง ครอบคลุม Edge Cases และสามารถเปิดเผยข้อบกพร่อง (Fault Detection) ใน Defects4J ได้จริง พร้อมบันทึกหลักฐานเชิงประจักษ์ (Token Usage & Generation Time)
+## ผล generation และหลักฐาน
 
----
+แหล่งข้อมูล generation สรุปมี 1,082 records เฉลี่ย 21,045.26 tokens และ 295.54 วินาทีต่อ record. บันทึกนี้ไม่มี run ID ที่เชื่อมกับ benchmark detection จึงห้ามตีความเป็น token/เวลาต่อบั๊กที่ตรวจพบ.
 
-## 🛠️ ขั้นตอนการทำงานจริงแบบละเอียด (Step-by-Step Workflow)
+- ไฟล์ suite: `Deepseek-v4_flash/TestCode/`
+- Prompt ที่บันทึกและ metrics ราย generation: `Deepseek-v4_flash/Prompt/` และ `Deepseek-v4_flash/Result/`
+- สรุปรวมและตัวหาร: [master stats](../results/master_descriptive_stats.json), [analytics](../results/advanced_analytics_report.md)
+- บันทึกการส่งมอบชุดจาก Member 3: [delivery report](../results/DELIVERY_REPORT_M3.md)
 
-### ขั้นตอนที่ 1: ดึงซอร์สโค้ดของคลาสเป้าหมาย
-* ดึงไฟล์ซอร์สโค้ดจาก `target_benchmark/<Project>_<BugID>b/` (เช่น `NumberUtils.java`)
-* **ข้อควรระวัง:** ส่งเฉพาะ Source Code ของ **Target Modified Class** เข้าไปใน Prompt เท่านั้น ห้ามส่งทั้ง Repository เพื่อป้องกันไม่ให้ Context ล้นและเกิน Token Quota
-
----
-
-### ขั้นตอนที่ 2: สถาปัตยกรรม Prompt (Prompt Architecture)
-Prompt ที่ใช้ต้องประกอบด้วย 4 ส่วนประกอบหลัก:
-1. **Role & Objective:** กำหนดบทบาทเป็น Lead SQA Specialist มุ่งเน้นการทำ Branch Coverage และ Boundary Value Analysis
-2. **Defect & Branch Analysis Matrix (CoT):** สั่งให้ AI วิเคราะห์ Control Flow และเงื่อนไขข้อบกพร่องออกมาก่อนเริ่มเขียนโค้ด
-3. **Strict Constraints (กฎเหล็กบังคับ):**
-   * บังคับใช้ **Java 8** และ **JUnit 4** เท่านั้น (`import org.junit.Test;`, `import static org.junit.Assert.*;`)
-   * บรรทัดแรกต้องประกาศ `package` ตรงกับ Defects4J (เช่น `package org.apache.commons.lang3.math;`)
-   * ทุกเมธอดต้องใส่ `@Test(timeout = 4000)` เพื่อป้องกัน Timeout
-   * ห้ามใช้ JUnit 5 (Jupiter), AssertJ, หรือ Mockito
-4. **Target Output:** สั่งให้ส่งคืนเฉพาะบล็อกโค้ด ````java ... ```` โดยไม่มีข้อความเกริ่นนำหรือปิดท้าย
-
----
-
-### ขั้นตอนที่ 3: สั่งรันเจนเทสอัตโนมัติด้วยสคริปต์
-Member 3 สามารถสั่งรันผ่านสคริปต์ [scripts/kku_generate.py](../scripts/kku_generate.py):
-
-```bash
-# เจนเทสด้วย DeepSeek V4 Flash
-python scripts/kku_generate.py --ai deepseek
-```
-
-*สคริปต์จะทำงานให้อัตโนมัติ:*
-1. อ่าน API Key จาก `.env` (พร้อมระบบหมุนเวียน 3 Token Pool อัตโนมัติ)
-2. ส่ง Source Code และ System Prompt ไปยัง KKU API
-3. สกัดเฉพาะบล็อกรหัสภาษา Java ออกมา
-4. จับเวลาการสร้าง (Generation Time) และดึงสถิติ Token จาก API
-5. บันทึกไฟล์เทสลงใน `TestCode/` อัตโนมัติ
-
----
-
-### ขั้นตอนที่ 4: การบันทึกสถิติและหลักฐาน (Reproducibility Records)
-หลังการรัน สคริปต์จะบันทึกหลักฐานสำคัญ 2 ไฟล์:
-1. **บันทึก Prompt ที่ใช้จริง:** บันทึกลงใน `Deepseek-v4_flash/Prompt/actual_prompt_<ClassName>.md`
-2. **บันทึก Empirical Metrics:** บันทึกลงใน `Deepseek-v4_flash/Result/generation_metrics_<ClassName>.md`
-   * เวลาที่ใช้ในการสร้าง (วินาที)
-   * Input Tokens (Prompt + Source Code)
-   * Output Tokens (Generated Test Code)
-   * Total Tokens และ Daily Quota ที่เหลือ
-
----
-
-### ขั้นตอนที่ 5: การส่งมอบ Test Code ให้ Runner ของ Member 4
-* ไฟล์เทสจะถูกจัดเก็บไว้ที่:
-   `Deepseek-v4_flash/TestCode/<ClassName>DeepseekTest.java` (เช่น `NumberUtilsDeepseekTest.java`)
-* สมาชิกสามารถตรวจสอบความเรียบร้อยของโค้ด แล้วส่งมอบให้ Member 4 นำไปรันวัด Coverage และ Fault Detection ต่อไป
-
----
-
-## 📂 รายการไฟล์ที่ Member 3 ต้องส่งมอบในส่วนของ DeepSeek
-
-* **โฟลเดอร์ Prompt/:** เก็บ Template Prompts และ Prompt ที่ใช้จริง
-* **โฟลเดอร์ Result/:** บันทึกค่า Token Usage, Generation Time, และตารางสถิติเปรียบเทียบ
-* **โฟลเดอร์ TestCode/:** ไฟล์ JUnit 4 Test Suite พร้อมคอมไพล์บน Defects4J
+ไฟล์ใน Prompt/Result เป็นหลักฐานตามการสร้างครั้งนั้น ให้เก็บเนื้อหาเดิมไว้; ใช้ master data สำหรับผล benchmark ปัจจุบัน. ข้อความเรื่อง Claude ในเอกสารเก่าหรือในสคริปต์ที่ยังรองรับ alias ไม่ใช่ผลเทคนิคที่เปรียบเทียบในรายงานนี้.

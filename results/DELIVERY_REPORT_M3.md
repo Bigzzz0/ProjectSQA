@@ -4,9 +4,13 @@
 **ผู้รับมอบ:** Member 4 (Infra Lead & Data Analysis)  
 **วันที่:** 2026-09-26  
 
-## 📌 สรุปภาพรวมการแก้ไข 31 ช่อง
-- **พร้อมนำเข้า Benchmark ทันที (MATCHING_CANDIDATE_NOT_ADMITTED):** 29 ช่อง (ผ่านการ Matcher 100%)
-- **พักการประเมินไว้ก่อนตามข้อตกลง (TARGET_MISMATCH_CANDIDATE):** 2 ช่อง (Math-13 DeepSeek & Gemini)
+## Benchmark outcome after delivery
+
+ไฟล์ส่งมอบ 31 ไฟล์จับคู่เป็น 29 คีย์บั๊ก–เทคนิค (Closure-34 มี 2 ไฟล์ต่อเทคนิค). ผลประเมินทั้ง 29 คีย์มี 26 COMPILE_ERROR และ 3 FLAKY_OR_REGRESSION (มี failure บน fixed version); ไม่มีคีย์ใดเพิ่ม BUG_DETECTED. แยกจากชุดส่งมอบนี้ audit ยังพบ candidate ของ Math-13 สำหรับ DeepSeek และ Gemini ที่ target package ไม่ตรง ทั้งสองคีย์จึงคง NO_SUITE. สถานะยืนยันจาก master snapshot วันที่ 26 กันยายน 2026.
+
+## 📌 สรุปไฟล์และคีย์ที่ส่งมอบ
+- **ส่งมอบ:** 31 ไฟล์ Java ที่จับคู่เป็น 29 คีย์บั๊ก–เทคนิค
+- **Candidate แยกใน suite-gap audit:** Math-13 DeepSeek และ Gemini 2 คีย์ (target mismatch; ไม่รับเข้า benchmark)
 
 ## 📊 ตารางส่งมอบรายละเอียดทั้ง 31 รายการ
 
