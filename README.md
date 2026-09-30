@@ -1,168 +1,126 @@
-# Project - AI-Assisted Testing vs. Automatic Test Case Generation Algorithms: A Benchmark and Test Coverage Evaluation
+# Project SQA: AI-Assisted Testing and Automatic Test Generation
 
-**รายวิชา:** CP353201 Software Quality Assurance (ปีการศึกษา 1/2569)  
-**อาจารย์ประจำวิชา:** ผศ.ดร.ชิตสุธา สุ่มเล็ก | **หลักสูตร:** วิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น  
-**หัวข้อโครงการ:** การประเมินประสิทธิภาพเชิงเปรียบเทียบระหว่างขั้นตอนวิธีสร้างกรณีทดสอบอัตโนมัติ (IPO & MIO) และเครื่องมือ Generative AI (DeepSeek & Gemini) บนชุดข้อมูลมาตรฐาน Defects4J
+โครงการนี้เปรียบเทียบการสร้างชุดทดสอบอัตโนมัติด้วย **Native IPO**, **MIO (EvoSuite)**, **DeepSeek V4 Flash** และ **Gemini 3.8 Flash** บน Java projects ในชุดข้อมูล Defects4J โดยประเมิน line coverage, branch coverage และความสามารถในการตรวจพบบั๊กจากการรันทดสอบบนเวอร์ชัน buggy และ fixed
 
----
-
-## 👥 รายชื่อสมาชิกและบทบาทหน้าที่ (Team Roles & Responsibilities)
-
-| ลำดับ | รหัสนักศึกษา | ชื่อ - สกุล | บทบาทในโครงการ | หน้าที่หลัก & สิ่งที่ต้องส่งมอบ (Deliverables) |
-| :---: | :---: | :--- | :--- | :--- |
-| 1 | 673380278-9 | นายปวริศช์ ประมวล | **Member 1: Algorithm Lead 1**<br>(IPO / Combinatorial Testing) | • วิเคราะห์ Input Space ของ Target Classes<br>• สร้าง Factor/Value-Domain Model และ Pairwise Combinations ด้วย Native IPO<br>• ใช้ PICT เฉพาะ Reference Baseline โดยไม่ถือว่า PICT เท่ากับ IPO<br>• แปลง Combinations เป็น JUnit 4 พร้อม Oracle จาก Defects4J Fixed Version<br>• **Output:** วางชุดที่ตรวจบน Fixed Version แล้วไว้ที่ `Combinatorial_IPO/TestCode/` |
-| 2 | 673380301-0 | นายแทนคุณ พันธ์นิกุล | **Member 2: Algorithm Lead 2**<br>(MIO / Search-Based Testing) | • รัน EvoSuite ด้วย MIO บน Defects4J<br>• ประเมินงบค้นหา 30, 60 และ 120 วินาที โดยใช้ 3 seeds (101, 102, 103) ในการทดลอง budget<br>• ส่ง suite, configuration, generation summary และรายงานข้อจำกัด<br>• **Output:** `MIO_Algorithm/TestCode/` และ `MIO_Algorithm/Result_Round2/` |
-| 3 | 673380272-1 | นายธนภูมิ จันทรา | **Member 3: AI Prompt Engineer**<br>(DeepSeek V4 Flash & Gemini 3.8 Flash) | • ออกแบบ Master Prompt Architecture (CoT, Boundary Analysis)<br>• พัฒนาสคริปต์ยิง KKU IntelSphere API (`kku_generate.py`)<br>• สกัด JUnit 4 Test Code และบันทึก Token Usage / Generation Time<br>• **Output:** วางไฟล์ที่ `Deepseek-v4_flash/TestCode/` และ `Gemini-3_8_flash/TestCode/` |
-| 4 | 673380292-5 | นายศิฆรินทร์ อุปจันทร์ | **Member 4: Infrastructure & Data Lead**<br>(Defects4J & Repository Manager) | • จัดเตรียม Docker Environment (Multi-JDK, PICT, EvoSuite, Python)<br>• สกัด Target Classes และ Ground Truth บั๊กจาก Defects4J<br>• พัฒนา Universal Runner (`run_benchmark.py`) พร้อมระบบ Resume<br>• ประเมินผล Coverage, Fault Detection Rate และรวบรวมเล่มรายงาน |
+**รายวิชา:** CP353201 Software Quality Assurance · ภาคการศึกษา 1/2569<br>
+**อาจารย์ประจำวิชา:** ผศ.ดร.ชิตสุธา สุ่มเล็ก<br>
+**หลักสูตร:** วิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น
 
 ---
 
-> [!TIP]
-> **📖 สำหรับสมาชิกทุกคนในทีม:** ดูขั้นตอนการทำงานแบบละเอียดรายบุคคล คำสั่งที่ต้องใช้ และตำแหน่งส่งมอบไฟล์ได้ที่ [คู่มือการทำงานของทีม](docs/team/TEAM_WORKFLOW_GUIDE.md)
+## สมาชิกและหน้าที่
+
+| สมาชิก | รหัสนักศึกษา | ชื่อ | ความรับผิดชอบหลัก |
+|---|---|---|---|
+| Member 1 | 673380278-9 | นายปวริศช์ ประมวล | Native IPO และ combinatorial testing; จัดทำ factor/value models, pairwise combinations และ JUnit 4 suites ใน `Combinatorial_IPO/` |
+| Member 2 | 673380301-0 | นายแทนคุณ พันธ์นิกุล | MIO บน EvoSuite; ทดลอง search budgets 30, 60 และ 120 วินาทีด้วย seeds 101, 102 และ 103; ดูแล suites และผล generation ใน `MIO_Algorithm/` |
+| Member 3 | 673380272-1 | นายธนภูมิ จันทรา | Prompt และชุดทดสอบจาก DeepSeek V4 Flash กับ Gemini 3.8 Flash; ดูแล generation logs และ suites ในโฟลเดอร์ของแต่ละโมเดล |
+| Member 4 | 673380292-5 | นายศิฆรินทร์ อุปจันทร์ | Docker/Defects4J environment, benchmark runner, target catalog, การรวมผล coverage/FDR และเอกสารโครงการ |
+
+ดูขั้นตอนการทำงาน คำสั่ง และตำแหน่งส่งมอบของแต่ละคนได้ที่ [คู่มือการทำงานของทีม](docs/team/TEAM_WORKFLOW_GUIDE.md)
 
 ---
 
-## 🎯 ขอบเขตการทดลองและการวัดผล (Scope & Benchmark Methodology)
+## ขอบเขตและวิธีประเมินผล
 
-### 1. ขอบเขตระดับโปรเจกต์ (Project-Level Scope)
-* **ชุดข้อมูลทดสอบ:** Java projects ใน Defects4J Dataset ทั้ง **17 Projects** ได้แก่ `Chart`, `Cli`, `Closure`, `Codec`, `Collections`, `Compress`, `Csv`, `Gson`, `JacksonCore`, `JacksonDatabind`, `JacksonXml`, `Jsoup`, `JxPath`, `Lang`, `Math`, `Mockito`, และ `Time`
-* **คลาสเป้าหมาย (Target Classes Under Test):** โฟกัสการสร้างชุดทดสอบที่ **Target Modified Classes (`classes.modified`)** ซึ่งเป็นคลาสที่มีข้อบกพร่องจริงตามที่ระบุใน Defects4J Ground Truth
-* **โหมดการประเมินผล:**
-  1. **17 Projects Benchmark Mode (`--sample-17`):** คัดเลือกข้อบกพร่องตัวแทนโปรเจกต์ละ 1 บั๊ก ($17 \text{ Projects} \times 4 \text{ Techniques} = 68 \text{ Experiment Units}$)
-  2. **Exhaustive Benchmark Mode (`--all-bugs`):** รันวนลูปทดสอบทุก Active Bug ใน Defects4J พร้อม checkpoint สำหรับทำงานต่อ (`--resume`) โดย runner สร้าง `progress.json` ไว้ในเครื่อง ไฟล์นี้ไม่ถูกติดตามใน Git
+### ชุดข้อมูลและขอบเขต
 
-### 2. ดรรชนีชี้วัดประสิทธิภาพ (Evaluation Metrics)
-1. **Target Class Line Coverage ($Coverage_{Line}$):** เปอร์เซ็นต์ความครอบคลุมของบรรทัดคำสั่งบน Target Class ที่วัดผ่าน Cobertura
-2. **Target Class Branch Coverage ($Coverage_{Branch}$):** เปอร์เซ็นต์ความครอบคลุมของกิ่งเงื่อนไขบน Target Class
-3. **Fault Detection Rate (FDR):** นับระดับบั๊ก โดยต้องมี test failure อย่างน้อยหนึ่งรายการบนเวอร์ชัน Buggy (`b`) และไม่มี failure บนเวอร์ชัน Fixed (`f`). ตัว runner ตรวจความต่างระหว่างเวอร์ชันจากผลทดสอบ ไม่ได้พิสูจน์เชิงสาเหตุว่า failure ทุกกรณีมาจาก root cause เดียวกับรายงานบั๊ก
-4. **Efficiency & Performance:** เวลาที่ใช้ในการสร้างชุดทดสอบ (Generation Time), ปริมาณ Token ที่ใช้ (สำหรับ AI), และจำนวนกรณีทดสอบที่สร้างขึ้น
+- ใช้ Java projects 17 โครงการใน Defects4J: `Chart`, `Cli`, `Closure`, `Codec`, `Collections`, `Compress`, `Csv`, `Gson`, `JacksonCore`, `JacksonDatabind`, `JacksonXml`, `Jsoup`, `JxPath`, `Lang`, `Math`, `Mockito` และ `Time`.
+- Catalog ครอบคลุม 854 บั๊ก โดยประเมิน 4 เทคนิค จึงมี 3,416 คู่บั๊ก–เทคนิคในตารางผลหลัก.
+- ขอบเขต coverage คือ modified target classes (`classes.modified`) ของแต่ละบั๊ก.
+- `--sample-17` ใช้บั๊กตัวแทนหนึ่งรายการต่อโครงการ รวม 68 คู่บั๊ก–เทคนิค; `--all-bugs` ใช้ catalog ทั้งหมด.
+- โหมด `--resume` อ่าน checkpoint `progress.json` ใน workspace ปัจจุบัน ไฟล์นี้สร้างโดย runner และไม่ถูกติดตามใน Git; ใช้ workspace เดิมเมื่อต้องการทำคิวต่อ.
 
----
+### ตัวชี้วัด
 
-## 📜 กฎเหล็กสำหรับชุดทดสอบ (Universal Test Suite Standards)
-
-เพื่อให้ไฟล์เทสที่สร้างขึ้นจากทุกสายงานสามารถนำไปคอมไพล์และประเมินผลบน Defects4J ได้โดยไม่เกิดความผิดพลาด สมาชิกทุกคนต้องปฏิบัติตามกฎ 4 ข้อนี้อย่างเคร่งครัด:
-
-1. **Framework Hygiene (บังคับใช้ JUnit 4 เท่านั้น):**
-   * ใช้ `import org.junit.Test;` และ `import static org.junit.Assert.*;`
-   * **ห้ามใช้** JUnit 5 / Jupiter (`org.junit.jupiter.*`) หรือ Mocking Frameworks ภายนอกเด็ดขาด
-2. **Package Declaration:**
-   * บรรทัดแรกของไฟล์เทสต้องประกาศ `package` ให้ตรงกับโฟลเดอร์ของคลาสเป้าหมายใน Defects4J (เช่น `package org.apache.commons.lang3.math;`)
-3. **Execution Guard (ป้องกันการวนลูปไม่รู้จบ):**
-   * ทุก `@Test` เมธอดต้องกำหนด Timeout เสมอ เช่น `@Test(timeout = 4000)`
-4. **Deterministic Behavior:**
-   * ห้ามใช้ฟังก์ชันที่ผลลัพธ์ไม่แน่นอน (เช่น `System.currentTimeMillis()`, สุ่มตัวเลขโดยไม่ระบุ Seed)
+- **Line coverage** และ **branch coverage** วัดบน modified target classes ด้วยเครื่องมือที่เชื่อมกับ Defects4J. คำนวณค่าเฉลี่ยจากผลที่วัด coverage ได้เท่านั้น; compile errors และค่าที่วัดไม่ได้ไม่ถูกนับเป็นศูนย์.
+- **Fault Detection Rate (FDR)** นับระดับบั๊ก ตรวจพบเมื่อมี test อย่างน้อยหนึ่งรายการ fail บนเวอร์ชัน buggy และผ่านบนเวอร์ชัน fixed. รายงานทั้งตัวหารจากรายการที่พยายามประเมินและจาก catalog 854 บั๊ก.
+- **Generation metrics** เช่น เวลาและ token ใช้บรรยายขั้นตอนสร้าง suite และแยกจากผล benchmark เว้นแต่มี run identity ที่เชื่อมโยงกันได้.
+- ผล `NO_SUITE` หมายถึงไม่มี suite ที่ส่งเข้าประเมิน ไม่ใช่ผลการทดสอบที่ผ่านหรือตรวจไม่พบบั๊ก.
 
 ---
 
-## 📂 โครงสร้าง Repository (Directory Structure)
+## ข้อกำหนดของ test suites
+
+เพื่อให้ runner ประเมินชุดทดสอบได้ แต่ละ suite ควรเป็นไปตามข้อกำหนดต่อไปนี้:
+
+1. ใช้ JUnit 4 ซึ่งเป็นรูปแบบที่ Defects4J projects ในการทดลองรองรับ.
+2. ประกาศ Java package ให้ตรงกับ target package ของโปรเจกต์.
+3. กำหนด timeout ให้ test ที่อาจใช้เวลานาน เพื่อป้องกันการค้างระหว่างประเมิน.
+4. ควบคุม random seed และหลีกเลี่ยงการพึ่งพาเวลา ระบบ หรือสถานะภายนอกที่ทำให้ผลทดสอบไม่สม่ำเสมอ.
+
+---
+
+## โครงสร้าง repository
 
 ```text
 ProjectSQA/
-├── README.md                          # เอกสารหลักแนะนำโปรเจกต์และข้อกำหนด
-├── docs/                              # รายงาน สไลด์ คู่มือ และเอกสารอ้างอิง
-│   ├── final/                         # รายงาน DOCX/PDF ฉบับส่งหลัก
-│   ├── reports/                       # รายงาน Markdown และประวัติรอบก่อน
-│   ├── presentation/                  # เนื้อหาสไลด์
-│   ├── demo/                          # คู่มือเดโมและทำซ้ำ
-│   ├── team/                          # คู่มือการทำงานและตำแหน่งส่งมอบ
-│   └── reference/                     # โจทย์รายวิชาและเอกสารอ้างอิง
-├── archive/                           # ไฟล์เก่าที่เก็บไว้ ไม่ใช้เป็น suite ปัจจุบัน
-├── results/                           # ไดเรกทอรีเก็บผลลัพธ์การทดลอง
-│   ├── benchmark_results.csv          # ผลรันดิบของ runner; ใช้ master_benchmark_summary.csv เป็นตารางสรุปหลัก
-│   └── <Project>/<Bug_ID>/            # ไฟล์ผลลัพธ์ละเอียดรายบั๊ก (.json)
-├── scripts/                           # สคริปต์ระบบอัตโนมัติ
-│   ├── d4j_meta.py                    # โมดูลดึง Metadata จาก Defects4J CLI แบบ Dynamic
-│   ├── run_benchmark.py               # Universal Benchmark Runner (17 Projects & All-Bugs)
-│   └── kku_generate.py                # สคริปต์ยิง KKU IntelSphere API สำหรับสร้าง AI Tests
-├── target_benchmark/                  # Ground Truth ของ 17 bug targets / 22 modified sources
-│   ├── catalog_17_projects.json       # สารบัญ Machine-Readable สำหรับระบบอัตโนมัติของทั้ง 4 สาย
-│   ├── README.md                      # สารบัญ Master Catalog แสดงรายละเอียดคลาสและ Trigger Tests
-│   └── <Project>_<BugID>b/            # โฟลเดอร์ของแต่ละบั๊ก (Chart_1b, Cli_1b, ..., Lang_1b, Math_2b, ..., Time_1b)
-├── docker/                            # สภาพแวดล้อมมาตรฐานสำหรับรัน Defects4J
-│   ├── Dockerfile                     # Multi-JDK (Java 8 & 11) + PICT + EvoSuite + Python
-│   ├── docker-compose.yml
-│   └── README_DOCKER.md               # คู่มือการใช้งาน Docker Environment
-├── Combinatorial_IPO/                 # อัลกอริทึมที่ 1: Native In-Parameter-Order (IPO)
-│   ├── analyzer/                      # วิเคราะห์ Java Method และ Parameters
-│   ├── domain/                        # สร้าง Factor และ Value Domains
-│   ├── algorithm/                     # Native IPO: Horizontal/Vertical Growth
-│   ├── generator/                     # แปลง Concrete Inputs เป็น JUnit 4
-│   ├── oracle/                        # เก็บ Oracle และตรวจ Suite บน Fixed Version
-│   ├── runner/                        # จุดสั่งรัน Automated IPO Pipeline
-│   ├── verification/                  # ตรวจ Pair Coverage
-│   ├── backends/                      # Optional PICT Reference Backend
-│   ├── baselines/pict/                # เก็บ PICT Reference Artifacts แยกจากผล IPO
-│   ├── Models/                        # Factor/Domain Models ของ Native IPO
-│   ├── Result_Round1/                 # Combinations, Inputs, Oracle และ Manifest
-│   └── TestCode/                      # JUnit 4 ที่ผ่าน Fixed-Version Verification
-├── MIO_Algorithm/                     # อัลกอริทึมที่ 2: Many Independent Objective (MIO) ผ่าน EvoSuite
-│   ├── Code/                          # สคริปต์สั่งรัน EvoSuite MIO
-│   ├── Configuration/                 # คอนฟิก Search Budget (30s, 60s, 120s)
-│   ├── Result_Round1/ & Result_Round2/
-│   └── TestCode/                      # ไฟล์ JUnit 4 (*_ESTest.java)
-├── Deepseek-v4_flash/                 # AI Tool 1: DeepSeek V4 Flash
-│   ├── Prompt/                        # System Prompts & Few-Shot Templates
-│   ├── Result/                        # ข้อมูล Token Usage & เวลาที่ใช้สร้าง
-│   └── TestCode/                      # ไฟล์ JUnit 4 (*_DeepseekTest.java)
-└── Gemini-3_8_flash/                  # AI Tool 2: Gemini 3.8 Flash
-    ├── Prompt/                        # System Prompts & Few-Shot Templates
-    ├── Result/                        # ข้อมูล Token Usage & เวลาที่ใช้สร้าง
-    └── TestCode/                      # ไฟล์ JUnit 4 (*_GeminiTest.java)
+├── README.md                     # ภาพรวมโครงการและคู่มือเริ่มต้น
+├── Combinatorial_IPO/            # Native IPO, models, suites และผล generation
+├── MIO_Algorithm/                # MIO/EvoSuite, configurations และ suites
+├── Deepseek-v4_flash/            # Prompts, generation records และ suites
+├── Gemini-3_8_flash/             # Prompts, generation records และ suites
+├── target_benchmark/             # Bug catalog และ modified target classes
+├── results/                      # Master data, run records, reports และ figures
+├── scripts/                      # Benchmark runner และสคริปต์วิเคราะห์ผล
+├── docker/                       # Dockerfile, Compose และ environment guide
+├── docs/
+│   ├── final/                    # รายงาน DOCX/PDF ฉบับส่ง
+│   ├── reports/                  # รายงาน Markdown และเอกสารรอบก่อน
+│   ├── presentation/             # เนื้อหาสำหรับสไลด์
+│   ├── demo/                     # คู่มือสาธิตและทำซ้ำ
+│   ├── team/                     # คู่มือทำงานและการส่งมอบ
+│   └── reference/                # โจทย์และเอกสารอ้างอิง
+├── archive/                      # ไฟล์ legacy ที่ไม่ใช้เป็นผลปัจจุบัน
+├── tests/                        # Tests ของ project tooling
+└── requirements-analysis.txt    # Dependencies สำหรับวิเคราะห์ผลบน host
 ```
 
 ---
 
-## 🛠️ ขั้นตอนการรันเพื่อทำซ้ำผลลัพธ์ (Steps to Reproduce)
+## วิธีทำซ้ำผลการทดลอง
 
-### 1. เปิดใช้งาน Docker Environment (Multi-JDK & Dependencies Ready)
+### สิ่งที่ต้องเตรียม
+
+- Git และ Docker Desktop หรือ Docker Engine พร้อม Docker Compose
+- Python 3 บน host สำหรับสร้างตารางสรุปและกราฟ
+- พื้นที่ดิสก์และเครือข่ายสำหรับ build Docker image และ checkout Defects4J projects
+
+### 1. ดาวน์โหลด repository และเริ่ม environment
 
 ```bash
-# Clone Repository
 git clone https://github.com/Bigzzz0/ProjectSQA.git
 cd ProjectSQA
 
-# Build และเปิด Container
 docker compose -f docker/docker-compose.yml up -d --build
-docker exec -it defects4j_sqa bash
+docker exec defects4j_sqa defects4j info -p Math -b 2
 ```
 
-### 2. การสั่งรัน Benchmark ผ่าน Universal Runner
+คำสั่ง `defects4j info` ใช้ตรวจว่า container และ Defects4J พร้อมใช้งาน
 
-เมื่ออยู่ในคอนเทนเนอร์ สามารถรันคำสั่งประเมินผลได้ตามขอบเขตที่ต้องการ:
+### 2. รัน benchmark
 
-```bash
-# ทดสอบเดี่ยวเฉพาะบั๊กเป้าหมาย (เช่น Lang Bug 1)
-python3 scripts/run_benchmark.py --project Lang --bug 1
+คำสั่งต่อไปนี้รันจาก PowerShell หรือ terminal ที่ root ของ repository:
 
-# รันประเมินผลกลุ่มตัวแทน 17 Projects Benchmark
-python3 scripts/run_benchmark.py --sample-17
+```powershell
+# ประเมิน Lang-1 ด้วยทุกเทคนิค
+docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --project Lang --bug 1
 
-# รันโหมด Exhaustive Benchmark (ทุกบั๊กใน Defects4J) พร้อมระบบทำต่อจากจุดเดิมอัตโนมัติ
-python3 scripts/run_benchmark.py --all-bugs --resume
+# ประเมินบั๊กตัวแทนหนึ่งรายการต่อโครงการ
+docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --sample-17
 
-# ตรวจและประเมินเฉพาะไฟล์ส่งมอบของ Member 3 (31 ไฟล์ / 29 คีย์บั๊ก–เทคนิค)
-python3 scripts/run_member3_delivery.py --dry-run
-python3 scripts/run_member3_delivery.py
+# ประเมิน catalog ทั้งหมดและทำต่อจาก checkpoint ใน workspace เดิม
+docker exec defects4j_sqa python3 /workspace/scripts/run_benchmark.py --all-bugs --resume
+
+# ตรวจรายการส่งมอบของ Member 3 ก่อนประเมิน
+docker exec defects4j_sqa python3 /workspace/scripts/run_member3_delivery.py --dry-run
 ```
 
----
+`progress.json` เป็น checkpoint ในเครื่องและถูก Git มองข้าม หากย้ายเครื่องหรือ clone ใหม่ ให้ตรวจผลและ run records ก่อนเริ่มคิวใหม่
 
-## 📊 ตารางสรุปผลการเปรียบเทียบประสิทธิภาพ (Master Benchmark Results)
+### 3. สร้างตารางสรุปและกราฟ
 
-*ค่าปัจจุบันสร้างจากผลประเมินรายบั๊กที่มี provenance ในไฟล์ master ด้านล่างเท่านั้น*
-
-| แหล่งข้อมูล | ใช้ตรวจสอบ |
-| :--- | :--- |
-| [Master benchmark CSV](results/master_benchmark_summary.csv) | สถานะและผลวัดของทุกคู่บั๊ก–เทคนิค โดยมีหนึ่งแถวต่อคู่ |
-| [สถิติเชิงพรรณนา JSON](results/master_descriptive_stats.json) | จำนวน suite, จำนวนที่รัน, จำนวนตรวจพบ, FDR และ coverage ที่วัดได้ |
-| [รายงาน analytics](results/advanced_analytics_report.md) | ผลสุดท้ายจาก snapshot ที่ครบ suite ซึ่งมีอยู่ |
-| [บัญชี suite](results/suite_inventory.csv) | suite ที่พบและ hash สำหรับตรวจสอบย้อนกลับ |
-| [บัญชีตรวจช่อง NO_SUITE](results/suite_gap_audit.csv) | แยกไฟล์ที่ไม่มี Java candidate ออกจาก candidate ที่ยังไม่ผ่านการตรวจรับ |
-
-ข้อมูลผลประเมินล่าสุดใน repository เป็น snapshot วันที่ 26 กันยายน 2026 (ตรวจเอกสาร 30 กันยายน): master มี 3,416 คีย์ไม่ซ้ำจาก 854 บั๊ก × 4 เทคนิค; suite ที่มีอยู่ 2,797 คู่ถูกประเมินครบ และ 619 คู่เป็น `NO_SUITE`. `results_complete` หมายถึงประเมิน suite ที่มีอยู่ครบ ไม่ได้หมายความว่ามี suite ครบทั้ง catalog. ใน 2,797 ผล มี 160 `BUG_DETECTED`, 711 `NOT_DETECTED`, 794 `FLAKY_OR_REGRESSION` และ 1,132 `COMPILE_ERROR`; ไม่มี `TIMEOUT` หรือสถานะค้างใน snapshot นี้. ใน 29 คีย์จาก Member 3 มี 26 `COMPILE_ERROR` และ 3 `FLAKY_OR_REGRESSION`. หากมีการแก้หรือเพิ่ม suite ให้ประเมินใหม่และสร้าง CSV, Excel, JSON และกราฟจาก snapshot เดียวกันก่อนใช้อ้างอิง
-
-หลัง runner จบหรือหยุดคิว ให้สร้าง snapshot และเอกสารผลใหม่ด้วยคำสั่งบน Windows host:
+ทำขั้นตอนนี้บน host หลัง benchmark หยุดหรือเสร็จแล้ว:
 
 ```powershell
 python -m venv .venv
@@ -174,48 +132,71 @@ python -m venv .venv
 .\.venv\Scripts\python.exe scripts/plot_results.py
 ```
 
+## ผลประเมินล่าสุด
+
+ตารางต่อไปนี้มาจาก snapshot วันที่ 26 กันยายน 2026. Master dataset มี 3,416 คู่บั๊ก–เทคนิคจาก 854 บั๊กและ 4 เทคนิค; suite ที่มีอยู่ 2,797 คู่ได้รับการประเมิน และ 619 คู่เป็น `NO_SUITE`. การประเมิน suite ที่มีอยู่ครบไม่ได้หมายความว่ามี suite ครบทุกคู่ใน catalog.
+
+| สถานะผลประเมิน | จำนวนคู่ |
+|---|---:|
+| `BUG_DETECTED` | 160 |
+| `NOT_DETECTED` | 711 |
+| `FLAKY_OR_REGRESSION` | 794 |
+| `COMPILE_ERROR` | 1,132 |
+| `NO_SUITE` | 619 |
+
+| เทคนิค | พยายามประเมิน | ประเมินสำเร็จ | Line coverage เฉลี่ย | Branch coverage เฉลี่ย | ตรวจพบบั๊ก | FDR ของรายการที่พยายามประเมิน | FDR ของ catalog |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Native IPO | 257 | 252 | 26.76% (n=252) | 18.67% (n=252) | 37 | 14.40% | 4.33% |
+| MIO (EvoSuite) | 834 | 797 | 63.85% (n=797) | 56.51% (n=797) | 5 | 0.60% | 0.59% |
+| DeepSeek V4 Flash | 853 | 192 | 78.02% (n=192) | 70.22% (n=192) | 11 | 1.29% | 1.29% |
+| Gemini 3.8 Flash | 853 | 424 | 86.29% (n=424) | 79.54% (n=424) | 107 | 12.54% | 12.53% |
+
+FDR นับบั๊กที่มี test fail บน buggy version และผ่านบน fixed version. FDR ของรายการที่พยายามประเมินใช้ตัวหาร `DONE + COMPILE_ERROR + TIMEOUT`; FDR ของ catalog ใช้ 854 บั๊ก. ค่า coverage เฉลี่ยคำนวณเฉพาะผลที่วัดได้ และไม่รวม compile errors หรือค่าที่หายไป.
+
+| แหล่งข้อมูล | รายละเอียด |
+|---|---|
+| [Master benchmark CSV](results/master_benchmark_summary.csv) | สถานะและผลวัดหนึ่งแถวต่อคู่บั๊ก–เทคนิค |
+| [สถิติเชิงพรรณนา JSON](results/master_descriptive_stats.json) | จำนวน suite, ผลประเมิน, FDR และ coverage |
+| [รายงานวิเคราะห์สถิติ](results/advanced_analytics_report.md) | ตารางเปรียบเทียบและการวิเคราะห์เพิ่มเติม |
+| [บัญชี suite](results/suite_inventory.csv) | suite ที่พบพร้อม hash สำหรับตรวจสอบย้อนกลับ |
+| [บัญชีช่อง NO_SUITE](results/suite_gap_audit.csv) | รายละเอียด suite ที่ขาดและสถานะไฟล์ candidate |
+
+หากมีการเพิ่มหรือแก้ suite ให้รัน benchmark และสร้าง CSV, Excel, JSON, รายงาน analytics และกราฟใหม่จาก snapshot เดียวกันก่อนอ้างตัวเลข.
+
 ---
 
-## 📈 แผนภูมิสรุปผลการทดลองวิชาการ (Academic Figures - 300 DPI)
+## แผนภูมิผลการทดลอง
 
-### รูปที่ 1: การเปรียบเทียบ Code Coverage ระหว่าง 4 เทคนิค
+### รูปที่ 1: Line และ branch coverage ของทั้ง 4 เทคนิค
 ![Figure 1: Code Coverage Comparison](results/figure1_coverage_comparison.png)
 
-### รูปที่ 2: การแจกแจงสถานะการตรวจจับข้อบกพร่อง (Bug-Level FDR 5 ระดับ)
+### รูปที่ 2: การแจกแจงสถานะผลประเมิน
 ![Figure 2: Fault Detection Rate Distribution](results/figure2_fdr_distribution.png)
 
-### รูปที่ 3: ความครอบคลุมคำสั่งโค้ดแยกราย 17 โปรเจกต์ใน Defects4J
+### รูปที่ 3: Line coverage แยกตามโครงการ
 ![Figure 3: Project-by-Project Coverage Breakdown](results/figure3_projects_breakdown.png)
 
-### รูปที่ 4: การเปรียบเทียบประสิทธิภาพและต้นทุน Token AI (DeepSeek vs Gemini)
+### รูปที่ 4: Token และเวลา generation ของ AI
 ![Figure 4: AI Economics & Latency](results/figure4_ai_economics.png)
 
-### รูปที่ 5: การวิเคราะห์จุดอิ่มตัวของการค้นหาใน MIO (Search Budget Scaling & Diminishing Returns)
+### รูปที่ 5: ผลของ search budget ต่อ MIO
 ![Figure 5: MIO Budget Scaling](results/figure5_budget_scaling.png)
 
-### รูปที่ 6: การผสานพลังในการตรวจพบบั๊กและการทับซ้อน (Ensemble Fault Detection Synergy & Overlap)
+### รูปที่ 6: การตรวจพบบั๊กและผลทับซ้อนระหว่างเทคนิค
 ![Figure 6: Ensemble Overlap](results/figure6_ensemble_overlap.png)
 
----
+## เอกสารและไฟล์ส่งมอบ
 
-## 📑 เอกสารส่งมอบและผลการวิเคราะห์ระดับพรีเมียม (Final Deliverables)
+- [รายงานฉบับส่งหลัก (DOCX)](docs/final/SQA_Final_Report.docx)
+- [รายงานฉบับส่งหลัก (PDF)](docs/final/SQA_Final_Report.pdf)
+- [เนื้อหา Markdown ประกอบรายงาน](docs/reports/Final_Report.md) — เอกสารประกอบ ไม่ใช่รายงานฉบับส่งหลัก
+- [โจทย์รายวิชา](docs/reference/SQA_Project_2026_Assignment.pdf)
+- [เนื้อหาสไลด์และ speaker notes](docs/presentation/PRESENTATION_SLIDES.md) — โครงสไลด์ในรูปแบบ Markdown
+- [คู่มือสาธิตและทำซ้ำ](docs/demo/DEMO_GUIDE.md)
+- [คู่มือการทำงานของทีม](docs/team/TEAM_WORKFLOW_GUIDE.md)
+- [Master benchmark workbook](results/Master_Benchmark_Results.xlsx)
+- [Data dictionary](results/DATA_DICTIONARY.md)
+- [Advanced analytics report](results/advanced_analytics_report.md)
 
-* 📄 **[รายงานฉบับส่งหลัก (DOCX)](docs/final/SQA_Final_Report.docx)**: ไฟล์ Word ฉบับสมบูรณ์สำหรับอ่านและแก้ไข
-* 📕 **[รายงานฉบับส่งหลัก (PDF)](docs/final/SQA_Final_Report.pdf)**: ไฟล์ PDF ฉบับเดียวกับ Word สำหรับส่งงาน
-* 📝 **[เอกสาร Markdown ประกอบรายงาน](docs/reports/Final_Report.md)**: สำเนาข้อความสำหรับอ่านและอ้างอิง ไม่ใช่ไฟล์ฉบับส่งหลัก
-* 📘 **[โจทย์รายวิชา](docs/reference/SQA_Project_2026_Assignment.pdf)**: เอกสารข้อกำหนดงานรอบที่ 2
-* 🎯 **[สไลด์นำเสนอ (Presentation Deck)](docs/presentation/PRESENTATION_SLIDES.md)**: โครงสไลด์พร้อมแหล่งตัวเลขที่ต้องตรวจจาก snapshot ล่าสุด
-* 🎬 **[คู่มือสาธิตและทำซ้ำ (Live Demo & Reproduction Guide)](docs/demo/DEMO_GUIDE.md)**: ขั้นตอนสาธิต Docker และตรวจหลักฐาน run log
-* 📖 **[คู่มือการทำงานของทีม](docs/team/TEAM_WORKFLOW_GUIDE.md)**: ขั้นตอนและตำแหน่งส่งมอบของสมาชิก
-* 📊 **[สมุดงาน Excel (Master Benchmark Workbook)](results/Master_Benchmark_Results.xlsx)**: สรุปและข้อมูลดิบ พร้อมชีท coverage, FDR, MIO budget, AI generation, ensemble และ data dictionary
-* 📚 **[พจนานุกรมข้อมูล (Data Dictionary & Codebook)](results/DATA_DICTIONARY.md)**: รายละเอียดฟิลด์และข้อกำหนดความซื่อตรงของตัวหาร
-* 📈 **[รายงานวิเคราะห์สถิติขั้นสูง (Advanced Statistical Report)](results/advanced_analytics_report.md)**: สรุปตามผลที่วัดได้และระบุตัวหาร/สถานะครบถ้วน
-
----
-
-## 📅 กำหนดการนำส่งงาน (Deliverables Schedule)
-
-1. **รายงานรอบที่ 1 (5%)**: ส่งภายในวันที่ 22 สิงหาคม 2569 ทาง Google Classroom
-2. **รายงานฉบับสมบูรณ์ & GitHub (10%)**: ส่งภายในวันสุดท้ายของการเรียนการสอน
-3. **Live Presentation & Demonstration**: นำเสนอผลการทดลองและสาธิตการทำงานจริงในวันสุดท้ายของการเรียนการสอน
+ข้อกำหนดการส่งรายงานฉบับสมบูรณ์ ผลการทดลอง source code, test code, prompts, configurations และเอกสารประกอบผ่าน GitHub และ Google Classroom อ้างอิงจาก [โจทย์รายวิชา](docs/reference/SQA_Project_2026_Assignment.pdf). การนำเสนอและสาธิตให้ใช้ผลและสถานะจาก snapshot เดียวกับรายงาน.
 
