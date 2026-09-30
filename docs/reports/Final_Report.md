@@ -125,6 +125,12 @@ SD ในคอลัมน์ coverage แสดงการกระจาย�
 
 การวิเคราะห์ใหม่จับคู่ project–bug–target class ที่มีค่าทั้งสอง budget และใช้ Wilcoxon signed-rank พร้อม Holm correction. ระหว่าง 30 กับ 60 วินาทีมี 1,006 คู่ (p หลัง Holm = 3.39 × 10⁻⁸⁴, rank-biserial = −0.828); ระหว่าง 60 กับ 120 วินาทีมี 981 คู่ (p หลัง Holm = 1.54 × 10⁻⁶⁷, rank-biserial = −0.765). ค่าลบหมายถึง coverage ของ budget ยาวสูงกว่าในคู่ที่มีข้อมูลครบ.
 
+<p align="center">
+  <img src="../../results/figure5_budget_scaling.png" alt="Coverage ที่ได้จากการสร้างชุดทดสอบ MIO ตาม search budget 30, 60 และ 120 วินาที" width="100%">
+  <br><strong>รูปที่ 5 ผลของ search budget ต่อ coverage ระหว่างการสร้างชุดทดสอบด้วย MIO</strong><br>
+  หมายเหตุ. เป็น generation metrics จาก class–budget records; n = 1,023, 1,015 และ 989 ตามลำดับ ไม่ใช่ผล coverage หรือ FDR จาก benchmark กลาง.
+</p>
+
 ---
 
 ## บทที่ 3: สถาปัตยกรรมและเทคนิคการสร้างชุดทดสอบด้วยปัญญาประดิษฐ์ (AI Testing Architecture)
@@ -156,6 +162,12 @@ SD ในคอลัมน์ coverage แสดงการกระจาย�
 
 ค่ารุ่นโมเดลอ้างตาม identifier ที่สคริปต์เรียกผ่าน KKU IntelSphere API; บันทึก generation ไม่ได้เก็บ provider model ID ต่อทุกแถว จึงไม่อ้างรายละเอียดสถาปัตยกรรมเฉพาะรุ่น.
 
+<p align="center">
+  <img src="../../results/figure4_ai_economics.png" alt="Token consumption และเวลา generation เฉลี่ยของ DeepSeek V4 Flash และ Gemini 3.8 Flash" width="100%">
+  <br><strong>รูปที่ 4 ปริมาณ token และเวลาเฉลี่ยต่อ AI generation record</strong><br>
+  หมายเหตุ. DeepSeek n = 1,082 และ Gemini n = 1,079 records; ตัวเลขนี้เป็นต้นทุนการสร้าง ไม่ได้เชื่อมกับจำนวนบั๊กที่ตรวจพบ.
+</p>
+
 ---
 
 ## บทที่ 4: สถาปัตยกรรมระบบ สภาพแวดล้อม และระเบียบวิธีวิจัยเชิงประจักษ์
@@ -164,28 +176,48 @@ SD ในคอลัมน์ coverage แสดงการกระจาย�
 เพื่อควบคุมสภาพแวดล้อมและช่วยให้ทำซ้ำการประเมินได้ Member 4 จัดทำ **Dockerized Defects4J Benchmark Environment** โดยบันทึก suite hash, run ID, timestamp และ log ของแต่ละผล การใช้ container ลดความต่างของ environment แต่ไม่ได้รับประกันการทำซ้ำสมบูรณ์ในทุกระบบ:
 
 ```mermaid
-graph TD
-    Host[Host Machine: Windows / Linux / macOS] -->|Volume Mount /workspace| Docker[Docker Container: defects4j_sqa]
-    Docker --> D4J[Defects4J 3.0.1-7-g8c16da82]
-    Docker --> JRE[OpenJDK 11 default; JDK 8 for selected MIO generation]
-    Docker --> Runner[scripts/run_benchmark.py]
-    
-    Runner --> Evaluator[Universal Test Evaluator]
-    Evaluator --> CompileB[Compile Test on Buggy Code 'b']
-    CompileB -->|Pass| RunB[Run Test on 'b']
-    CompileB -->|Fail| CE[COMPILE_ERROR]
-    
-    RunB --> CompileF[Compile & Run on Fixed Code 'f']
-    RunB -->|Timeout >4s| TO[TIMEOUT]
-    
-    CompileF -->|Pass; buggy failed| BD[BUG_DETECTED]
-    CompileF -->|Pass; buggy passed| ND[NOT_DETECTED]
-    CompileF -->|Any failure on fixed| FR[FLAKY_OR_REGRESSION]
-    
-    Evaluator --> Cov[Cobertura Coverage Engine]
-    Cov --> MasterCSV[results/master_benchmark_summary.csv]
-    MasterCSV --> Analytics[scripts/advanced_data_analytics.py]
+flowchart TD
+    Catalog["Defects4J catalog<br/>854 bugs · 17 projects"] --> IPO["Native IPO"]
+    Catalog --> MIO["MIO / EvoSuite"]
+    Catalog --> DeepSeek["DeepSeek V4 Flash"]
+    Catalog --> Gemini["Gemini 3.8 Flash"]
+
+    IPO --> Inventory["Suite inventory and project–bug–class mapping"]
+    MIO --> Inventory
+    DeepSeek --> Inventory
+    Gemini --> Inventory
+
+    Inventory -->|Suite available| Runner["Benchmark runner in Docker<br/>Defects4J 3.0.1"]
+    Inventory -->|No suite| NoSuite["NO_SUITE<br/>not evaluated"]
+
+    Runner --> CompileBuggy["Compile on buggy version"]
+    CompileBuggy -->|Compile failure| CompileError["COMPILE_ERROR"]
+    CompileBuggy -->|Compile succeeds| RunBuggy["Run tests on buggy version"]
+    RunBuggy -->|Tests complete| CompileFixed["Compile and run tests on fixed version"]
+    RunBuggy -->|Timeout| Timeout["TIMEOUT"]
+    CompileFixed -->|Pass; buggy failed| Detected["BUG_DETECTED"]
+    CompileFixed -->|Pass; buggy passed| NotDetected["NOT_DETECTED"]
+    CompileFixed -->|Failure on fixed| Flaky["FLAKY_OR_REGRESSION"]
+    CompileFixed -->|Timeout| FixedTimeout["TIMEOUT"]
+    Runner --> Coverage["Measure target-class coverage"]
+
+    Detected --> Master["Master benchmark dataset"]
+    NotDetected --> Master
+    Flaky --> Master
+    Timeout --> Master
+    FixedTimeout --> Master
+    Coverage --> Master
+    NoSuite --> Master
+    CompileError --> Master
+    Master --> Analysis["Statistics, tables and figures"]
+
+    IPO -. Generation records .-> Generation["Generation metrics<br/>kept separate from benchmark outcomes"]
+    MIO -. Budgets and seeds .-> Generation
+    DeepSeek -. Tokens and time .-> Generation
+    Gemini -. Tokens and time .-> Generation
 ```
+
+<p align="center"><strong>แผนภาพที่ 1 ขั้นตอนการสร้างและประเมินชุดทดสอบด้วย benchmark กลาง</strong><br>หมายเหตุ. `NO_SUITE` แยกจากผลการรัน; สถิติ generation ไม่ถูกนำไปรวมกับ coverage หรือ FDR.</p>
 
 * **Defects4J:** 3.0.1-7-g8c16da82; CLI ใช้ Java 11
 * **Java SDK:** ติดตั้ง OpenJDK 8 และ 11; JDK 11 เป็นค่าเริ่มต้น และบางงาน MIO กำหนด JDK 8
@@ -234,6 +266,18 @@ Coverage รวมทุก modified target class ตาม aggregate counts ท
 | DeepSeek V4 Flash | 853 | 661 | 192 | 78.02% ± 30.80 / 70.22% ± 31.10 | 11 | 1.29% | 1.29% |
 | Gemini 3.8 Flash | 853 | 429 | 424 | 86.29% ± 25.10 / 79.54% ± 26.94 | 107 | 12.54% | 12.53% |
 
+<p align="center">
+  <img src="../../results/figure1_coverage_comparison.png" alt="เปรียบเทียบ line coverage และ branch coverage ของสี่เทคนิค พร้อมจำนวนผลที่วัดได้" width="100%">
+  <br><strong>รูปที่ 1 ค่าเฉลี่ย line และ branch coverage ของชุดทดสอบที่ประเมินได้</strong><br>
+  หมายเหตุ. n นับเฉพาะผลที่มี coverage เชิงตัวเลข: IPO = 252, MIO = 797, DeepSeek = 192 และ Gemini = 424; ค่าเฉลี่ยรวม modified target classes ตาม aggregate counts ของ Defects4J.
+</p>
+
+<p align="center">
+  <img src="../../results/figure2_fdr_distribution.png" alt="สัดส่วนสถานะ fault detection ของการประเมิน suite ทั้งสี่เทคนิค" width="100%">
+  <br><strong>รูปที่ 2 สัดส่วนสถานะผลประเมิน suite แยกตามเทคนิค</strong><br>
+  หมายเหตุ. ครอบคลุม 2,797 evaluations: IPO n = 257, MIO n = 834, DeepSeek n = 853 และ Gemini n = 853; แสดงสัดส่วนสถานะภายในแต่ละเทคนิคและไม่รวม 619 ช่อง `NO_SUITE`.
+</p>
+
 เปรียบเทียบ line coverage ด้วย Wilcoxon signed-rank เฉพาะ project–bug ที่ทั้งสองเทคนิคมีค่าที่วัดได้ และปรับ p-value ด้วย Holm สำหรับหกคู่. ค่า paired rank-biserial เป็นบวกเมื่อเทคนิคทางซ้ายมี coverage สูงกว่า; ผลนี้เป็นการวิเคราะห์เชิงสำรวจเพราะแต่ละเทคนิคมี suite ที่วัดได้ต่างกัน.
 
 | คู่เปรียบเทียบ | Matched N | p หลัง Holm | Paired rank-biserial |
@@ -245,7 +289,19 @@ Coverage รวมทุก modified target class ตาม aggregate counts ท
 | Gemini – IPO | 147 | 1.90×10⁻²⁴ | 1.000 |
 | DeepSeek – IPO | 69 | 4.92×10⁻¹² | 1.000 |
 
+<p align="center">
+  <img src="../../results/figure3_projects_breakdown.png" alt="ค่าเฉลี่ย line coverage รายโครงการของสี่เทคนิคใน Defects4J ทั้ง 17 โครงการ" width="100%">
+  <br><strong>รูปที่ 3 ค่าเฉลี่ย line coverage แยกตามโครงการ Defects4J</strong><br>
+  หมายเหตุ. แต่ละแท่งเป็นค่าเฉลี่ยของบั๊กที่วัด coverage ได้ในโครงการนั้น รวม 17 โครงการ; ช่องที่ไม่มีค่าที่วัดได้ถูกเว้นว่าง ไม่ได้นับเป็นศูนย์.
+</p>
+
 เมื่อนับการตรวจจับแบบ union ระดับบั๊ก ทั้งสี่เทคนิคร่วมกันตรวจพบ 144 บั๊กจาก 853 บั๊กที่มี suite อย่างน้อยหนึ่งเทคนิค (16.88%); มี 619 บั๊ก–เทคนิคที่ไม่มี suite และแยกเป็น `NO_SUITE`. รายงาน analytics, Excel และกราฟถูกสร้างจาก snapshot เดียวกันใน `results/advanced_analytics_report.md`, `results/Master_Benchmark_Results.xlsx` และ `results/figure1_coverage_comparison.png` ถึง `results/figure6_ensemble_overlap.png`.
+
+<p align="center">
+  <img src="../../results/figure6_ensemble_overlap.png" alt="จำนวนบั๊กที่แต่ละเทคนิคตรวจพบและจำนวนบั๊กที่ตรวจพบได้เฉพาะเทคนิคนั้น รวมถึงผล union" width="100%">
+  <br><strong>รูปที่ 6 จำนวนบั๊กที่ตรวจพบและส่วนที่แต่ละเทคนิคช่วยตรวจพบเฉพาะ</strong><br>
+  หมายเหตุ. Ensemble คือ union ของผล `BUG_DETECTED` จากการรันเดิม: 144 บั๊กจาก 853 บั๊กที่มี suite อย่างน้อยหนึ่งเทคนิค; ไม่ได้สร้างหรือรัน suite ensemble ใหม่. จำนวนที่ตรวจพบเฉพาะเทคนิคคือ IPO 27, MIO 5, DeepSeek 5 และ Gemini 91.
+</p>
 
 ### 5.3 สถิติการสร้างชุดทดสอบและข้อจำกัด
 
