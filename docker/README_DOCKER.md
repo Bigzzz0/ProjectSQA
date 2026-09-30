@@ -8,7 +8,7 @@
 - OpenJDK 11 เป็นค่าเริ่มต้น; มี OpenJDK 8 สำหรับ MIO generation ที่ต้องใช้
 - EvoSuite 1.0.6 ใน /opt/evosuite/
 - PICT ติดตั้งใน environment เพื่อใช้เป็น reference tool; ผล PICT ไม่ใช่ Native IPO ใน benchmark หลัก
-- Python สำหรับ benchmark runner; analytics และรายงาน workbook สร้างบน host ตาม requirements-member4.txt
+- Python สำหรับ benchmark runner; analytics และรายงาน workbook สร้างบน host ตาม requirements-analysis.txt
 
 ## เปิดและตรวจ environment
 
@@ -51,7 +51,7 @@ Runner บันทึกผลดิบลง:
 
 - results/benchmark_results.csv
 - results/<Project>/<bug_id>/<technique>.json
-- progress.json สำหรับสถานะและ resume
+- checkpoint `progress.json` สำหรับ resume ซึ่ง runner สร้างไว้ใน workspace และ Git ไม่ติดตาม
 
 คอลัมน์ Run_Log ใน master dataset ชี้ไปยัง JSON run record ที่เก็บ suite hash, run ID, ผล buggy/fixed, coverage, เวลา และ error.
 

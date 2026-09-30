@@ -12,6 +12,9 @@ Thumbs.db
 .venv/
 .local/
 
+# Benchmark runner checkpoint (kept locally for resume; not shared through Git)
+/progress.json
+
 # Temporary test outputs
 tmp/
 *.tmp

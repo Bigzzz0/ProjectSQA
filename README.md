@@ -29,7 +29,7 @@
 * **คลาสเป้าหมาย (Target Classes Under Test):** โฟกัสการสร้างชุดทดสอบที่ **Target Modified Classes (`classes.modified`)** ซึ่งเป็นคลาสที่มีข้อบกพร่องจริงตามที่ระบุใน Defects4J Ground Truth
 * **โหมดการประเมินผล:**
   1. **17 Projects Benchmark Mode (`--sample-17`):** คัดเลือกข้อบกพร่องตัวแทนโปรเจกต์ละ 1 บั๊ก ($17 \text{ Projects} \times 4 \text{ Techniques} = 68 \text{ Experiment Units}$)
-  2. **Exhaustive Benchmark Mode (`--all-bugs`):** รันวนลูปทดสอบทุก Active Bug ใน Defects4J พร้อมระบบ State Persistence (`progress.json`) สามารถกดหยุดหรือรันต่อ (`--resume`) ได้ตลอดเวลา
+  2. **Exhaustive Benchmark Mode (`--all-bugs`):** รันวนลูปทดสอบทุก Active Bug ใน Defects4J พร้อม checkpoint สำหรับทำงานต่อ (`--resume`) โดย runner สร้าง `progress.json` ไว้ในเครื่อง ไฟล์นี้ไม่ถูกติดตามใน Git
 
 ### 2. ดรรชนีชี้วัดประสิทธิภาพ (Evaluation Metrics)
 1. **Target Class Line Coverage ($Coverage_{Line}$):** เปอร์เซ็นต์ความครอบคลุมของบรรทัดคำสั่งบน Target Class ที่วัดผ่าน Cobertura
@@ -71,7 +71,6 @@ ProjectSQA/
 ├── results/                           # ไดเรกทอรีเก็บผลลัพธ์การทดลอง
 │   ├── benchmark_results.csv          # ผลรันดิบของ runner; ใช้ master_benchmark_summary.csv เป็นตารางสรุปหลัก
 │   └── <Project>/<Bug_ID>/            # ไฟล์ผลลัพธ์ละเอียดรายบั๊ก (.json)
-├── progress.json                      # สถานะการรันการทดลองระดับ Project-Bug-Technique (Resume State)
 ├── scripts/                           # สคริปต์ระบบอัตโนมัติ
 │   ├── d4j_meta.py                    # โมดูลดึง Metadata จาก Defects4J CLI แบบ Dynamic
 │   ├── run_benchmark.py               # Universal Benchmark Runner (17 Projects & All-Bugs)
@@ -167,7 +166,7 @@ python3 scripts/run_member3_delivery.py
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-member4.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements-analysis.txt
 .\.venv\Scripts\python.exe scripts/reclassify_fault_detection.py --apply
 .\.venv\Scripts\python.exe scripts/consolidate_master_results.py
 .\.venv\Scripts\python.exe scripts/audit_suite_gaps.py

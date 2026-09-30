@@ -129,7 +129,7 @@ def main():
         json_updates.append((log_path, detail))
         json_updates.append((result_path, result))
 
-    progress = json.loads(PROGRESS.read_text(encoding="utf-8"))
+    progress = json.loads(PROGRESS.read_text(encoding="utf-8")) if PROGRESS.exists() else {}
     corrected_by_run = {row["Run_ID"]: expected for row, _, _, expected in corrections}
     for value in progress.values():
         if isinstance(value, dict) and value.get("run_id") in corrected_by_run:

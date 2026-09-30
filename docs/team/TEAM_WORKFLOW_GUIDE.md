@@ -81,7 +81,8 @@ FDR ในตารางคำนวณจากจำนวน BUG_DETECTED �
 | Suite และ hash | [suite_inventory.csv](../../results/suite_inventory.csv) |
 | ช่อง NO_SUITE และสาเหตุ audit | [suite_gap_audit.csv](../../results/suite_gap_audit.csv) |
 | ความหมาย field/ตัวหาร | [DATA_DICTIONARY.md](../../results/DATA_DICTIONARY.md) |
-| ผลดิบและ run records | [benchmark_results.csv](../../results/benchmark_results.csv), [results/](../../results/), progress.json |
+| ผลดิบและ run records | [benchmark_results.csv](../../results/benchmark_results.csv), [results/](../../results/) |
+| สถานะ resume เฉพาะเครื่อง | `progress.json` (runner สร้างให้อัตโนมัติ; ไม่เก็บใน Git ควรใช้ workspace เดิมเพื่อทำคิวต่อ) |
 | Catalog และ target classes | [all_bugs_catalog.json](../../target_benchmark/all_bugs_catalog.json), [target_benchmark/](../../target_benchmark/) |
 | วิธีใช้ IPO | [Combinatorial_IPO/README.md](../../Combinatorial_IPO/README.md) |
 | วิธีใช้ MIO | [MIO_Algorithm/README.md](../../MIO_Algorithm/README.md) |
@@ -217,12 +218,12 @@ runner ประเมิน suite ที่ค้นพบและทำต่
     .\.venv\Scripts\python.exe scripts/advanced_data_analytics.py
     .\.venv\Scripts\python.exe scripts/plot_results.py
 
-หากยังไม่มี virtual environment ให้ติดตั้ง dependencies ตาม README. ห้ามรันสองคิวเขียนผลลงไฟล์เดียวกันพร้อมกัน ตรวจ git status ก่อน commit เพราะ progress.json และ run records อาจเปลี่ยน
+หากยังไม่มี virtual environment ให้ติดตั้ง dependencies ตาม README. ห้ามรันสองคิวเขียนผลลงไฟล์เดียวกันพร้อมกัน `progress.json` เป็น checkpoint เฉพาะเครื่องและถูก Git มองข้าม ส่วน run records อาจเปลี่ยน ให้ตรวจรายการไฟล์ก่อน commit
 
 เตรียม virtual environment บน Windows host เมื่อจำเป็น:
 
     python -m venv .venv
-    .\.venv\Scripts\python.exe -m pip install -r requirements-member4.txt
+    .\.venv\Scripts\python.exe -m pip install -r requirements-analysis.txt
 
 ### 8.4 ตรวจผลก่อนนำไปใช้
 
