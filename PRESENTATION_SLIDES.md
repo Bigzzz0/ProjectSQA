@@ -4,7 +4,7 @@
 **อาจารย์ประจำวิชา:** ผศ.ดร.ชิตสุธา สุ่มเล็ก  
 **ทีมผู้จัดทำ:** กลุ่มที่ 4 (ปวริศช์, แทนคุณ, ธนภูมิ, ศิฆรินทร์)  
 
-> **ผลการประเมินครบแล้ว (26 กันยายน 2026)** — master มีครบ 3,416 แถวสำหรับ 854 บั๊ก × 4 เทคนิค; suite ที่มีอยู่ 2,768 คู่ถูกรันครบ และ 648 คู่ไม่มี suite (`NO_SUITE`). ไม่มีรายการ `NOT_RUN` ค้าง (`results_complete: true`, `available_suite_evaluations_complete: true`).
+> **Snapshot ผลประเมิน (26 กันยายน 2026)** — master มี 3,416 แถวจาก 854 บั๊ก × 4 เทคนิค; ประเมิน suite ที่มีอยู่ครบ 2,797 คู่ และ 619 คู่เป็น `NO_SUITE`. ไม่มีผลค้างที่ยังไม่สรุป (`unresolved_rows: 0`). `results_complete` หมายถึงประเมิน suite ที่มีอยู่ครบ ไม่ได้หมายความว่ามี suite ครบทุกคู่บั๊ก–เทคนิค.
 
 ---
 
@@ -27,28 +27,26 @@
 <!-- slide -->
 ### 📌 Slide 2: ที่มาและความสำคัญ (Motivation & Research Questions)
 #### ปัญหาและความท้าทายในวงการ Software Testing
-* **Manual Testing:** ใช้เวลา 40–60% ของการพัฒนาซอฟต์แวร์ และมักเกิดความผิดพลาดของมนุษย์ (Human Error)
-* **Algorithmic Generation (IPO / MIO):** รวดเร็ว มีทฤษฎีทางคณิตศาสตร์รองรับ แต่ขาดความเข้าใจเชิงความหมาย (Semantic Blindness) และติดปัญหา Regression Oracle
-* **LLM-Assisted Testing (DeepSeek / Gemini):** เข้าใจตรรกะโปรแกรมและสร้าง Assertion ได้ฉลาด แต่เสี่ยงต่อ Compile Error และ Flaky Tests
+* **การสร้าง test อัตโนมัติ:** IPO สร้างชุดทดสอบจาก input factors ส่วน MIO ค้นหาชุดทดสอบตาม coverage objectives ทั้งสองวิธีต้องอาศัย target และ oracle ที่เหมาะสม
+* **การสร้างด้วย Generative AI:** โมเดลสร้าง test และ assertions จาก prompt; ผลทดลองชุดนี้พบทั้ง compile errors และ flaky/regression
 
 #### 5 คำถามวิจัยหลัก (Research Questions):
 1. **RQ1 (Coverage):** เทคนิคใดบรรลุความครอบคลุมรหัสคำสั่งสูงที่สุด?
 2. **RQ2 (FDR):** เทคนิคใดตรวจจับข้อบกพร่องจริงได้แม่นยำที่สุดภายใต้กฎความซื่อตรงของตัวหาร?
-3. **RQ3 (Ensemble):** การรวมเทคนิคต่าง Paradigm (Hybrid) มีพลังตรวจจับบั๊กเหนือกว่าใช้เดี่ยวๆ หรือไม่?
-4. **RQ4 (Scaling):** จุดอิ่มตัวของการค้นหา (Search Saturation) ใน MIO อยู่ที่งบประมาณใด?
-5. **RQ5 (Economics):** ความคุ้มค่าของโทเค็นและเวลาประมวลผลต่อบั๊กที่ตรวจพบเป็นอย่างไร?
+3. **RQ3 (Ensemble):** เมื่อนับผลตรวจจับแบบ union เทคนิคต่าง ๆ ตรวจพบบั๊กซ้ำกันและเพิ่มการตรวจพบเฉพาะได้เท่าใด?
+4. **RQ4 (MIO Budget):** coverage และเวลา generation เปลี่ยนอย่างไรเมื่อเพิ่ม budget และผลนี้มีข้อจำกัดใด?
+5. **RQ5 (AI Generation):** token usage และเวลา generation ต่อ generation record แตกต่างกันระหว่างโมเดลอย่างไร?
 
 ---
 
 <!-- slide -->
 ### 📌 Slide 3: ขอบเขตและสถาปัตยกรรมคลังข้อมูล (Scope & Master Catalog)
-#### ครอบคลุมทุกคลาสเป้าหมายของทุกบั๊กใน Defects4J (All-Bugs & All-Classes)
-* **17 โครงการมาตรฐานระดับโลก:** Chart, Cli, Closure, Codec, Collections, Compress, Csv, Gson, JacksonCore, JacksonDatabind, JacksonXml, Jsoup, JxPath, Lang, Math, Mockito, Time
-* **สถิติสเกลการประเมินผล:**
-  - **854 Active Bugs** ใน Defects4J 3.0.1-7-g8c16da82 ครอบคลุม 17 โปรเจกต์
-  - **3,416 แถว** ใน master matrix (854 bugs × 4 techniques)
-  - **2,768 suite evaluations เสร็จ**, **648 `NO_SUITE`**, และ **0 `NOT_RUN`**
-* **ขอบเขตการวัดผล:** ใช้ aggregate coverage summary ของทุกคลาสใน `classes.modified`; รวม covered/total ก่อนคิดเปอร์เซ็นต์
+#### Catalog ครอบคลุม 854 บั๊ก; ผลประเมินครอบคลุม suite ที่มีอยู่
+* **17 โปรเจกต์:** Chart, Cli, Closure, Codec, Collections, Compress, Csv, Gson, JacksonCore, JacksonDatabind, JacksonXml, Jsoup, JxPath, Lang, Math, Mockito และ Time
+* **854 active bugs** ใน Defects4J 3.0.1-7-g8c16da82; master มี **3,416 bug–technique rows** (854 × 4)
+* ประเมิน suite ที่มีอยู่ครบ **2,797 คู่**; **619 คู่ `NO_SUITE`**; unresolved outcomes **0**
+* ตัวเลข `available_suite_evaluations_complete: true` หมายถึงไม่มี suite ที่มีอยู่ค้างประเมิน; ไม่ได้หมายถึงมี suite ครบทั้ง 3,416 คู่
+* Coverage รวม covered/total จาก aggregate summary ของ modified target classes ใน `classes.modified`
 
 ---
 
@@ -57,9 +55,10 @@
 #### In-Parameter-Order (IPO/IPOG) และแหล่ง suite ปัจจุบัน
 - IPO Native สร้าง pairwise combinations จาก factor/value model ของคลาสเป้าหมาย
 - ผลที่ใช้ประเมินต้องอยู่ใน verified_suites_manifest.json และ hash ต้องตรง
-- manifest ปัจจุบันมี 277 class-level suite records ครอบคลุม 257 bug-technique slots
-- ประเมินครบ 257 suite slots; 252 ได้ผลวัด coverage, ตรวจพบ 37 บั๊ก (FDR 14.40%)
-- ค่าเฉลี่ย line/branch coverage จากผลที่วัดได้: 26.76%/18.67% (n=252)
+- verified manifest มี 277 suite records ระดับคลาส ครอบคลุม 257 bug IDs
+- มี suite ประเมินได้ 257/854 คู่; 252 วัด coverage ได้, compile error 5, `NO_SUITE` 597
+- ตรวจพบ 37 บั๊ก (FDR 14.40% ของ 257 คู่ที่ประเมิน); `FLAKY_OR_REGRESSION` 18 และ `NOT_DETECTED` 197
+- Line/branch coverage เฉลี่ย 26.76%/18.67% (n=252); `NO_SUITE` แบ่งเป็น generation/verification error 37 และ skipped/not ready 560 คู่
 
 ---
 
@@ -68,8 +67,9 @@
 #### Many-Independent-Objective (MIO) Algorithm ใน EvoSuite
 - EvoSuite สร้าง regression suites ด้วย search budget ที่กำหนด
 - สถิติ generation แยกจาก coverage และ FDR ใน benchmark กลาง
-- ประเมินครบ 834 suite slots; 797 ได้ผลวัด coverage, ตรวจพบ 5 บั๊ก (FDR 0.60%)
-- ค่าเฉลี่ย line/branch coverage จากผลที่วัดได้: 63.85%/56.51% (n=797)
+- มี suite ประเมินได้ 834/854 คู่; `NO_SUITE` 20 คู่จาก generation failure
+- 797 วัด coverage ได้; ตรวจพบ 5 บั๊ก (FDR 0.60% ของ 834 คู่ที่ประเมิน)
+- Line/branch coverage เฉลี่ย 63.85%/56.51% (n=797); มี `FLAKY_OR_REGRESSION` 291 และ compile error 37
 
 ---
 
@@ -78,8 +78,10 @@
 #### แหล่งข้อมูล generation budget แยกจาก benchmark evaluation
 - ใช้ MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv เป็น source ของสถิติ budget, seed และเวลา generation
 - สร้างตารางทดสอบและกราฟใหม่ด้วย advanced_data_analytics.py
-- Wilcoxon signed-rank บน class ที่จับคู่กัน: 30→60 วินาที n=1,006, p หลัง Holm=3.39×10⁻⁸⁴; 60→120 วินาที n=981, p หลัง Holm=1.54×10⁻⁶⁷
-- ผล budget นี้อธิบายการสร้าง suite ไม่ใช่จำนวนบั๊กที่ตรวจพบหรือ coverage จากการประเมินกลาง
+- coverage เฉลี่ยตาม budget 30/60/120 วินาที: 65.73%/68.73%/70.82%; เวลา generation เฉลี่ย 68.29/90.62/194.41 วินาที
+- Wilcoxon แบบจับคู่: 30→60 วินาที n=1,006, p หลัง Holm=3.39×10⁻⁸⁴; 60→120 วินาที n=981, p หลัง Holm=1.54×10⁻⁶⁷
+- EvoSuite ใช้ criterion `LINE:BRANCH` ซึ่งให้ coverage ค่าเดียวใน budget summary ไม่ใช่ line/branch แยก
+- จำนวน records และ cohort ต่างกันตาม budget; เป็นผล generation เชิงพรรณนา ไม่ใช่ FDR และยังสรุปค่า budget ที่ดีที่สุดทั่วไปไม่ได้
 - ดูผลที่สร้างล่าสุดใน results/advanced_analytics.json และ results/figure5_budget_scaling.png
 
 ---
@@ -91,7 +93,7 @@
   1. `JUnit 4 Strict Compliance` (ห้าม JUnit 5 เด็ดขาด)
   2. `Execution Timeout Guard` (`@Test(timeout = 4000)`)
   3. `No External Dependencies` (ห้าม Mockito/AssertJ)
-  4. `Defect Context & Oracle Injection` (ป้อน Ground truth context)
+  4. `Defect Context` (inject known defect specification จาก Defects4J เมื่อมีข้อมูล เพื่อสร้าง test แบบ defect-targeted)
   5. `Boundary Value Analysis (BVA)` (ทดสอบขอบเขต Null, Overflow, Empty)
 
 ---
@@ -110,8 +112,8 @@
 
 <!-- slide -->
 ### 📌 Slide 9: ระเบียบวิธีคำนวณ FDR และกฎ 5 สถานะ (Member 4)
-#### Bug-Level FDR Formulation & Denominator Integrity Rule
-$$FDR = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evaluated\_bugs}}} \right) \times 100\%$$
+#### Bug–Technique FDR และตัวหารที่ใช้
+$$FDR_{\text{evaluated}} = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{suite evaluations}}} \right) \times 100\%$$
 
 | สถานะการประเมิน | เงื่อนไขการจำแนก | นับเป็น Bug Detected? |
 | :--- | :--- | :---: |
@@ -121,7 +123,7 @@ $$FDR = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evaluated\_bugs}}} \righ
 | **`COMPILE_ERROR`** | Syntax error หรือขาด Classpath | ❌ ไม่นับ |
 | **`TIMEOUT`** | ทำงานค้างเกิน 4 วินาที | ❌ ไม่นับ |
 
-> **⚠️ กฎความซื่อตรงของตัวหาร:** บั๊กที่เกิด `COMPILE_ERROR` หรือ `TIMEOUT` **จะถูกนับในตัวหารเสมอ ห้ามตัดทิ้ง!**
+> **ตัวหาร:** ใช้จำนวน bug–technique rows ที่มี suite และถูกประเมิน รวม `COMPILE_ERROR`, `FLAKY_OR_REGRESSION` และ `TIMEOUT` (ถ้ามี); รายงาน `BUG_DETECTED ÷ 854` เป็นอัตราเทียบ catalog เพิ่มเติม ส่วน `NO_SUITE` ไม่ใช่ผลทดสอบ
 
 ---
 
@@ -129,14 +131,14 @@ $$FDR = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evaluated\_bugs}}} \righ
 ### 📌 Slide 10: ผลการประเมินปัจจุบัน (Master Results)
 - ใช้ results/master_benchmark_summary.csv เป็นตารางหลัก หนึ่งแถวต่อบั๊กและเทคนิค
 
-| เทคนิค | Suite ที่ประเมิน | Coverage N | Line / Branch coverage | ตรวจพบ | FDR |
-|---|---:|---:|---:|---:|---:|
-| Native IPO | 257/257 | 252 | 26.76% / 18.67% | 37 | 14.40% |
-| MIO (EvoSuite) | 834/834 | 797 | 63.85% / 56.51% | 5 | 0.60% |
-| DeepSeek V4 Flash | 836/836 | 191 | 77.99% / 70.25% | 11 | 1.32% |
-| Gemini 3.8 Flash | 841/841 | 422 | 86.24% / 79.45% | 107 | 12.72% |
+| เทคนิค | มี suite / 854 | NO_SUITE | Coverage n | Line / Branch coverage | ตรวจพบ | FDR ต่อ suite |
+|---|---:|---:|---:|---:|---:|---:|
+| Native IPO | 257 | 597 | 252 | 26.76% / 18.67% | 37 | 14.40% |
+| MIO (EvoSuite) | 834 | 20 | 797 | 63.85% / 56.51% | 5 | 0.60% |
+| DeepSeek V4 Flash | 853 | 1 | 192 | 78.02% / 70.22% | 11 | 1.29% |
+| Gemini 3.8 Flash | 853 | 1 | 424 | 86.29% / 79.54% | 107 | 12.54% |
 
-*FDR ใช้ suite evaluations ทั้งหมดของเทคนิคนั้นเป็นตัวหาร รวม compile errors และ flaky/regression; coverage เฉลี่ยใช้เฉพาะผล DONE ที่มีค่าจริง*
+*ทุก suite ที่มีอยู่ถูกประเมินแล้ว (รวม 2,797 คู่); FDR ใช้จำนวน suite evaluations ของเทคนิคนั้นเป็นตัวหารและรวม compile errors กับ flaky/regression ส่วน coverage ใช้เฉพาะผลที่วัดได้*
 
 ---
 
@@ -148,9 +150,9 @@ $$FDR = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evaluated\_bugs}}} \righ
 
 | คู่เปรียบเทียบ | Matched N | p หลัง Holm | Rank-biserial |
 |---|---:|---:|---:|
-| Gemini – DeepSeek | 135 | 7.28×10⁻¹² | 0.830 |
-| MIO – Gemini | 397 | 1.09×10⁻³² | -0.758 |
-| MIO – DeepSeek | 182 | 0.0154 | -0.227 |
+| Gemini – DeepSeek | 136 | 4.92×10⁻¹² | 0.834 |
+| MIO – Gemini | 399 | 7.28×10⁻³³ | -0.759 |
+| MIO – DeepSeek | 183 | 0.0175 | -0.222 |
 | MIO – IPO | 245 | 1.64×10⁻³⁸ | 0.993 |
 | Gemini – IPO | 147 | 1.90×10⁻²⁴ | 1.000 |
 | DeepSeek – IPO | 69 | 4.92×10⁻¹² | 1.000 |
@@ -172,9 +174,9 @@ $$FDR = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evaluated\_bugs}}} \righ
 <!-- slide -->
 ### 📌 Slide 13: AI Generation Economics
 - แสดงค่าเฉลี่ย token และเวลา generation จากบันทึกจริงใน Deepseek_vs_Gemini_Economics.csv
-- Gemini: 1,068 generation records, เฉลี่ย 20,699.64 tokens และ 88.66 วินาที; benchmark ตรวจพบ 107 บั๊ก
-- DeepSeek: 1,069 generation records, เฉลี่ย 20,900.15 tokens และ 295.11 วินาที; benchmark ตรวจพบ 11 บั๊ก
-- ไม่คำนวณ token ต่อบั๊กที่ตรวจพบ เพราะ generation log ไม่มี run ID สำหรับจับคู่ผล benchmark
+- Gemini: 1,079 generation records, เฉลี่ย 20,855.06 tokens และ 89.78 วินาทีต่อ record
+- DeepSeek: 1,082 generation records, เฉลี่ย 21,045.26 tokens และ 295.54 วินาทีต่อ record
+- Generation logs ไม่มี run ID เชื่อมกับผล benchmark จึงรายงาน token/time แยกจาก detection และไม่คำนวณ token ต่อบั๊กที่ตรวจพบ
 - แหล่งข้อมูลสรุป: results/advanced_analytics.json
 
 ---
@@ -185,7 +187,7 @@ $$FDR = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evaluated\_bugs}}} \righ
 - ค่า coverage ใช้แถว DONE ที่มีค่าการวัดจริงเท่านั้น
 - ตารางนี้เป็นการแยกกลุ่มเพิ่มเติม; ตารางหลักรวม single-class และ multi-class bugs แล้ว
 - FDR แสดงจำนวน attempted และตัวหารของแต่ละกลุ่มแยกกัน
-- Gemini single-class: line coverage 87.01% (n=402), FDR 14.83% (106/715); multi-class: 70.61% (n=20), FDR 0.79% (1/126)
+- Gemini single-class: line coverage 87.07% (n=404), FDR 14.60% (106/726); multi-class: 70.61% (n=20), FDR 0.79% (1/127)
 - ผลแยกทุกเทคนิคอยู่ใน `single_vs_multiclass` ภายใน results/advanced_analytics.json
 
 ---
@@ -196,7 +198,8 @@ $$FDR = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evaluated\_bugs}}} \righ
 - ระบุข้อจำกัดของแต่ละเทคนิคและจำนวน suite ที่มีจริง
 - แยก generation budget และ AI token logs ออกจากผล benchmark
 - Gemini ให้ coverage เฉลี่ยสูงสุดและตรวจพบ 107 บั๊ก; Native IPO ให้ FDR สูงสุดที่ 14.40% จาก 257 suites
-- ควรพิจารณาควบคู่กับ compile errors: DeepSeek 645/836 และ Gemini 419/841; ผลนี้จึงไม่ชี้ผู้ชนะตัวเดียวสำหรับทุกเกณฑ์
+- ควรพิจารณาควบคู่กับ compile errors: DeepSeek 661/853 และ Gemini 429/853; Gemini มี coverage mean สูงสุด ส่วน Native IPO มี FDR ต่อ suite สูงสุดใน snapshot นี้
+- AI prompt inject known defect specification จาก Defects4J เมื่อมีข้อมูล; ผลจึงเป็นการสร้างแบบ defect-targeted ไม่ใช่ blind generation และไม่ควรขยายข้อสรุปเกินเงื่อนไขนี้
 
 ---
 
@@ -205,8 +208,9 @@ $$FDR = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{evaluated\_bugs}}} \righ
 #### รายการส่งมอบที่ Member 4 ตรวจแล้ว:
 * Master CSV ต้องมีหนึ่งแถวต่อ project, bug และ technique โดยไม่มี key ซ้ำ
 * Excel, JSON, report และกราฟต้องสร้างจาก master CSV snapshot เดียวกัน
-* Snapshot ปัจจุบันมี 3,416 แถว, 0 `NOT_RUN`, และ `results_complete: true`
-* มี 648 `NO_SUITE` ซึ่งแยกออกจากตัวหาร FDR และไม่ตีความเป็นการตรวจไม่พบบั๊ก
+* Snapshot มี 3,416 แถว; ไม่มี unresolved outcomes; ประเมิน suite ที่มีอยู่ครบ (`available_suite_evaluations_complete: true`)
+* มี 619 `NO_SUITE`; แยกออกจากผลไม่ตรวจพบบั๊กและตัวหาร FDR
+* ผลครบเฉพาะ suite ที่มีอยู่; การไม่มี suite สำหรับ 619 คู่ยังเป็นข้อจำกัดของการครอบคลุม dataset
 * ต้องซ้อมสาธิตกรณี BUG_DETECTED โดยมี log แสดงผล fail บน buggy และ pass บน fixed
 
 **ขอขอบคุณ ผศ.ดร.ชิตสุธา สุ่มเล็ก และทุกท่านครับ**  
