@@ -1,5 +1,5 @@
-# 🎬 คู่มือการสาธิตระบบสดต่อหน้าอาจารย์ (Live Demo & Reproduction Guide)
-## การจำลองและรันระบบทดสอบจริง (Step-by-Step Live Demonstration Script)
+# 🎬 คู่มือสาธิตระบบและหลักฐานผลรัน (Demo & Reproduction Guide)
+## ขั้นตอนสาธิตสดควบคู่กับผล benchmark ที่บันทึกไว้
 
 **วิชา:** CP353201 การประกันคุณภาพซอฟต์แวร์ (Software Quality Assurance)  
 **อาจารย์ประจำวิชา:** ผศ.ดร.ชิตสุธา สุ่มเล็ก  
@@ -9,13 +9,13 @@
 
 ## 📌 บทนำและลำดับการสาธิตสด (Demo Flow Overview)
 
-คู่มือนี้ใช้สาธิตผลของ IPO, MIO, DeepSeek และ Gemini จาก master CSV กับ structured run logs ที่ตรวจสอบย้อนกลับได้ แล้วอธิบายตัวอย่าง `BUG_DETECTED` ว่าล้มเหลวบน buggy และผ่านบน fixed อย่างไร โดยไม่รัน benchmark ทั้งคิวซ้ำบนเวที
+คู่มือนี้สาธิต suite และผลประเมินของ IPO, MIO, DeepSeek และ Gemini โดยเปิด master CSV, suite จริง และ structured run logs ที่ตรวจสอบย้อนกลับได้ พร้อมตรวจ environment สดบนเวที ขั้นตอนหลักเป็นการสาธิตหลักฐานจากผลรันจริงที่บันทึกไว้ ไม่ได้สร้าง suite ใหม่หรือรัน benchmark ทั้งคิวสด
 
 | ลำดับขั้นตอน | รายการสาธิต | เวลาที่ใช้ | เครื่องมือที่ใช้ |
 | :---: | :--- | :---: | :--- |
-| **Stage 1** | ตรวจสอบ Docker Container และ Defects4J Environment | 1 นาที | PowerShell / Docker |
-| **Stage 2** | ตรวจตัวอย่าง `BUG_DETECTED` จากทั้ง 4 เทคนิค | 2 นาที | Master CSV / Run logs |
-| **Stage 3** | แสดงการพิสูจน์สถานะ `BUG_DETECTED` บนเวอร์ชัน `b` และ `f` | 1 นาที | Defects4J CLI |
+| **Stage 1** | ตรวจ Docker Container และ Defects4J สด | 1 นาที | PowerShell / Docker |
+| **Stage 2** | เปิด suite และผลประเมินจากทั้ง 4 เทคนิค | 3 นาที | Master CSV / suite / run logs |
+| **Stage 3** | อธิบายผล buggy/fixed และนิยาม `BUG_DETECTED` | 1 นาที | Structured run logs |
 | **Stage 4** | แสดงกราฟและ workbook จาก snapshot ล่าสุด | 1 นาที | Results / Excel |
 | **Stage 5** | เปิดไฟล์ Excel รวม 8 ชีทและ Data Dictionary สรุปผล | 1 นาที | Excel / VS Code |
 
@@ -25,15 +25,18 @@
 
 ## 🚀 ขั้นที่ 1: ตรวจสอบความพร้อมของ Docker Container
 
-เปิด PowerShell บนเครื่อง แล้วสั่งตรวจสอบสถานะของ Container กลาง:
+ก่อนเริ่ม ต้องเปิด Docker Desktop และรอให้ Docker Engine พร้อม จากนั้นเปิด PowerShell ที่ root ของ repository แล้วตรวจสอบ:
 
 ```powershell
-# 1.1 ตรวจสอบว่า Container defects4j_sqa กำลังทำงานอยู่หรือไม่
+docker info
 docker ps --filter "name=defects4j_sqa"
 
-# หากยังไม่ได้เปิด Container ให้สั่งเปิดด้วยคำสั่ง:
-docker start defects4j_sqa
+# สร้างหรือเปิด service จาก compose หาก container ยังไม่ทำงาน
+docker compose -f docker/docker-compose.yml up -d
+docker ps --filter "name=defects4j_sqa"
 ```
+
+ถ้า `docker info` แจ้งว่าเชื่อม Docker Engine ไม่ได้ ให้เปิด Docker Desktop แล้วรอจนคำสั่งนี้ทำงานก่อนเริ่มนำเสนอ
 
 ทดสอบการเรียกใช้งาน Defects4J CLI ภายใน Container:
 ```powershell
@@ -43,32 +46,44 @@ docker exec defects4j_sqa defects4j info -p Math -b 2
 
 ---
 
-## 🚀 ขั้นที่ 2: ตรวจผลจากทั้งสี่เทคนิค
+## 🚀 ขั้นที่ 2: สาธิต suite และผลประเมินจากทั้งสี่เทคนิค
 
-ใช้ตัวอย่างที่มีสถานะ `BUG_DETECTED` ใน master และ structured log จริงของแต่ละเทคนิค:
+ตัวอย่างด้านล่างเลือกให้เห็นทั้งกรณีตรวจพบและกรณี coverage สูงแต่ไม่ตรวจพบ ใช้ master row, suite และ run log ที่เก็บจาก benchmark จริง:
 
-| เทคนิค | Bug | Suite | Line / branch coverage | Run ID | Buggy failures / fixed failures |
+| เทคนิค | Bug / สถานะ | Suite ที่เปิดให้ดู | Line / branch coverage | Run ID | Buggy failures / fixed failures |
 |---|---|---|---:|---|---:|
-| Native IPO | Chart-14 | `XYPlot_IPOTest.java` | 4.41% / 1.74% | `Chart-14-ipo-1790351771` | 48 / 0 |
-| MIO (EvoSuite) | Jsoup-14 | `TokeniserState_ESTest.java`; `Tokeniser_ESTest.java` | 0.00% / 0.00% | `Jsoup-14-mio-1790379300` | 31 / 0 |
-| DeepSeek V4 Flash | Closure-105 | `FoldConstantsDeepseekTest.java` | 26.49% / 25.44% | `Closure-105-deepseek-1790360926` | 2 / 0 |
-| Gemini 3.8 Flash | Chart-3 | `TimeSeriesGeminiTest.java` | 94.74% / 87.63% | `Chart-3-gemini-1790350744` | 2 / 0 |
+| Native IPO | Chart-14 / `BUG_DETECTED` | `Combinatorial_IPO/TestCode/Chart_14b/org/jfree/chart/plot/XYPlot_IPOTest.java` | 4.41% / 1.74% | `Chart-14-ipo-1790351771` | 48 / 0 |
+| MIO (EvoSuite) | Jsoup-45 / `NOT_DETECTED` | `MIO_Algorithm/TestCode/Jsoup_45b/HtmlTreeBuilder_ESTest.java` | 93.35% / 86.14% | `Jsoup-45-mio-1790380739` | 0 / 0 |
+| DeepSeek V4 Flash | Closure-105 / `BUG_DETECTED` | `Deepseek-v4_flash/TestCode/Closure_105b/FoldConstantsDeepseekTest.java` | 26.49% / 25.44% | `Closure-105-deepseek-1790360926` | 2 / 0 |
+| Gemini 3.8 Flash | Chart-3 / `BUG_DETECTED` | `Gemini-3_8_flash/TestCode/Chart_3b/TimeSeriesGeminiTest.java` | 94.74% / 87.63% | `Chart-3-gemini-1790350744` | 2 / 0 |
+
+ตัวอย่าง MIO ช่วยอธิบายว่า coverage สูงไม่ได้รับประกันว่าจะตรวจพบ fault เสมอ หากอาจารย์ถามถึง MIO ที่ตรวจพบจริง ให้เปิด `Jsoup-14` เพิ่มเติม: log บันทึก 31 failures บน buggy, 0 บน fixed แต่ coverage เป็น 0.00% ทั้ง line และ branch จึงต้องแสดงค่านั้นตามจริงและไม่ใช้เป็นตัวอย่าง coverage
 
 อ่าน log ทั้งสี่รายการจากโฟลเดอร์ repository:
 
 ```powershell
-$logPaths = @(
-  'results/run_logs/Chart-14-ipo-1790351771.json',
-  'results/run_logs/Jsoup-14-mio-1790379300.json',
-  'results/run_logs/Closure-105-deepseek-1790360926.json',
-  'results/run_logs/Chart-3-gemini-1790350744.json'
+$cases = @(
+  @{ Project='Chart'; Bug_ID='14'; Technique='IPO (Native IPO)'; Run_ID='Chart-14-ipo-1790351771'; Log='results/run_logs/Chart-14-ipo-1790351771.json' },
+  @{ Project='Jsoup'; Bug_ID='45'; Technique='MIO (EvoSuite SBST)'; Run_ID='Jsoup-45-mio-1790380739'; Log='results/run_logs/Jsoup-45-mio-1790380739.json' },
+  @{ Project='Closure'; Bug_ID='105'; Technique='DeepSeek V4 Flash'; Run_ID='Closure-105-deepseek-1790360926'; Log='results/run_logs/Closure-105-deepseek-1790360926.json' },
+  @{ Project='Chart'; Bug_ID='3'; Technique='Gemini 3.8 Flash'; Run_ID='Chart-3-gemini-1790350744'; Log='results/run_logs/Chart-3-gemini-1790350744.json' }
 )
-$logRows = foreach ($path in $logPaths) {
-  $log = Get-Content -Raw $path | ConvertFrom-Json
+$master = Import-Csv results/master_benchmark_summary.csv
+$logRows = foreach ($case in $cases) {
+  $rows = @($master | Where-Object { $_.Project -eq $case.Project -and $_.Bug_ID -eq $case.Bug_ID -and $_.Technique -eq $case.Technique })
+  if ($rows.Count -ne 1) { throw "Expected one master row for $($case.Project)-$($case.Bug_ID)-$($case.Technique)" }
+  $row = $rows[0]
+  $log = Get-Content -Raw $case.Log | ConvertFrom-Json
+  if ($row.Run_ID -ne $case.Run_ID -or $log.run_id -ne $case.Run_ID -or $row.Suite_SHA256 -ne $log.suite_sha256 -or $row.Fault_Detection_Status -ne $log.fault_detection_status) {
+    throw "Run ID or suite hash mismatch for $($case.Project)-$($case.Bug_ID)-$($case.Technique)"
+  }
   [pscustomobject]@{
-    Bug = "$($log.project)-$($log.bug_id)"
+    Bug = "$($row.Project)-$($row.Bug_ID)"
     Technique = $log.technique
-    Status = $log.fault_detection_status
+    MasterStatus = $row.Fault_Detection_Status
+    LogStatus = $log.fault_detection_status
+    LineCoverage = $log.line_coverage_percent
+    BranchCoverage = $log.branch_coverage_percent
     BuggyFailures = $log.buggy_failures.Count
     FixedFailures = $log.fixed_failures.Count
     RunId = $log.run_id
@@ -78,7 +93,7 @@ $logRows = foreach ($path in $logPaths) {
 $logRows | Format-Table -AutoSize
 ```
 
-ตัวอย่าง MIO / Jsoup-14 มี coverage ที่บันทึกเป็น 0.00% แต่ runner ยังยืนยัน `BUG_DETECTED` จาก failure บน buggy และไม่มี failure บน fixed; ให้นำเสนอทั้งสองค่าตาม log และไม่อนุมานสาเหตุจาก coverage เพียงอย่างเดียว.
+สคริปต์ด้านบนตรวจว่ามี master row เดียว และ Run ID/hash ใน master ตรงกับ log สำหรับตัวอย่างทั้งสี่
 
 ---
 
@@ -86,7 +101,7 @@ $logRows | Format-Table -AutoSize
 
 BUG_DETECTED นับได้เมื่อชุดทดสอบ fail บน buggy และ pass บน fixed เท่านั้น เปิดผลดิบรายบั๊กใน results/run_logs และผลรวมใน master CSV เพื่อไล่กลับจากตัวเลขไปยังหลักฐาน
 
-หากจะรัน Defects4J สด ให้เลือกหนึ่ง suite ที่ทดสอบไว้ล่วงหน้าและใช้ buggy/fixed checkout ของ bug เดียวกันเท่านั้น; อย่ารันคิว 854 บั๊กระหว่างการนำเสนอ. ตัวอย่างหลักใน stage นี้คือ Chart-3 / Gemini ซึ่งมี `buggy_failures` 2 รายการและ `fixed_failures` ว่างใน log
+ขั้นนี้เปิด run log จริงให้เห็นผลแยก buggy/fixed และชี้ให้เห็นว่า classifier ใช้เกณฑ์ใด `BUG_DETECTED` ต้องมี failure บน buggy และไม่มี failure บน fixed; ตัว classifier เปรียบเทียบสองเวอร์ชัน แต่ไม่ได้พิสูจน์ semantic root cause โดยอัตโนมัติ
 
 ---
 
@@ -94,7 +109,9 @@ BUG_DETECTED นับได้เมื่อชุดทดสอบ fail บ�
 
 ระหว่างนำเสนอให้เปิดกราฟและ workbook ที่สร้างจาก snapshot เดียวกัน ไม่ต้องสร้างไฟล์ใหม่สด ๆ เว้นแต่มีการเปลี่ยนผล benchmark; ถ้าต้องทำซ้ำหลังการนำเสนอ ใช้คำสั่งนี้:
 
+    .\.venv\Scripts\python.exe scripts/reclassify_fault_detection.py --apply
     .\.venv\Scripts\python.exe scripts/consolidate_master_results.py
+    .\.venv\Scripts\python.exe scripts/audit_suite_gaps.py
     .\.venv\Scripts\python.exe scripts/advanced_data_analytics.py
     .\.venv\Scripts\python.exe scripts/plot_results.py
 
@@ -104,7 +121,7 @@ BUG_DETECTED นับได้เมื่อชุดทดสอบ fail บ�
 
 ## 🚀 ขั้นที่ 5: ตรวจไฟล์ส่งมอบ
 
-- กราฟ: figure1 ถึง figure6 ใน results/
+- กราฟ: `figure1_coverage_comparison.png` ถึง `figure6_ensemble_overlap.png` ใน `results/`
 - Excel: results/Master_Benchmark_Results.xlsx มี Summary, Master evaluations, MIO generation budget, Hypothesis tests, AI generation logs, Ensemble, Single vs multiclass และ Data dictionary
 - Data dictionary และรายงาน snapshot: results/DATA_DICTIONARY.md และ results/advanced_analytics_report.md
 - README, DOCX/PDF report, PRESENTATION_SLIDES และ DEMO_GUIDE ต้องตรงกับ snapshot: 3,416 แถว, 2,797 suite evaluations, 619 `NO_SUITE`, unresolved outcomes 0
@@ -112,5 +129,7 @@ BUG_DETECTED นับได้เมื่อชุดทดสอบ fail บ�
 - workbook ปัจจุบันมี 8 sheets; เปิด Summary และ Data dictionary ประกอบการอธิบาย
 
 หากผลประเมินยังไม่ครบ ให้รายงานจำนวน suite, จำนวน attempted, จำนวน DONE, จำนวน BUG_DETECTED และจำนวน NO_SUITE แยกกัน ห้ามนำผลเก่ามาแทนค่าที่หายไป
+
+**ขอบเขตของเดโม:** flow นี้สาธิต environment สดและ suite/log จริงที่ได้จากการรัน benchmark แล้ว ไม่ได้สร้าง suite ใหม่ต่อหน้า หากต้องการสาธิตการสร้าง IPO, MIO หรือเรียก AI API สด ต้องซ้อมแยก ตรวจ quota/dependencies และกำหนดเวลาสำรองก่อนวันนำเสนอ
 
 ---
