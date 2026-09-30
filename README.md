@@ -195,6 +195,8 @@ python -m venv .venv
 ## 📑 เอกสารส่งมอบและผลการวิเคราะห์ระดับพรีเมียม (Final Deliverables)
 
 * 📄 **[รายงานโครงการ (Final Report)](Final_Report.md)**: บทวิธีวิจัยและผลจาก benchmark รอบที่ประเมินครบแล้ว
+* 📄 **[รายงานฉบับสมบูรณ์ (DOCX)](SQA_Final_Report.docx)**: ไฟล์ Word สำหรับอ่านและแก้ไข
+* 📕 **[รายงานฉบับสมบูรณ์ (PDF)](SQA_Final_Report.pdf)**: ไฟล์ PDF สำหรับอ่านและส่ง
 * 🎯 **[สไลด์นำเสนอ (Presentation Deck)](PRESENTATION_SLIDES.md)**: โครงสไลด์พร้อมแหล่งตัวเลขที่ต้องตรวจจาก snapshot ล่าสุด
 * 🎬 **[คู่มือสาธิตและทำซ้ำ (Live Demo & Reproduction Guide)](DEMO_GUIDE.md)**: ขั้นตอนสาธิต Docker และตรวจหลักฐาน run log
 * 📊 **[สมุดงาน Excel (Master Benchmark Workbook)](results/Master_Benchmark_Results.xlsx)**: สรุปและข้อมูลดิบ พร้อมชีท coverage, FDR, MIO budget, AI generation, ensemble และ data dictionary
