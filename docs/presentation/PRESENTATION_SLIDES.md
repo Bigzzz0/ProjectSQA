@@ -1,6 +1,6 @@
 # สไลด์นำเสนอภายใน 10 นาที
 
-ไฟล์นำเสนอ: [SQA_Presentation_10min.pptx](SQA_Presentation_10min.pptx) — เปิดใน PowerPoint เพื่อใช้กราฟและตารางที่แก้ไขได้ พร้อมบทพูดและเวลารายหน้าใน speaker notes
+สไลด์นำเสนอ: [SQA Research Keynote (Canva)](https://canva.link/43hoh5a4r15c15e) หรือ [SQA Research Keynote (PDF)](SQA%20Research%20Keynote.pdf) — เอกสารนี้เป็นบทพูด ลำดับการนำเสนอ และเวลารายหน้าสำหรับทีม
 
 **หัวข้อ:** การเปรียบเทียบ Native IPO, MIO, DeepSeek และ Gemini บน Defects4J<br>
 **วิชา:** CP353201 Software Quality Assurance · ภาคการศึกษา 1/2569<br>
