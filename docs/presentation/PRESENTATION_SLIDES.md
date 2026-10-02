@@ -1,219 +1,334 @@
-# 🎯 สไลด์นำเสนอผลงานฉบับสมบูรณ์ (Project Presentation Deck)
-## AI-Assisted Testing vs. Automatic Test Case Generation Algorithms: A Benchmark on Defects4J
-**วิชา:** CP353201 Software Quality Assurance (KKU CS)  
-**อาจารย์ประจำวิชา:** ผศ.ดร.ชิตสุธา สุ่มเล็ก  
-**ทีมผู้จัดทำ:** กลุ่มที่ 4 (ปวริศช์, แทนคุณ, ธนภูมิ, ศิฆรินทร์)  
+# สไลด์นำเสนอภายใน 10 นาที
 
-> **Snapshot ผลประเมิน (26 กันยายน 2026)** — master มี 3,416 แถวจาก 854 บั๊ก × 4 เทคนิค; ประเมิน suite ที่มีอยู่ครบ 2,797 คู่ และ 619 คู่เป็น `NO_SUITE`. ไม่มีผลค้างที่ยังไม่สรุป (`unresolved_rows: 0`). `results_complete` หมายถึงประเมิน suite ที่มีอยู่ครบ ไม่ได้หมายความว่ามี suite ครบทุกคู่บั๊ก–เทคนิค.
+ไฟล์นำเสนอ: [SQA_Presentation_10min.pptx](SQA_Presentation_10min.pptx) — เปิดใน PowerPoint เพื่อใช้กราฟและตารางที่แก้ไขได้ พร้อมบทพูดและเวลารายหน้าใน speaker notes
 
----
+**หัวข้อ:** การเปรียบเทียบ Native IPO, MIO, DeepSeek และ Gemini บน Defects4J<br>
+**วิชา:** CP353201 Software Quality Assurance · ภาคการศึกษา 1/2569<br>
+**อาจารย์:** ผศ.ดร.ชิตสุธา สุ่มเล็ก
 
-<!-- slide -->
-### 📌 Slide 1: หน้าปกโครงงาน (Title Slide)
-# การเปรียบเทียบเชิงประจักษ์ระหว่าง AI Testing และ Algorithmic Test Generation บน Defects4J
-### Empirical Benchmark & Test Coverage Evaluation Across 17 Projects (854 bugs)
+ต้นฉบับเนื้อหาสไลด์และบทพูดสำหรับทีม: **10 หน้าหลัก ใช้เวลา 9:30 นาที รวมเดโมทั้งสี่เทคนิค** และสำรอง 0:30 นาทีสำหรับการสลับหน้าจอหรือความล่าช้า ข้อมูลอ้างอิง snapshot 26 กันยายน 2026; การถามตอบยาวกว่านี้ต้องใช้เวลาที่อาจารย์จัดเพิ่ม
 
-* **สมาชิกในกลุ่ม:**
-  1. นายปวริศช์ ประมวล (673380278-9) — Member 1: IPO Lead
-  2. นายแทนคุณ พันธ์นิกุล (673380301-0) — Member 2: MIO Lead
-  3. นายธนภูมิ จันทรา (673380272-1) — Member 3: AI Lead
-  4. นายศิฆรินทร์ อุปจันทร์ (673380292-5) — Member 4: Infra & Data Analysis Lead
+## ลำดับเวลาและผู้พูด
 
-> **🗣️ Speaker Note (ผู้บรรยาย):**  
-> "กราบเรียน ผศ.ดร.ชิตสุธา สุ่มเล็ก และสวัสดีเพื่อนๆ ทุกคนครับ วันนี้กลุ่มของพวกเราจะขอนำเสนอผลการวิจัยเชิงประจักษ์ขนาดใหญ่ ในการเปรียบเทียบระหว่างขั้นตอนวิธีสร้างเทสอัตโนมัติแบบดั้งเดิม (IPO และ MIO) กับโมเดลปัญญาประดิษฐ์ LLM ยุคใหม่ (DeepSeek และ Gemini) บนคลังข้อบกพร่องจริง Defects4J ครับ"
+| หน้า | หัวข้อ | เวลา | เวลาสะสม | ผู้พูดแนะนำ |
+|---|---|---:|---|---|
+| 1 | ชื่อโครงการและทีม | 0:20 | 0:00–0:20 | Member 1 |
+| 2 | เป้าหมายและขอบเขตจริง | 0:40 | 0:20–1:00 | Member 1 |
+| 3 | การสร้าง suite ด้วย IPO และ MIO | 1:00 | 1:00–2:00 | Member 1 / 2 คนละ 0:30 |
+| 4 | Prompt สำหรับ DeepSeek และ Gemini | 0:50 | 2:00–2:50 | Member 3 |
+| 5 | วิธีประเมินกลางและตัวหาร | 0:50 | 2:50–3:40 | Member 4 |
+| 6 | ผล coverage | 0:50 | 3:40–4:30 | Member 3 |
+| 7 | ผล fault detection และ compile error | 1:00 | 4:30–5:30 | Member 4 |
+| 8 | ต้นทุนการสร้างและข้อจำกัด | 0:50 | 5:30–6:20 | Member 2 |
+| 9 | เดโมจริงทั้งสี่เทคนิค | 2:30 | 6:20–8:50 | Member 4 ควบคุมเครื่อง; เจ้าของเทคนิคช่วยอธิบาย |
+| 10 | บทเรียนและการทำซ้ำ | 0:40 | 8:50–9:30 | Member 4 |
+| — | เวลาสำรอง | 0:30 | 9:30–10:00 | ทั้งทีม |
 
----
-
-<!-- slide -->
-### 📌 Slide 2: ที่มาและความสำคัญ (Motivation & Research Questions)
-#### ปัญหาและความท้าทายในวงการ Software Testing
-* **การสร้าง test อัตโนมัติ:** IPO สร้างชุดทดสอบจาก input factors ส่วน MIO ค้นหาชุดทดสอบตาม coverage objectives ทั้งสองวิธีต้องอาศัย target และ oracle ที่เหมาะสม
-* **การสร้างด้วย Generative AI:** โมเดลสร้าง test และ assertions จาก prompt; ผลทดลองชุดนี้พบทั้ง compile errors และ flaky/regression
-
-#### 5 คำถามวิจัยหลัก (Research Questions):
-1. **RQ1 (Coverage):** เทคนิคใดบรรลุความครอบคลุมรหัสคำสั่งสูงที่สุด?
-2. **RQ2 (FDR):** เทคนิคใดตรวจจับข้อบกพร่องจริงได้แม่นยำที่สุดภายใต้กฎความซื่อตรงของตัวหาร?
-3. **RQ3 (Ensemble):** เมื่อนับผลตรวจจับแบบ union เทคนิคต่าง ๆ ตรวจพบบั๊กซ้ำกันและเพิ่มการตรวจพบเฉพาะได้เท่าใด?
-4. **RQ4 (MIO Budget):** coverage และเวลา generation เปลี่ยนอย่างไรเมื่อเพิ่ม budget และผลนี้มีข้อจำกัดใด?
-5. **RQ5 (AI Generation):** token usage และเวลา generation ต่อ generation record แตกต่างกันระหว่างโมเดลอย่างไร?
+**แนวทางจัดหน้า:** อัตราส่วน 16:9 พื้นสว่าง ตัวอักษรสีเข้ม ใช้สีเดียวกันแทนแต่ละเทคนิคทุกหน้า ไม่มีอิโมจิ หัวข้อประมาณ 32 pt ขึ้นไป เนื้อหา 22–26 pt และข้อความอ้างอิงอย่างน้อย 17 pt หนึ่งหน้ามีประเด็นหลักเดียว กราฟใช้พื้นที่ส่วนใหญ่ของหน้า คำบรรยายอยู่ใต้กราฟ เนื้อหาในช่อง “บทพูด” และภาคผนวกใช้ประกอบการซ้อม ไม่ใส่ทั้งหมดบนหน้าจอ
 
 ---
 
 <!-- slide -->
-### 📌 Slide 3: ขอบเขตและสถาปัตยกรรมคลังข้อมูล (Scope & Master Catalog)
-#### Catalog ครอบคลุม 854 บั๊ก; ผลประเมินครอบคลุม suite ที่มีอยู่
-* **17 โปรเจกต์:** Chart, Cli, Closure, Codec, Collections, Compress, Csv, Gson, JacksonCore, JacksonDatabind, JacksonXml, Jsoup, JxPath, Lang, Math, Mockito และ Time
-* **854 active bugs** ใน Defects4J 3.0.1-7-g8c16da82; master มี **3,416 bug–technique rows** (854 × 4)
-* ประเมิน suite ที่มีอยู่ครบ **2,797 คู่**; **619 คู่ `NO_SUITE`**; unresolved outcomes **0**
-* ตัวเลข `available_suite_evaluations_complete: true` หมายถึงไม่มี suite ที่มีอยู่ค้างประเมิน; ไม่ได้หมายถึงมี suite ครบทั้ง 3,416 คู่
-* Coverage รวม covered/total จาก aggregate summary ของ modified target classes ใน `classes.modified`
+## หน้า 1 — การสร้างชุดทดสอบอัตโนมัติบน Defects4J
+
+**Native IPO · MIO / EvoSuite · DeepSeek V4 Flash · Gemini 3.8 Flash**
+
+CP353201 Software Quality Assurance · มหาวิทยาลัยขอนแก่น
+
+| ผู้จัดทำ | รหัสนักศึกษา |
+|---|---|
+| นายปวริศช์ ประมวล | 673380278-9 |
+| นายแทนคุณ พันธ์นิกุล | 673380301-0 |
+| นายธนภูมิ จันทรา | 673380272-1 |
+| นายศิฆรินทร์ อุปจันทร์ | 673380292-5 |
+
+<details><summary>บทพูด — 20 วินาที</summary>
+
+สวัสดีครับ โครงการนี้เปรียบเทียบการสร้างชุดทดสอบด้วยอัลกอริทึมสองวิธีและ AI สองเครื่องมือบน Java Defects4J เราจะอธิบายวิธีสร้าง ผล coverage และการตรวจพบบั๊ก แล้วสาธิตการประเมินจริงครบทั้งสี่เทคนิคครับ
+
+</details>
 
 ---
 
 <!-- slide -->
-### 📌 Slide 4: เทคนิคที่ 1 — Combinatorial Testing & IPO (Member 1)
-#### In-Parameter-Order (IPO/IPOG) และแหล่ง suite ปัจจุบัน
-- IPO Native สร้าง pairwise combinations จาก factor/value model ของคลาสเป้าหมาย
-- ผลที่ใช้ประเมินต้องอยู่ใน verified_suites_manifest.json และ hash ต้องตรง
-- verified manifest มี 277 suite records ระดับคลาส ครอบคลุม 257 bug IDs
-- IPO inventory มี 1,070 class records ขณะที่ master catalog มี 1,073 modified-class entries; ส่วนต่าง 3 รายการยังไม่ reconcile จึงไม่อ้างว่า IPO audit ครอบคลุมทุก class entry
-- มี suite ประเมินได้ 257/854 คู่; 252 วัด coverage ได้, compile error 5, `NO_SUITE` 597
-- ตรวจพบ 37 บั๊ก (FDR 14.40% ของ 257 คู่ที่ประเมิน); `FLAKY_OR_REGRESSION` 18 และ `NOT_DETECTED` 197
-- Line/branch coverage เฉลี่ย 26.76%/18.67% (n=252); `NO_SUITE` แบ่งเป็น generation/verification error 37 และ skipped/not ready 560 คู่
+## หน้า 2 — เป้าหมายและขอบเขตที่ประเมินได้
+
+- เปรียบเทียบ **coverage, fault detection และต้นทุนการสร้าง suite**
+- แค็ตตาล็อก **854 บั๊ก / 17 โครงการ** → 3,416 คู่บั๊ก–เทคนิค
+- มี suite ที่ประเมินแล้ว **2,797 คู่**; ไม่มี suite **619 คู่ (`NO_SUITE`)**
+- ครบการประเมิน suite ที่มีอยู่; ยังมีช่องที่ไม่มี suite ให้รัน
+
+แหล่งข้อมูล: [สถิติรวม](../../results/master_descriptive_stats.json)
+
+<details><summary>บทพูด — 40 วินาที</summary>
+
+โจทย์กำหนดให้ทดสอบกับ Defects4J ทุกรายการ เราจึงทำบัญชีครบ 854 บั๊กใน 17 โครงการสำหรับทั้งสี่เทคนิค รวม 3,416 ช่อง แต่สร้างหรือรับรอง suite ได้ไม่ครบทุกช่อง มีผลประเมิน 2,797 ช่อง และอีก 619 ช่องไม่มี suite เราระบุส่วนที่ขาดไว้ชัดเจน ผลต่อไปจึงอ้างถึง suite ที่มีหลักฐาน ไม่กล่าวว่ารันทดสอบสำเร็จครบทั้ง 3,416 ช่องครับ
+
+</details>
 
 ---
 
 <!-- slide -->
-### 📌 Slide 5: เทคนิคที่ 2 — Search-Based Testing & MIO (Member 2)
-#### Many-Independent-Objective (MIO) Algorithm ใน EvoSuite
-- EvoSuite สร้าง regression suites ด้วย search budget ที่กำหนด
-- สถิติ generation แยกจาก coverage และ FDR ใน benchmark กลาง
-- มี suite ประเมินได้ 834/854 คู่; `NO_SUITE` 20 คู่จาก generation failure
-- 797 วัด coverage ได้; ตรวจพบ 5 บั๊ก (FDR 0.60% ของ 834 คู่ที่ประเมิน)
-- Line/branch coverage เฉลี่ย 63.85%/56.51% (n=797); มี `FLAKY_OR_REGRESSION` 291 และ compile error 37
+## หน้า 3 — การสร้าง suite ด้วยอัลกอริทึม
+
+| Native IPO — Member 1 | MIO / EvoSuite — Member 2 |
+|---|---|
+| วิเคราะห์ API → สร้าง factor และค่าของ input | กำหนดคลาสเป้าหมายและ coverage objectives |
+| สร้าง combinations ให้ครอบคลุมทุกคู่ค่า (strength 2) | ค้นหาและปรับชุดทดสอบเพื่อครอบคลุมเป้าหมาย |
+| สร้าง JUnit 4 และตรวจบน fixed version | ทดลอง budget 30 / 60 / 120 วินาที; seeds 101 / 102 / 103 |
+| ส่งเฉพาะรายการที่ verified manifest และ hash ตรง | ส่ง test พร้อม scaffolding ที่จำเป็นให้ตัวรันกลาง |
+
+**ผลส่งเข้า benchmark:** IPO 257 บั๊ก; MIO 834 บั๊ก
+
+แหล่งข้อมูล: [Native IPO](../../Combinatorial_IPO/) · [MIO](../../MIO_Algorithm/)
+
+<details><summary>บทพูด — 60 วินาที; แบ่งคนละ 30 วินาที</summary>
+
+**Member 1:** IPO ลดจำนวนชุดค่าทดสอบด้วยการทำให้แต่ละคู่ค่าปรากฏอย่างน้อยหนึ่งครั้ง เราต้องสร้างโมเดล input และวิธีตรวจผลก่อน จึงสร้าง JUnit แล้วตรวจบน fixed version ตัวรันกลางรับเฉพาะ suite ที่ manifest ยืนยันและ hash ตรง ครอบคลุม 257 บั๊ก การครบคู่ค่าไม่ได้รับประกันว่าจะตรวจพบบั๊กทุกชนิด
+
+**Member 2:** MIO ใน EvoSuite ใช้การค้นหาชุดทดสอบตามเป้าหมาย coverage เราทดลองสาม budgets และสาม seeds และส่ง scaffolding ที่ suite ต้องใช้ด้วย มี suite เข้า benchmark 834 บั๊ก ผล budget เป็นผลระหว่างการสร้าง ส่วน coverage และ FDR ที่นำมาเทียบสี่เทคนิคมาจากตัวรันกลางครับ
+
+</details>
 
 ---
 
 <!-- slide -->
-### 📌 Slide 6: MIO Search Budget
-#### แหล่งข้อมูล generation budget แยกจาก benchmark evaluation
-- ใช้ MIO_Algorithm/Result_Round2/evosuite_budget_summary.csv เป็น source ของสถิติ budget, seed และเวลา generation
-- สร้างตารางทดสอบและกราฟใหม่ด้วย advanced_data_analytics.py
-- coverage เฉลี่ยตาม budget 30/60/120 วินาที: 65.73%/68.73%/70.82%; เวลา generation เฉลี่ย 68.29/90.62/194.41 วินาที
-- Wilcoxon แบบจับคู่: 30→60 วินาที n=1,006, p หลัง Holm=3.39×10⁻⁸⁴; 60→120 วินาที n=981, p หลัง Holm=1.54×10⁻⁶⁷
-- EvoSuite ใช้ criterion `LINE:BRANCH` ซึ่งให้ coverage ค่าเดียวใน budget summary ไม่ใช่ line/branch แยก
-- จำนวน records และ cohort ต่างกันตาม budget; เป็นผล generation เชิงพรรณนา ไม่ใช่ FDR และยังสรุปค่า budget ที่ดีที่สุดทั่วไปไม่ได้
-- ดูผลที่สร้างล่าสุดใน results/advanced_analytics.json และ results/figure5_budget_scaling.png
+## หน้า 4 — Prompt สำหรับ DeepSeek และ Gemini
+
+**Source code + target class + defect context เมื่อมีข้อมูล → AI → JUnit 4 suite**
+
+ข้อกำหนดหลักใน prompt:
+
+- Java 8 / JUnit 4; package และชื่อคลาสถูกต้อง
+- Assertions ตรวจค่าหรือสถานะจริง; ครอบคลุม boundary และ exception
+- `@Test(timeout = 4000)`; ไม่ใช้ JUnit 5 หรือ mocking libraries
+- เก็บ prompt, suite, token และเวลา generation เพื่อย้อนตรวจได้
+
+**ข้อจำกัด:** บาง prompt ใช้ข้อมูล defect จึงเป็นการสร้าง test แบบรู้บริบทบั๊ก
+
+หลักฐาน: [DeepSeek / Closure-105](../../Deepseek-v4_flash/Prompt/Closure_105b/actual_prompt_FoldConstants.md) · [Gemini / Chart-3](../../Gemini-3_8_flash/Prompt/Chart_3b/actual_prompt_TimeSeries.md)
+
+<details><summary>บทพูด — 50 วินาที</summary>
+
+AI สองเครื่องมือรับ source code และข้อกำหนดการสร้าง test ผ่าน KKU IntelSphere เราระบุ JUnit 4, package, assertion, boundary และ timeout ชัดเจน และเก็บ prompt จริงกับ suite ที่ได้ไว้ ยกตัวอย่าง prompt ของ Closure-105 ที่ลิงก์นี้ ข้อกำหนดใน prompt ไม่รับประกันว่า output จะคอมไพล์ผ่าน จึงต้องประเมินจริง อีกข้อจำกัดคือบางกรณีให้บริบท defect แก่โมเดล ผลนี้จึงไม่ใช่การค้นหาบั๊กแบบไม่รู้ข้อมูลล่วงหน้าทั้งหมดครับ
+
+</details>
 
 ---
 
 <!-- slide -->
-### 📌 Slide 7: เทคนิคที่ 3 & 4 — สถาปัตยกรรม Dual-AI Testing (Member 3)
-#### DeepSeek V4 Flash vs. Gemini 3.8 Flash ผ่าน KKU IntelSphere
-* **System Prompt Architecture พร้อม 5 Guardrails:**
-  1. `JUnit 4 Strict Compliance` (ห้าม JUnit 5 เด็ดขาด)
-  2. `Execution Timeout Guard` (`@Test(timeout = 4000)`)
-  3. `No External Dependencies` (ห้าม Mockito/AssertJ)
-  4. `Defect Context` (inject known defect specification จาก Defects4J เมื่อมีข้อมูล เพื่อสร้าง test แบบ defect-targeted)
-  5. `Boundary Value Analysis (BVA)` (ทดสอบขอบเขต Null, Overflow, Empty)
+## หน้า 5 — วิธีประเมินเดียวกันทั้งสี่เทคนิค
+
+**Suite + hash → Docker / Defects4J → buggy และ fixed → coverage + สถานะ + log**
+
+- `BUG_DETECTED`: test fail บน buggy และ suite ผ่านบน fixed
+- FDR = จำนวนบั๊กที่ตรวจพบ ÷ จำนวนคู่ที่มี suite และถูกประเมิน
+- Coverage: modified target classes; รวม covered ÷ total ทุกคลาสก่อนหาค่าเฉลี่ยรายเทคนิค
+- Compile error และค่าที่วัดไม่ได้ไม่แทนด้วย coverage 0; `NO_SUITE` แยกไว้
+
+แหล่งข้อมูล: [ตัวรันกลาง](../../scripts/run_benchmark.py) · [นิยามข้อมูล](../../results/DATA_DICTIONARY.md)
+
+<details><summary>บทพูด — 50 วินาที</summary>
+
+เราใช้ suite เดียวกันกับ buggy และ fixed version แล้วนับว่าตรวจพบเมื่อ buggy fail แต่ fixed ผ่าน นับหนึ่งบั๊กต่อเทคนิคแม้มีหลาย target classes ตัวหาร FDR รวม compile error และผลที่ fixed ไม่ผ่านด้วย ส่วน coverage ใช้เฉพาะค่าที่วัดได้และรวม covered กับ total ของ modified classes ก่อน ไม่เปลี่ยน compile error เป็นศูนย์ แต่ละผลมี suite hash และ run ID ให้ย้อนกลับไปดู log ได้ครับ
+
+</details>
 
 ---
 
 <!-- slide -->
-### 📌 Slide 8: สถาปัตยกรรมระบบทดสอบกลาง Docker (Member 4)
-#### Universal Benchmark Pipeline & Dockerized Defects4J Environment
-* **Docker Container (`defects4j_sqa`):** Defects4J 3.0.1-7-g8c16da82; Java 11 เป็นค่าเริ่มต้น และติดตั้ง Java 8 สำหรับขั้นตอน MIO ที่กำหนด
-* **การ build:** Dockerfile สร้างจาก Ubuntu 20.04 และตรึง commit ของ Defects4J/PICT ไว้ใน repository; build ครั้งแรกดาวน์โหลด catalog ของ Defects4J และใช้พื้นที่กับเวลามาก
-* **กลไกการวัดผล:**
-  - Automated Cobertura Coverage Instrumenter
-  - Auto-discovery Test Loader (รองรับทั้ง Single-Class และ Multi-Class Folders)
-  - Incremental Resume via `progress.json` ป้องกันการสูญหายของข้อมูล
+## หน้า 6 — ผล coverage ของ suite ที่วัดได้
+
+![Line และ branch coverage ของสี่เทคนิค](../../results/figure1_coverage_comparison.png)
+
+<p align="center">ค่าเฉลี่ย coverage; n = IPO 252, MIO 797, DeepSeek 192, Gemini 424</p>
+
+**Gemini มีค่าเฉลี่ยสูงสุดในกลุ่มที่วัดได้: line 86.29% / branch 79.54%**
+
+จำนวนและกลุ่มบั๊กที่วัดได้ต่างกันระหว่างเทคนิค จึงต้องอ่านร่วมกับ compile error
+
+<details><summary>บทพูด — 50 วินาที</summary>
+
+กราฟนี้แสดงค่าเฉลี่ย line และ branch coverage เฉพาะผลที่มีการวัดจริง Gemini สูงสุดที่ประมาณ 86 และ 80 เปอร์เซ็นต์ ตามด้วย DeepSeek, MIO และ IPO แต่ฐานข้อมูลแต่ละแท่งต่างกัน เช่น DeepSeek วัดได้ 192 บั๊ก ขณะที่ MIO วัดได้ 797 บั๊ก จึงไม่ควรสรุปจากความสูงของแท่งอย่างเดียว และ coverage สูงยังไม่ได้แปลว่า assertion จะตรวจพบบั๊กเสมอไป เดโมจะมีตัวอย่างนี้ครับ
+
+</details>
 
 ---
 
 <!-- slide -->
-### 📌 Slide 9: ระเบียบวิธีคำนวณ FDR และกฎ 5 สถานะ (Member 4)
-#### Bug–Technique FDR และตัวหารที่ใช้
-$$FDR_{\text{evaluated}} = \left( \frac{N_{\text{BUG\_DETECTED}}}{N_{\text{suite evaluations}}} \right) \times 100\%$$
+## หน้า 7 — การตรวจพบบั๊กและความสำเร็จในการคอมไพล์
 
-| สถานะการประเมิน | เงื่อนไขการจำแนก | นับเป็น Bug Detected? |
-| :--- | :--- | :---: |
-| **`BUG_DETECTED`** | **Fail บนเวอร์ชันมีบั๊ก (`b`) และ Pass 100% บนเวอร์ชันแก้แล้ว (`f`)** | ✅ **นับ ($D=1$)** |
-| **`NOT_DETECTED`** | Pass 100% ทั้งบน `b` และ `f` (ไม่กระตุ้นจุดบั๊ก) | ❌ ไม่นับ |
-| **`FLAKY_OR_REGRESSION`** | Fail ทั้งบน `b` และ `f` (Assertion ผิดจากสเปกจริง) | ❌ ไม่นับ |
-| **`COMPILE_ERROR`** | Syntax error หรือขาด Classpath | ❌ ไม่นับ |
-| **`TIMEOUT`** | คำสั่ง Defects4J coverage/test ที่ runner เรียกเกิน 240 วินาที (แยกจาก `@Test(timeout = 4000)`) | ❌ ไม่นับ |
+| เทคนิค | ตรวจพบ / ประเมิน | FDR | Compile error |
+|---|---:|---:|---:|
+| Native IPO | 37 / 257 | 14.40% | 5 / 257 |
+| MIO | 5 / 834 | 0.60% | 37 / 834 |
+| DeepSeek | 11 / 853 | 1.29% | 661 / 853 |
+| Gemini | 107 / 853 | 12.54% | 429 / 853 |
 
-> **ตัวหาร:** ใช้จำนวน bug–technique rows ที่มี suite และถูกประเมิน รวม `COMPILE_ERROR`, `FLAKY_OR_REGRESSION` และ `TIMEOUT` (ถ้ามี); รายงาน `BUG_DETECTED ÷ 854` เป็นอัตราเทียบ catalog เพิ่มเติม ส่วน `NO_SUITE` ไม่ใช่ผลทดสอบ
-> **ข้อจำกัด:** runner จำแนกจากผล buggy/fixed และไม่ได้ยืนยันเชิงความหมายว่า failure มาจาก root cause ที่รายงานไว้ของ Defects4J
+**รวมผลตรวจพบ 144 บั๊กไม่ซ้ำ / 853 บั๊กที่มี suite อย่างน้อยหนึ่งเทคนิค (16.88%)**
 
----
+Union เป็นการรวมผลจากการรันเดิม; `NO_SUITE` 619 คู่ไม่อยู่ในตัวหาร FDR ข้างต้น
 
-<!-- slide -->
-### 📌 Slide 10: ผลการประเมินปัจจุบัน (Master Results)
-- ใช้ results/master_benchmark_summary.csv เป็นตารางหลัก หนึ่งแถวต่อบั๊กและเทคนิค
+แหล่งข้อมูล: [Master dataset](../../results/master_benchmark_summary.csv) · [Analytics](../../results/advanced_analytics.json)
 
-| เทคนิค | มี suite / 854 | NO_SUITE | Coverage n | Line / Branch coverage | ตรวจพบ | FDR ต่อ suite |
-|---|---:|---:|---:|---:|---:|---:|
-| Native IPO | 257 | 597 | 252 | 26.76% / 18.67% | 37 | 14.40% |
-| MIO (EvoSuite) | 834 | 20 | 797 | 63.85% / 56.51% | 5 | 0.60% |
-| DeepSeek V4 Flash | 853 | 1 | 192 | 78.02% / 70.22% | 11 | 1.29% |
-| Gemini 3.8 Flash | 853 | 1 | 424 | 86.29% / 79.54% | 107 | 12.54% |
+<details><summary>บทพูด — 60 วินาที</summary>
 
-*ทุก suite ที่มีอยู่ถูกประเมินแล้ว (รวม 2,797 คู่); FDR ใช้จำนวน suite evaluations ของเทคนิคนั้นเป็นตัวหารและรวม compile errors กับ flaky/regression ส่วน coverage ใช้เฉพาะผลที่วัดได้*
+Gemini ตรวจพบจำนวนมากสุด 107 บั๊ก ส่วน IPO มีสัดส่วนตรวจพบสูงสุด 14.40 เปอร์เซ็นต์ แต่ IPO มี suite เพียง 257 บั๊ก จึงเป็นคนละฐานกับ Gemini ที่ 853 บั๊ก อีกด้านหนึ่ง AI มี compile error มาก โดยเฉพาะ DeepSeek 661 จาก 853 คู่ ซึ่งมีผลต่อการใช้งานจริง เมื่อนำผลตรวจพบของทุกเทคนิคมารวมแบบไม่ซ้ำ ได้ 144 บั๊ก แสดงว่าแต่ละเทคนิคช่วยตรวจพบบางกรณีเพิ่มเติมได้ ทั้งนี้ไม่ได้รัน suite ensemble ใหม่ครับ
+
+</details>
 
 ---
 
 <!-- slide -->
-### 📌 Slide 11: เปรียบเทียบ coverage แบบจับคู่
-- เปรียบเทียบ line coverage เฉพาะ project–bug ที่ทั้งสองเทคนิคมีค่าที่วัดได้
-- ใช้ Wilcoxon signed-rank และปรับ p-value ด้วย Holm สำหรับหกคู่
-- ผล matched N, p-value หลัง Holm และ paired rank-biserial:
+## หน้า 8 — ต้นทุนการสร้างและข้อจำกัด
 
-| คู่เปรียบเทียบ | Matched N | p หลัง Holm | Rank-biserial |
+- **MIO:** เพิ่ม budget 30 → 120 วินาที; generation coverage เฉลี่ย 65.73% → 70.82%
+- **AI:** เวลาเฉลี่ยต่อ generation record — DeepSeek 295.54 วินาที; Gemini 89.78 วินาที
+- **ไม่มี suite 619 คู่:** IPO 597, MIO 20, DeepSeek 1, Gemini 1
+- **บทเรียน:** การเรียก API, dependency, oracle และการคอมไพล์มีผลต่อความสำเร็จของ suite
+
+MIO n = 1,023 / 989 records ที่ 30 / 120 วินาที; AI n = 1,082 / 1,079 records ตามลำดับ เป็นสถิติ generation ที่แยกจาก FDR
+
+แหล่งข้อมูล: [Analytics](../../results/advanced_analytics.json) · [Suite gap audit](../../results/suite_gap_audit.csv)
+
+<details><summary>บทพูด — 50 วินาที</summary>
+
+การเพิ่ม budget ของ MIO ทำให้ coverage ระหว่างสร้างสูงขึ้นในข้อมูลชุดนี้ แต่จำนวน records แต่ละ budget ต่างกัน รายละเอียดแบบจับคู่อยู่ในภาคผนวก ฝั่ง AI Gemini ใช้เวลาเฉลี่ยต่อ record ต่ำกว่า DeepSeek แต่ log ยังเชื่อมกับ benchmark run ไม่ครบ จึงไม่คำนวณต้นทุนต่อบั๊กที่ตรวจพบ ส่วน suite ที่ขาดมีทั้งยังไม่พร้อมสร้างและสร้างล้มเหลว เราเรียนรู้ว่าคุณภาพ input model, oracle และความเข้ากันได้กับ environment สำคัญพอ ๆ กับตัวสร้าง test ครับ
+
+</details>
+
+---
+
+<!-- slide -->
+## หน้า 9 — เดโมการประเมินจริงทั้งสี่เทคนิค
+
+```powershell
+.\scripts\demo_four_techniques.ps1
+```
+
+| เทคนิค / ตัวอย่าง | Buggy fail → fixed fail | ผลจากรอบที่บันทึกไว้ |
+|---|---:|---|
+| IPO / Chart-14 | 48 → 0 | BUG_DETECTED |
+| MIO / Jsoup-45 | 0 → 0 | NOT_DETECTED |
+| DeepSeek / Closure-105 | 2 → 0 | BUG_DETECTED |
+| Gemini / Chart-3 | 2 → 0 | BUG_DETECTED |
+
+**ชี้ให้เห็น:** suite ที่ใช้ · coverage · buggy/fixed · run ID และ hash
+
+ตารางเป็นหลักฐานรอบก่อน; ระหว่างเดโมอธิบายตาม output สด ตัวอย่างทั้งสี่เป็นกรณีที่เลือกมา ไม่ใช่การเปรียบเทียบสี่เทคนิคบนบั๊กเดียวกัน
+
+<details><summary>บทพูดและคิวเดโม — 150 วินาที</summary>
+
+**0:00–0:15:** “เดโมนี้ใช้ suite ที่สร้างไว้แล้วมารันประเมินใหม่ครบสี่เทคนิค” เริ่มสคริปต์ใน terminal ที่เตรียมไว้
+
+**0:15–1:40:** ระหว่างรัน ชี้ไฟล์ suite และอธิบายว่าตัวรันใช้ buggy/fixed ตรวจผลเดียวกัน เปิด log หรือ source ที่เตรียมไว้เฉพาะจุด ไม่อ่าน output ทุกบรรทัด เจ้าของแต่ละเทคนิคช่วยอธิบายเมื่อกรณีของตนแสดงผล
+
+**1:40–2:15:** เมื่อผลออกครบ ชี้หนึ่งกรณี BUG_DETECTED และกรณี MIO ที่ line coverage 93.35% ในรอบก่อนแต่ไม่ตรวจพบบั๊ก เพื่ออธิบายความต่างระหว่าง coverage กับ fault detection ตรวจ run ID/hash ที่ output จริง
+
+**2:15–2:30:** “ผลนี้แสดงขั้นตอนประเมินจริงสี่กรณี ส่วนผลรวม 854 บั๊กดูได้ใน master dataset” แล้วกลับหน้าสรุป
+
+**จุดเปลี่ยนแผน:** หากถึง 2:00 นาทีของช่วงเดโมแล้วยังรันไม่ครบ หรือระบบมี error ให้แสดงไฟล์ผลที่บันทึกไว้ตาม [คู่มือเดโม](../demo/DEMO_GUIDE.md) และพูดให้ชัดว่าเป็นผลรอบก่อน เปิดผลครบสี่เทคนิคแล้วกลับสไลด์ภายใน 2:30 นาที ไม่ปิด terminal กลางคันเพราะสคริปต์ต้องคืนไฟล์เดิมหลังจบ
+
+</details>
+
+---
+
+<!-- slide -->
+## หน้า 10 — บทเรียนและหลักฐานสำหรับทำซ้ำ
+
+- **Coverage สูงไม่รับประกันการตรวจพบบั๊ก:** ต้องมี assertion ที่แยก buggy/fixed ได้
+- **ไม่มีวิธีที่ดีที่สุดทุกด้าน:** อ่าน coverage, FDR, compile error และ suite ที่ขาดร่วมกัน
+- **ทำซ้ำได้จาก repository:** source, tests, prompts, configuration, Docker, master data และ run logs
+
+[GitHub: Bigzzz0/ProjectSQA](https://github.com/Bigzzz0/ProjectSQA) · [รายงาน PDF](../final/SQA_Final_Report.pdf) · [คู่มือเดโม](../demo/DEMO_GUIDE.md)
+
+<details><summary>บทพูด — 40 วินาที</summary>
+
+สิ่งที่ได้เรียนรู้คือ coverage วัดว่า test เข้าไปถึงโค้ดมากแค่ไหน ส่วนการตรวจพบบั๊กต้องมี assertion ที่แยก buggy กับ fixed ได้ด้วย ผลของชุดนี้ Gemini มี coverage เฉลี่ยสูงสุด ส่วน IPO มี FDR ต่อ suite สูงสุด แต่ทั้งคู่มีข้อจำกัดต่างกัน เราเก็บ source, tests, prompt, configuration และ log พร้อมขั้นตอนรันไว้ใน GitHub เพื่อให้ตรวจและทำซ้ำได้ ขอบคุณครับ
+
+</details>
+
+---
+
+## ภาคผนวกสำหรับตอบคำถาม — ไม่อยู่ใน 10 หน้าหลัก
+
+<details><summary>A. ผลครบทั้งสี่เทคนิคและสถานะการประเมิน</summary>
+
+| เทคนิค | มี suite / 854 | NO_SUITE | Coverage n | Line / Branch เฉลี่ย | ตรวจพบ | FDR ต่อ suite | ตรวจพบ / 854 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Native IPO | 257 | 597 | 252 | 26.76% / 18.67% | 37 | 14.40% | 4.33% |
+| MIO | 834 | 20 | 797 | 63.85% / 56.51% | 5 | 0.60% | 0.59% |
+| DeepSeek | 853 | 1 | 192 | 78.02% / 70.22% | 11 | 1.29% | 1.29% |
+| Gemini | 853 | 1 | 424 | 86.29% / 79.54% | 107 | 12.54% | 12.53% |
+
+`NOT_DETECTED`: test ผ่านทั้งสองเวอร์ชัน; `FLAKY_OR_REGRESSION`: fixed version ไม่ผ่าน รวมกรณี buggy ผ่านแต่ fixed fail ด้วย ชื่อสถานะนี้ไม่ได้พิสูจน์ว่าทดสอบแล้วเกิดความไม่แน่นอนซ้ำหลายรอบ `TIMEOUT`: คำสั่ง coverage/test เกิน 240 วินาที ซึ่งต่างจาก timeout ของ test method ที่ 4 วินาที
+
+Runner จำแนกจาก buggy/fixed ไม่ได้ยืนยันเชิงความหมายว่า failure ตรงกับ root cause ที่รายงานใน Defects4J
+
+ผลตรวจพบเฉพาะเทคนิค: IPO 27, MIO 5, DeepSeek 5, Gemini 91 บั๊ก; union รวม 144 บั๊ก ผล single/multiclass เพิ่มเติมอยู่ใน [Analytics](../../results/advanced_analytics.json)
+
+</details>
+
+<details><summary>B. Budget, token และสถิติแบบจับคู่</summary>
+
+| MIO budget | Records | Generation coverage เฉลี่ย | เวลา generation เฉลี่ย |
+|---|---:|---:|---:|
+| 30 วินาที | 1,023 | 65.73% | 68.29 วินาที |
+| 60 วินาที | 1,015 | 68.73% | 90.62 วินาที |
+| 120 วินาที | 989 | 70.82% | 194.41 วินาที |
+
+Budget summary ใช้ criterion `LINE:BRANCH` และรายงาน coverage รวมค่าเดียว; ไม่ใช่การวัด line/branch แยก เวลา generation รวมขั้นตอนอื่นจึงยาวกว่า search budget ได้
+
+Wilcoxon จับคู่ project–bug–target class: 30→60 วินาที n=1,006, p หลัง Holm=3.39×10⁻⁸⁴; 60→120 วินาที n=981, p หลัง Holm=1.54×10⁻⁶⁷ ผลนี้ยังไม่สรุป budget ที่เหมาะที่สุดทั่วไป
+
+| AI generation | Records | Tokens เฉลี่ยต่อ record | เวลาเฉลี่ยต่อ record |
+|---|---:|---:|---:|
+| DeepSeek | 1,082 | 21,045.26 | 295.54 วินาที |
+| Gemini | 1,079 | 20,855.06 | 89.78 วินาที |
+
+Generation logs ไม่มี run ID ที่เชื่อม benchmark ครบ จึงไม่คำนวณ token ต่อบั๊กที่ตรวจพบ ชื่อโมเดลเป็น identifier ที่ใช้ในโครงการ ไม่ได้ยืนยัน provider model ID ทุก record
+
+| คู่เปรียบเทียบ line coverage | Matched N | p หลัง Holm | Rank-biserial |
 |---|---:|---:|---:|
 | Gemini – DeepSeek | 136 | 4.92×10⁻¹² | 0.834 |
-| MIO – Gemini | 399 | 7.28×10⁻³³ | -0.759 |
+| MIO – Gemini | 399 | 7.29×10⁻³³ | -0.759 |
 | MIO – DeepSeek | 183 | 0.0175 | -0.222 |
 | MIO – IPO | 245 | 1.64×10⁻³⁸ | 0.993 |
 | Gemini – IPO | 147 | 1.90×10⁻²⁴ | 1.000 |
 | DeepSeek – IPO | 69 | 4.92×10⁻¹² | 1.000 |
-- การเปรียบเทียบเป็น exploratory เพราะแต่ละเทคนิคมี suite ที่ compile และวัด coverage ได้ไม่เท่ากัน
-- ค่า rank-biserial บวกหมายถึงเทคนิคทางซ้ายมี line coverage สูงกว่า; รายละเอียดเต็มอยู่ใน `results/advanced_analytics.json`
 
----
+เปรียบเทียบเฉพาะบั๊กที่ทั้งสองเทคนิควัด line coverage ได้ ใช้ Wilcoxon signed-rank และ Holm correction หกคู่; ค่าบวกแปลว่าเทคนิคทางซ้ายมี coverage สูงกว่า เป็น exploratory analysis ของกลุ่มที่มีข้อมูลครบ
 
-<!-- slide -->
-### 📌 Slide 12: ผลตรวจจับบั๊กและ Ensemble
-- ใช้จำนวน detected และ FDR จากผลประเมินที่ provenance ตรงกับ suite ปัจจุบัน
-- นับหนึ่งบั๊กต่อหนึ่งเทคนิค; BUG_DETECTED ต้อง fail บน buggy และ pass บน fixed
-- ผลรวมเทคนิคตรวจพบ 144 บั๊กไม่ซ้ำจาก 853 บั๊กที่มี suite อย่างน้อยหนึ่งเทคนิค (16.88%)
-- ผลตรวจพบเฉพาะเทคนิค: IPO 27, MIO 5, DeepSeek 5, Gemini 91 บั๊ก
-- แหล่งข้อมูล: results/master_descriptive_stats.json และ results/advanced_analytics.json
+</details>
 
----
+<details><summary>C. สาเหตุที่ไม่มี suite และข้อจำกัด</summary>
 
-<!-- slide -->
-### 📌 Slide 13: AI Generation Economics
-- แสดงค่าเฉลี่ย token และเวลา generation จากบันทึกจริงใน Deepseek_vs_Gemini_Economics.csv
-- Gemini: 1,079 generation records, เฉลี่ย 20,855.06 tokens และ 89.78 วินาทีต่อ record
-- DeepSeek: 1,082 generation records, เฉลี่ย 21,045.26 tokens และ 295.54 วินาทีต่อ record
-- Generation logs ไม่มี run ID เชื่อมกับผล benchmark จึงรายงาน token/time แยกจาก detection และไม่คำนวณ token ต่อบั๊กที่ตรวจพบ
-- แหล่งข้อมูลสรุป: results/advanced_analytics.json
+- IPO 597 คู่: generation/verification error 37 และ skipped/not ready 560; ต้องพัฒนา adapter, entry point หรือวิธีตรวจผลเพิ่มเติมตาม manifest
+- IPO verified manifest มี 277 class-level suite records ครอบคลุม 257 บั๊ก; inventory 1,070 class records เทียบ catalog 1,073 modified-class entries มีส่วนต่าง 3 รายการที่ยังไม่ reconcile
+- MIO 20 คู่: generation failure จาก dependency/compile, EvoSuite NPE, JVM crash และ encoding ตามรายงานของ Member 2
+- DeepSeek และ Gemini อย่างละ 1 คู่: ยังไม่มี suite ที่เข้าประเมินได้; ใช้เหตุรายรายการจาก [audit](../../results/suite_gap_audit.csv)
+- ทุกคู่ที่ไม่มี suite คง `NO_SUITE`; ไม่ใช้เป็นหลักฐานว่าผ่านการทดสอบหรือว่าเทคนิคนั้นสร้างไม่ได้ในทุก environment
 
----
+</details>
 
-<!-- slide -->
-### 📌 Slide 14: Single-Class และ Multi-Class
-- ใช้การแบ่งกลุ่มจาก target classes ใน all_bugs_catalog.json
-- ค่า coverage ใช้แถว DONE ที่มีค่าการวัดจริงเท่านั้น
-- ตารางนี้เป็นการแยกกลุ่มเพิ่มเติม; ตารางหลักรวม single-class และ multi-class bugs แล้ว
-- FDR แสดงจำนวน attempted และตัวหารของแต่ละกลุ่มแยกกัน
-- Gemini single-class: line coverage 87.07% (n=404), FDR 14.60% (106/726); multi-class: 70.61% (n=20), FDR 0.79% (1/127)
-- ผลแยกทุกเทคนิคอยู่ใน `single_vs_multiclass` ภายใน results/advanced_analytics.json
+## ความสอดคล้องกับโจทย์อาจารย์
 
----
+อ้างอิง [โจทย์หน้า 3 ข้อ 2.2](../reference/SQA_Project_2026_Assignment.pdf) ตารางนี้ใช้ตรวจความครบของเนื้อหานำเสนอ ไม่ใช่การรับรองว่าข้อจำกัดของการทดลองหมดไป
 
-<!-- slide -->
-### 📌 Slide 15: ข้อเสนอแนะเชิงวิศวกรรม
-- เลือกแนวทางสร้าง suite จากผล coverage, FDR, compile error และเวลา generation ที่วัดได้
-- ระบุข้อจำกัดของแต่ละเทคนิคและจำนวน suite ที่มีจริง
-- แยก generation budget และ AI token logs ออกจากผล benchmark
-- Gemini ให้ coverage เฉลี่ยสูงสุดและตรวจพบ 107 บั๊ก; Native IPO ให้ FDR สูงสุดที่ 14.40% จาก 257 suites
-- ควรพิจารณาควบคู่กับ compile errors: DeepSeek 661/853 และ Gemini 429/853; Gemini มี coverage mean สูงสุด ส่วน Native IPO มี FDR ต่อ suite สูงสุดใน snapshot นี้
-- AI prompt inject known defect specification จาก Defects4J เมื่อมีข้อมูล; ผลจึงเป็นการสร้างแบบ defect-targeted ไม่ใช่ blind generation และไม่ควรขยายข้อสรุปเกินเงื่อนไขนี้
+| สิ่งที่อาจารย์กำหนด | หน้าที่นำเสนอ | หลักฐาน |
+|---|---|---|
+| พัฒนาและใช้ 2 อัลกอริทึมสร้าง suite แล้วประเมิน | 3, 5–7, 9 | Native IPO / MIO source, suites, configuration และ logs |
+| ใช้ prompt กับ 2 AI tools สร้าง suite แล้วประเมิน | 4–7, 9 | Prompt จริง, test code, generation logs และผลกลาง |
+| ขอบเขต Defects4J ทุกรายการและการวัดผล | 2, 5–8 | Catalog 854 บั๊ก / 17 โครงการ; เปิดเผย 619 คู่ที่ไม่มี suite |
+| เปรียบเทียบ วิเคราะห์ บทเรียน และปัญหาที่พบ | 6–8, 10 | Coverage, FDR, compile errors, generation costs และข้อจำกัด |
+| รายงานและหลักฐานที่คนอื่นทำซ้ำได้ | 10 | DOCX/PDF, README, Docker, source, tests, prompts, config และ results |
+| Presentation และ Demo ตัวอย่างสำคัญ | 1–10 โดยเฉพาะ 9 | เดโมทั้งสี่เทคนิคพร้อม buggy/fixed และหลักฐานสำรอง |
+| ส่ง GitHub และ Google Classroom พร้อมชื่อและรหัส | 1, 10 | README และไฟล์ส่ง; ตัวแทนกลุ่มต้องตรวจการส่ง Classroom จริง |
 
----
+## ซ้อมก่อนนำเสนอ
 
-<!-- slide -->
-### 📌 Slide 16: บทสรุปและการส่งมอบผลงาน (Conclusion & Deliverables)
-#### รายการส่งมอบที่ Member 4 ตรวจแล้ว:
-* Master CSV ต้องมีหนึ่งแถวต่อ project, bug และ technique โดยไม่มี key ซ้ำ
-* Excel, JSON, report และกราฟต้องสร้างจาก master CSV snapshot เดียวกัน
-* Snapshot มี 3,416 แถว; ไม่มี unresolved outcomes; ประเมิน suite ที่มีอยู่ครบ (`available_suite_evaluations_complete: true`)
-* มี 619 `NO_SUITE`; แยกออกจากผลไม่ตรวจพบบั๊กและตัวหาร FDR
-* ผลครบเฉพาะ suite ที่มีอยู่; การไม่มี suite สำหรับ 619 คู่ยังเป็นข้อจำกัดของการครอบคลุม dataset
-* ต้องซ้อมสาธิตกรณี BUG_DETECTED โดยมี log แสดงผล fail บน buggy และ pass บน fixed
-
-**ขอขอบคุณ ผศ.ดร.ชิตสุธา สุ่มเล็ก และทุกท่านครับ**  
-*เปิดรับคำถามและข้อเสนอแนะ (Q&A)*
+1. เปิด Docker, container, terminal, prompt ตัวอย่าง และผลสำรองให้พร้อมก่อนเริ่มจับเวลา อ่านเงื่อนไขเตรียมเครื่องใน [คู่มือเดโม](../demo/DEMO_GUIDE.md)
+2. ซ้อมด้วยเครื่องที่จะใช้จริงอย่างน้อยหนึ่งรอบ จับเวลาตั้งแต่หน้า 1 จนจบหน้า 10; เป้าหมายไม่เกิน 9:30 นาที เวลานี้เป็นงบที่ออกแบบไว้ ต้องยืนยันด้วยการซ้อม
+3. ถ้าพูดช้า ให้ตัดรายละเอียดในบทพูดและงดเปิดภาคผนวก คงวิธีสร้างของทั้งสี่เทคนิค, coverage/FDR, ข้อจำกัด และเดโมไว้
+4. ถ้าเดโมเกินสองนาทีให้สลับไปหลักฐานรอบก่อนตามคู่มือ ระบุที่มาของผลตรงตามจริง และกลับหน้าสรุปภายในเวลา 8:50 ของการนำเสนอ
+5. ก่อนส่งตรวจว่ารายงาน สไลด์ และ master ใช้ snapshot เดียวกัน และตัวแทนกลุ่มส่งลิงก์/ไฟล์เข้า Google Classroom แล้ว

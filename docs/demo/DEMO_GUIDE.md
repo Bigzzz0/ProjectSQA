@@ -10,7 +10,50 @@
 
 จึงเป็นเดโมการ **ประเมิน suite แบบสด** และการตรวจว่า suite แยกเวอร์ชัน buggy/fixed ได้หรือไม่ ไม่ใช่การสร้าง suite ใหม่หรือเรียก AI API ต่อหน้า การสร้าง suite เป็นขั้นตอนก่อนหน้าและไฟล์ที่ใช้จะระบุไว้ในตารางด้านล่าง
 
-เดโมสี่กรณีใช้เวลารันจริงประมาณ 1–2 นาทีบนเครื่องที่ทดสอบ; เผื่อเวลาอธิบายและตรวจ output รวมประมาณ 5 นาที
+คู่มือเดิมบันทึกเวลารันสี่กรณีประมาณ 1–2 นาทีบนเครื่องที่ทดสอบ; ต้องซ้อมจับเวลาบนเครื่องนำเสนออีกครั้ง การอธิบายเต็มใช้ประมาณ 5 นาที ส่วน [สไลด์นำเสนอ 10 นาที](../presentation/PRESENTATION_SLIDES.md) จัดช่วงเดโมแบบย่อไว้ **2:30 นาที** โดยเริ่มที่ 6:20 และกลับหน้าสรุปที่ 8:50
+
+## คิวเดโมสำหรับการนำเสนอ 10 นาที
+
+| เวลาในช่วงเดโม | สิ่งที่แสดง |
+|---|---|
+| 0:00–0:15 | เริ่มสคริปต์และบอกว่าใช้ suite ที่สร้างไว้แล้วมาประเมินใหม่ |
+| 0:15–1:40 | ระหว่างรันชี้ suite และการใช้ buggy/fixed; เจ้าของเทคนิคอธิบายสั้น ๆ ตาม output |
+| 1:40–2:15 | ชี้ผลทั้งสี่เทคนิค: BUG_DETECTED ต้อง buggy fail / fixed pass และตัวอย่าง MIO ที่ coverage สูงแต่ NOT_DETECTED |
+| 2:15–2:30 | ชี้ run ID/hash หนึ่งกรณี แล้วกลับหน้าสรุป |
+
+เปิด Docker และเตรียมหน้าต่างก่อนเริ่มนำเสนอ หากถึง 2:00 นาทีของเดโมแล้วยังรันไม่ครบหรือเกิด error ให้เปิดหลักฐานรอบก่อนที่เตรียมไว้และบอกว่าเป็นผลที่บันทึกไว้ ไม่ใช้ผลสำรองกล่าวอ้างว่า live run สำเร็จ ไม่ปิด terminal กลางคัน ให้สคริปต์ทำงานและคืนไฟล์เดิมจนจบ
+
+### เตรียมผลสำรองก่อนเริ่มเดโม
+
+เปิด PowerShell อีกหน้าต่างที่ root ของ repository แล้วรันคำสั่งต่อไปนี้ **ก่อนเริ่มสคริปต์สด** เพื่อเก็บผลเดิมไว้ในหน่วยความจำของหน้าต่างสำรอง ไม่อ่านไฟล์ที่ live runner อาจกำลังเขียนอยู่:
+
+```powershell
+$demoSavedPaths = @(
+    'results/Chart/14/ipo.json',
+    'results/Jsoup/45/mio.json',
+    'results/Closure/105/deepseek.json',
+    'results/Chart/3/gemini.json'
+)
+$demoSavedResults = foreach ($path in $demoSavedPaths) {
+    $r = Get-Content -LiteralPath $path -Raw | ConvertFrom-Json
+    [pscustomobject]@{
+        Case = $path
+        Status = $r.fault_detected
+        BuggyFail = @($r.buggy_failures).Count
+        FixedFail = @($r.fixed_failures).Count
+        Line = $r.line_cov
+        Branch = $r.branch_cov
+        Suite = $r.test_file
+        RunID = $r.run_id
+        Hash = $r.suite_sha256
+    }
+}
+Write-Host 'SAVED RESULTS FROM AN EARLIER RUN — NOT LIVE OUTPUT'
+$demoSavedResults | Format-Table Case, Status, BuggyFail, FixedFail, Line, Branch -AutoSize
+$demoSavedResults[0] | Format-List Suite, RunID, Hash
+```
+
+เตรียมเปิด source, prompt และ log ของตัวอย่างไว้ด้วย เพื่ออธิบายหลักฐานได้แม้การรันสดติดขัด ห้ามเปลี่ยนผลสำรองให้ตรงกับค่าที่คาดหวัง
 
 ## เตรียมเครื่อง
 

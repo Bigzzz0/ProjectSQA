@@ -1,23 +1,167 @@
-# Project SQA: AI-Assisted Testing and Automatic Test Generation
+![Project SQA — Automatic Test Generation and AI-Assisted Testing](assets/readme-banner.svg)
 
-โครงการนี้เปรียบเทียบการสร้างชุดทดสอบอัตโนมัติด้วย **Native IPO**, **MIO (EvoSuite)**, **DeepSeek V4 Flash** และ **Gemini 3.8 Flash** บน Java projects ในชุดข้อมูล Defects4J โดยประเมิน line coverage, branch coverage และความสามารถในการตรวจพบบั๊กจากการรันทดสอบบนเวอร์ชัน buggy และ fixed
+<div align="center">
 
-**รายวิชา:** CP353201 Software Quality Assurance · ภาคการศึกษา 1/2569<br>
-**อาจารย์ประจำวิชา:** ผศ.ดร.ชิตสุธา สุ่มเล็ก<br>
-**หลักสูตร:** วิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น
+<h3>การเปรียบเทียบการสร้างชุดทดสอบอัตโนมัติและชุดทดสอบจาก AI</h3>
+
+[**อ่านรายงาน PDF**](docs/final/SQA_Final_Report.pdf) · [**เปิดสไลด์ Canva**](https://canva.link/43hoh5a4r15c15e) · [**คู่มือเดโม**](docs/demo/DEMO_GUIDE.md) · [**ดูข้อมูลผลทดลอง**](results/master_benchmark_summary.csv)
+
+</div>
 
 ---
 
-## สมาชิกและหน้าที่
+**รายวิชา** CP353201 Software Quality Assurance · ภาคการศึกษา 1/2569 · Sec 1<br>
+**อาจารย์ประจำวิชา** ผศ.ดร.ชิตสุธา สุ่มเล็ก<br>
+**หลักสูตร** วิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น
 
-| สมาชิก | รหัสนักศึกษา | ชื่อ | ความรับผิดชอบหลัก |
-|---|---|---|---|
-| Member 1 | 673380278-9 | นายปวริศช์ ประมวล | Native IPO และ combinatorial testing; จัดทำ factor/value models, pairwise combinations และ JUnit 4 suites ใน `Combinatorial_IPO/` |
-| Member 2 | 673380301-0 | นายแทนคุณ พันธ์นิกุล | MIO บน EvoSuite; ทดลอง search budgets 30, 60 และ 120 วินาทีด้วย seeds 101, 102 และ 103; ดูแล suites และผล generation ใน `MIO_Algorithm/` |
-| Member 3 | 673380272-1 | นายธนภูมิ จันทรา | Prompt และชุดทดสอบจาก DeepSeek V4 Flash กับ Gemini 3.8 Flash; ดูแล generation logs และ suites ในโฟลเดอร์ของแต่ละโมเดล |
-| Member 4 | 673380292-5 | นายศิฆรินทร์ อุปจันทร์ | Docker/Defects4J environment, benchmark runner, target catalog, การรวมผล coverage/FDR และเอกสารโครงการ |
+## สมาชิกผู้จัดทำ
 
-ดูขั้นตอนการทำงาน คำสั่ง และตำแหน่งส่งมอบของแต่ละคนได้ที่ [คู่มือการทำงานของทีม](docs/team/TEAM_WORKFLOW_GUIDE.md)
+| สมาชิก | ชื่อ–นามสกุล | รหัสนักศึกษา | Section |
+|:---:|---|:---:|:---:|
+| 1 | นายปวริศช์ ประมวล | 673380278-9 | Sec 1 |
+| 2 | นายแทนคุณ พันธ์นิกุล | 673380301-0 | Sec 1 |
+| 3 | นายธนภูมิ จันทรา | 673380272-1 | Sec 1 |
+| 4 | นายศิฆรินทร์ อุปจันทร์ | 673380292-5 | Sec 1 |
+
+**การแบ่งงาน:** Member 1 — Native IPO · Member 2 — MIO/EvoSuite · Member 3 — AI suites · Member 4 — ตัวรันกลางและวิเคราะห์ผล<br>
+รายละเอียดหน้าที่และการส่งมอบ: [คู่มือการทำงานของทีม](docs/team/TEAM_WORKFLOW_GUIDE.md)
+
+---
+
+[เอกสารส่งมอบ](#deliverables) · [ภาพรวม](#overview) · [ผลทดลอง](#results) · [กราฟทั้ง 6 รูป](#figures) · [ทำซ้ำผลทดลอง](#reproduce) · [โครงสร้างไฟล์](#structure)
+
+<a id="deliverables"></a>
+
+## เอกสารสำหรับอ่านและนำเสนอ
+
+| เอกสาร | เปิดอ่าน / ดาวน์โหลด | ใช้สำหรับ |
+|---|---|---|
+| **รายงานฉบับส่งหลัก** | [PDF](docs/final/SQA_Final_Report.pdf) · [DOCX](docs/final/SQA_Final_Report.docx) | เนื้อหารายงานฉบับสมบูรณ์ |
+| **สไลด์ SQA Research Keynote** | [Canva](https://canva.link/43hoh5a4r15c15e) · [PDF](docs/presentation/SQA%20Research%20Keynote.pdf) | เปิดนำเสนอใน Canva ตามสิทธิ์การเข้าถึง หรือใช้ PDF สำรอง |
+| **คู่มือเดโม** | [DEMO_GUIDE.md](docs/demo/DEMO_GUIDE.md) | เตรียมเครื่อง รัน suite จริงทั้ง 4 เทคนิค และเปิดหลักฐานสำรอง |
+| ข้อมูลผลทดลอง | [CSV](results/master_benchmark_summary.csv) · [Excel](results/Master_Benchmark_Results.xlsx) · [Data dictionary](results/DATA_DICTIONARY.md) | ตรวจตัวเลขและความหมายของแต่ละช่องข้อมูล |
+| เอกสารประกอบ | [รายงาน Markdown](docs/reports/Final_Report.md) · [บทพูดและเวลา](docs/presentation/PRESENTATION_SLIDES.md) | อ่านรายละเอียดบน GitHub และเตรียมการนำเสนอ |
+| สไลด์ PowerPoint | [SQA_Presentation_10min.pptx](docs/presentation/SQA_Presentation_10min.pptx) | ชุดสไลด์เพิ่มเติมพร้อม speaker notes |
+| ข้อกำหนดรายวิชา | [Assignment PDF](docs/reference/SQA_Project_2026_Assignment.pdf) | ตรวจรายการส่งงานและเกณฑ์การนำเสนอ |
+
+**รายงานฉบับส่งหลักคือ DOCX และ PDF ใน `docs/final/`** ส่วน Markdown เป็นเอกสารประกอบบน GitHub
+
+---
+
+<a id="overview"></a>
+
+## ภาพรวมโครงการ
+
+โครงการนี้เปรียบเทียบชุดทดสอบจากอัลกอริทึมและ AI รวม 4 เทคนิคบน Defects4J โดยใช้ตัวรันกลางวัด **line coverage**, **branch coverage** และ **fault detection** จากการรัน suite เดียวกันบนเวอร์ชัน buggy และ fixed ผลการประเมินเชื่อมโยงกับ test code, suite hash และ run logs เพื่อให้ตรวจสอบย้อนกลับได้
+
+| เทคนิค | วิธีสร้างชุดทดสอบ | Source / Prompt / Configuration |
+|---|---|---|
+| **Native IPO** | สร้างชุดค่าทดสอบแบบ pairwise จาก factor/value models และตรวจยืนยัน suite | [Combinatorial_IPO](Combinatorial_IPO/) |
+| **MIO / EvoSuite** | ค้นหาชุดทดสอบด้วย search budgets 30/60/120 วินาที และ seeds 101/102/103 | [MIO_Algorithm](MIO_Algorithm/) |
+| **DeepSeek V4 Flash** | สร้าง JUnit suites จาก prompt และบริบทของโค้ดเป้าหมาย | [Deepseek-v4_flash](Deepseek-v4_flash/) |
+| **Gemini 3.8 Flash** | สร้าง JUnit suites จาก prompt และบริบทของโค้ดเป้าหมาย | [Gemini-3_8_flash](Gemini-3_8_flash/) |
+
+**ลำดับการทดลอง:** สร้าง suite → ตรวจรายการและ hash → รัน buggy/fixed → วัด coverage และจำแนกสถานะ → รวมผลใน master dataset
+
+---
+
+<a id="results"></a>
+
+## ผลการทดลองโดยสรุป
+
+**Snapshot: 26 กันยายน 2026** — อ้างอิง [สถิติเชิงพรรณนา](results/master_descriptive_stats.json) และ [master dataset](results/master_benchmark_summary.csv)
+
+| โครงการ Java | บั๊กใน catalog | คู่บั๊ก–เทคนิค | มี suite และพยายามประเมิน | ไม่มี suite |
+|---:|---:|---:|---:|---:|
+| **17** | **854** | **3,416** | **2,797** | **619** |
+
+ทุกคู่ใน catalog มีสถานะบันทึกแล้ว แต่ผลที่มีสถานะครบไม่ได้หมายความว่าทุกคู่มี suite หรือรันสำเร็จ
+
+### ความสามารถในการตรวจพบบั๊ก
+
+| เทคนิค | พยายามประเมิน (บั๊ก) | Compile error | ตรวจพบ (บั๊ก) | FDR / ที่พยายามประเมิน | FDR / catalog 854 |
+|---|---:|---:|---:|---:|---:|
+| Native IPO | 257 | 5 | 37 | **14.40%** | 4.33% |
+| MIO / EvoSuite | 834 | 37 | 5 | 0.60% | 0.59% |
+| DeepSeek V4 Flash | 853 | 661 | 11 | 1.29% | 1.29% |
+| Gemini 3.8 Flash | 853 | 429 | **107** | 12.54% | **12.53%** |
+
+FDR นับระดับบั๊กต่อเทคนิค: ต้องมี test fail บน buggy และผ่านการตรวจบน fixed ตามกติกาของ runner ตัวหารที่พยายามประเมินรวม `DONE + COMPILE_ERROR + TIMEOUT` และไม่รวม `NO_SUITE`
+
+### ความครอบคลุมของโค้ด
+
+| เทคนิค | จำนวนบั๊กที่วัด coverage ได้ (n) | Line coverage เฉลี่ย | Branch coverage เฉลี่ย |
+|---|---:|---:|---:|
+| Native IPO | 252 | 26.76% | 18.67% |
+| MIO / EvoSuite | 797 | 63.85% | 56.51% |
+| DeepSeek V4 Flash | 192 | 78.02% | 70.22% |
+| Gemini 3.8 Flash | 424 | **86.29%** | **79.54%** |
+
+ค่า coverage เฉลี่ยใช้เฉพาะรายการที่วัดได้บน modified target classes; compile error และค่าที่วัดไม่ได้ไม่ถูกแทนด้วยศูนย์ จำนวนตัวอย่างของแต่ละเทคนิคต่างกัน จึงต้องอ่านค่าเฉลี่ยร่วมกับ n, compile error และ suite ที่ขาด
+
+**ข้อค้นพบ:** Gemini ตรวจพบจำนวนบั๊กมากที่สุดในผลชุดนี้ ส่วน IPO มี FDR ต่อรายการที่พยายามประเมินสูงที่สุด การเปรียบเทียบนี้ใช้ชุดบั๊กที่มี suite ของแต่ละเทคนิคซึ่งมีขนาดและองค์ประกอบต่างกัน ค่า coverage สูงจึงต้องพิจารณาร่วมกับ assertions และผล buggy/fixed
+
+### สถานะการประเมินทั้งหมด
+
+| สถานะ | จำนวนคู่ | ความหมายโดยสรุป |
+|---|---:|---|
+| `BUG_DETECTED` | 160 | ผ่านเกณฑ์ตรวจพบบั๊กของ runner |
+| `NOT_DETECTED` | 711 | รันได้ แต่ไม่แยก buggy/fixed ตามเกณฑ์ตรวจพบ |
+| `FLAKY_OR_REGRESSION` | 794 | ผลบน fixed ไม่ผ่านเงื่อนไขรับรองการตรวจพบ; ป้ายนี้ไม่ยืนยันว่า flaky ทุกกรณี |
+| `COMPILE_ERROR` | 1,132 | การคอมไพล์ไม่ผ่าน |
+| `NO_SUITE` | 619 | ไม่มี suite ที่ส่งเข้าประเมิน |
+
+จำนวน `BUG_DETECTED` 160 คู่เป็นผลรวมข้ามเทคนิค บั๊กเดียวกันอาจถูกตรวจพบโดยหลายเทคนิค จึงไม่ใช่จำนวนบั๊กไม่ซ้ำ
+
+---
+
+<a id="figures"></a>
+
+## แผนภูมิผลการทดลอง
+
+### Coverage และสถานะผลประเมิน
+
+![ค่าเฉลี่ย line และ branch coverage ของทั้ง 4 เทคนิค](results/figure1_coverage_comparison.png)
+
+**รูปที่ 1 — Line และ branch coverage:** คำนวณเฉพาะรายการที่วัดได้ จำนวนตัวอย่างระบุในตารางด้านบน
+
+![การแจกแจงสถานะผลประเมินแยกตามเทคนิค](results/figure2_fdr_distribution.png)
+
+**รูปที่ 2 — สถานะผลประเมินแยกตามเทคนิค:** รวมรายการที่คอมไพล์ไม่ผ่านและไม่มี suite
+
+### Coverage รายโครงการและต้นทุนการสร้างชุดทดสอบ
+
+![Line coverage แยกตามโครงการ](results/figure3_projects_breakdown.png)
+
+**รูปที่ 3 — Line coverage แยก 17 โครงการ:** ไม่นับค่าที่วัดไม่ได้เป็นศูนย์
+
+![Token และเวลา generation ของ AI](results/figure4_ai_economics.png)
+
+**รูปที่ 4 — Token และเวลา generation ของ AI:** เป็นสถิติขั้นตอนสร้าง suite แยกจาก coverage และ FDR ของ benchmark
+
+### Search budget และการตรวจพบบั๊กร่วมกัน
+
+![ผลของ search budget ต่อ MIO](results/figure5_budget_scaling.png)
+
+**รูปที่ 5 — ผลของ search budget ต่อ MIO:** เป็นผล generation ตาม budget และ seed ที่บันทึกไว้
+
+![ผลตรวจพบบั๊กและการทับซ้อนระหว่างเทคนิค](results/figure6_ensemble_overlap.png)
+
+**รูปที่ 6 — ผลตรวจพบทับซ้อน:** รวมผลตรวจพบจากการประเมินเดิม ไม่ใช่การรัน ensemble suite ใหม่
+
+---
+
+## หลักฐานและการตรวจสอบย้อนกลับ
+
+| แหล่งข้อมูล | รายละเอียด |
+|---|---|
+| [Master benchmark CSV](results/master_benchmark_summary.csv) | สถานะและผลวัดหนึ่งแถวต่อคู่บั๊ก–เทคนิค |
+| [สถิติเชิงพรรณนา JSON](results/master_descriptive_stats.json) | จำนวน suite, ผลประเมิน, FDR และ coverage |
+| [รายงานวิเคราะห์สถิติ](results/advanced_analytics_report.md) | ตารางเปรียบเทียบและการวิเคราะห์เพิ่มเติม |
+| [บัญชี suite](results/suite_inventory.csv) | suite ที่พบพร้อม hash สำหรับตรวจสอบย้อนกลับ |
+| [บัญชีช่อง NO_SUITE](results/suite_gap_audit.csv) | รายละเอียด suite ที่ขาดและสถานะไฟล์ candidate |
+
+หากมีการเพิ่มหรือแก้ suite ให้รัน benchmark และสร้าง CSV, Excel, JSON, รายงาน analytics และกราฟใหม่จาก snapshot เดียวกันก่อนอ้างตัวเลข.
 
 ---
 
@@ -51,32 +195,7 @@
 
 ---
 
-## โครงสร้าง repository
-
-```text
-ProjectSQA/
-├── README.md                     # ภาพรวมโครงการและคู่มือเริ่มต้น
-├── Combinatorial_IPO/            # Native IPO, models, suites และผล generation
-├── MIO_Algorithm/                # MIO/EvoSuite, configurations และ suites
-├── Deepseek-v4_flash/            # Prompts, generation records และ suites
-├── Gemini-3_8_flash/             # Prompts, generation records และ suites
-├── target_benchmark/             # Bug catalog และ modified target classes
-├── results/                      # Master data, run records, reports และ figures
-├── scripts/                      # Benchmark runner และสคริปต์วิเคราะห์ผล
-├── docker/                       # Dockerfile, Compose และ environment guide
-├── docs/
-│   ├── final/                    # รายงาน DOCX/PDF ฉบับส่ง
-│   ├── reports/                  # รายงาน Markdown และเอกสารรอบก่อน
-│   ├── presentation/             # เนื้อหาสำหรับสไลด์
-│   ├── demo/                     # คู่มือสาธิตและทำซ้ำ
-│   ├── team/                     # คู่มือทำงานและการส่งมอบ
-│   └── reference/                # โจทย์และเอกสารอ้างอิง
-├── archive/                      # ไฟล์ legacy ที่ไม่ใช้เป็นผลปัจจุบัน
-├── tests/                        # Tests ของ project tooling
-└── requirements-analysis.txt    # Dependencies สำหรับวิเคราะห์ผลบน host
-```
-
----
+<a id="reproduce"></a>
 
 ## วิธีทำซ้ำผลการทดลอง
 
@@ -132,71 +251,37 @@ python -m venv .venv
 .\.venv\Scripts\python.exe scripts/plot_results.py
 ```
 
-## ผลประเมินล่าสุด
+---
 
-ตารางต่อไปนี้มาจาก snapshot วันที่ 26 กันยายน 2026. Master dataset มี 3,416 คู่บั๊ก–เทคนิคจาก 854 บั๊กและ 4 เทคนิค; suite ที่มีอยู่ 2,797 คู่ได้รับการประเมิน และ 619 คู่เป็น `NO_SUITE`. การประเมิน suite ที่มีอยู่ครบไม่ได้หมายความว่ามี suite ครบทุกคู่ใน catalog.
+<a id="structure"></a>
 
-| สถานะผลประเมิน | จำนวนคู่ |
-|---|---:|
-| `BUG_DETECTED` | 160 |
-| `NOT_DETECTED` | 711 |
-| `FLAKY_OR_REGRESSION` | 794 |
-| `COMPILE_ERROR` | 1,132 |
-| `NO_SUITE` | 619 |
+## โครงสร้าง repository
 
-| เทคนิค | พยายามประเมิน | ประเมินสำเร็จ | Line coverage เฉลี่ย | Branch coverage เฉลี่ย | ตรวจพบบั๊ก | FDR ของรายการที่พยายามประเมิน | FDR ของ catalog |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| Native IPO | 257 | 252 | 26.76% (n=252) | 18.67% (n=252) | 37 | 14.40% | 4.33% |
-| MIO (EvoSuite) | 834 | 797 | 63.85% (n=797) | 56.51% (n=797) | 5 | 0.60% | 0.59% |
-| DeepSeek V4 Flash | 853 | 192 | 78.02% (n=192) | 70.22% (n=192) | 11 | 1.29% | 1.29% |
-| Gemini 3.8 Flash | 853 | 424 | 86.29% (n=424) | 79.54% (n=424) | 107 | 12.54% | 12.53% |
-
-FDR นับบั๊กที่มี test fail บน buggy version และผ่านบน fixed version. FDR ของรายการที่พยายามประเมินใช้ตัวหาร `DONE + COMPILE_ERROR + TIMEOUT`; FDR ของ catalog ใช้ 854 บั๊ก. ค่า coverage เฉลี่ยคำนวณเฉพาะผลที่วัดได้ และไม่รวม compile errors หรือค่าที่หายไป.
-
-| แหล่งข้อมูล | รายละเอียด |
-|---|---|
-| [Master benchmark CSV](results/master_benchmark_summary.csv) | สถานะและผลวัดหนึ่งแถวต่อคู่บั๊ก–เทคนิค |
-| [สถิติเชิงพรรณนา JSON](results/master_descriptive_stats.json) | จำนวน suite, ผลประเมิน, FDR และ coverage |
-| [รายงานวิเคราะห์สถิติ](results/advanced_analytics_report.md) | ตารางเปรียบเทียบและการวิเคราะห์เพิ่มเติม |
-| [บัญชี suite](results/suite_inventory.csv) | suite ที่พบพร้อม hash สำหรับตรวจสอบย้อนกลับ |
-| [บัญชีช่อง NO_SUITE](results/suite_gap_audit.csv) | รายละเอียด suite ที่ขาดและสถานะไฟล์ candidate |
-
-หากมีการเพิ่มหรือแก้ suite ให้รัน benchmark และสร้าง CSV, Excel, JSON, รายงาน analytics และกราฟใหม่จาก snapshot เดียวกันก่อนอ้างตัวเลข.
+```text
+ProjectSQA/
+├── README.md                     # ภาพรวมโครงการและคู่มือเริ่มต้น
+├── Combinatorial_IPO/            # Native IPO, models, suites และผล generation
+├── MIO_Algorithm/                # MIO/EvoSuite, configurations และ suites
+├── Deepseek-v4_flash/            # Prompts, generation records และ suites
+├── Gemini-3_8_flash/             # Prompts, generation records และ suites
+├── target_benchmark/             # Bug catalog และ modified target classes
+├── results/                      # Master data, run records, reports และ figures
+├── scripts/                      # Benchmark runner และสคริปต์วิเคราะห์ผล
+├── docker/                       # Dockerfile, Compose และ environment guide
+├── docs/
+│   ├── final/                    # รายงาน DOCX/PDF ฉบับส่ง
+│   ├── reports/                  # รายงาน Markdown และเอกสารรอบก่อน
+│   ├── presentation/             # สไลด์ PDF, PowerPoint และบทพูด
+│   ├── demo/                     # คู่มือสาธิตและทำซ้ำ
+│   ├── team/                     # คู่มือทำงานและการส่งมอบ
+│   └── reference/                # โจทย์และเอกสารอ้างอิง
+├── archive/                      # ไฟล์ legacy ที่ไม่ใช้เป็นผลปัจจุบัน
+├── tests/                        # Tests ของ project tooling
+└── requirements-analysis.txt    # Dependencies สำหรับวิเคราะห์ผลบน host
+```
 
 ---
 
-## แผนภูมิผลการทดลอง
+## การส่งงาน
 
-### รูปที่ 1: Line และ branch coverage ของทั้ง 4 เทคนิค
-![Figure 1: Code Coverage Comparison](results/figure1_coverage_comparison.png)
-
-### รูปที่ 2: การแจกแจงสถานะผลประเมิน
-![Figure 2: Fault Detection Rate Distribution](results/figure2_fdr_distribution.png)
-
-### รูปที่ 3: Line coverage แยกตามโครงการ
-![Figure 3: Project-by-Project Coverage Breakdown](results/figure3_projects_breakdown.png)
-
-### รูปที่ 4: Token และเวลา generation ของ AI
-![Figure 4: AI Economics & Latency](results/figure4_ai_economics.png)
-
-### รูปที่ 5: ผลของ search budget ต่อ MIO
-![Figure 5: MIO Budget Scaling](results/figure5_budget_scaling.png)
-
-### รูปที่ 6: การตรวจพบบั๊กและผลทับซ้อนระหว่างเทคนิค
-![Figure 6: Ensemble Overlap](results/figure6_ensemble_overlap.png)
-
-## เอกสารและไฟล์ส่งมอบ
-
-- [รายงานฉบับส่งหลัก (DOCX)](docs/final/SQA_Final_Report.docx)
-- [รายงานฉบับส่งหลัก (PDF)](docs/final/SQA_Final_Report.pdf)
-- [เนื้อหา Markdown ประกอบรายงาน](docs/reports/Final_Report.md) — เอกสารประกอบ ไม่ใช่รายงานฉบับส่งหลัก
-- [โจทย์รายวิชา](docs/reference/SQA_Project_2026_Assignment.pdf)
-- [เนื้อหาสไลด์และ speaker notes](docs/presentation/PRESENTATION_SLIDES.md) — โครงสไลด์ในรูปแบบ Markdown
-- [คู่มือสาธิตและทำซ้ำ](docs/demo/DEMO_GUIDE.md)
-- [คู่มือการทำงานของทีม](docs/team/TEAM_WORKFLOW_GUIDE.md)
-- [Master benchmark workbook](results/Master_Benchmark_Results.xlsx)
-- [Data dictionary](results/DATA_DICTIONARY.md)
-- [Advanced analytics report](results/advanced_analytics_report.md)
-
-ข้อกำหนดการส่งรายงานฉบับสมบูรณ์ ผลการทดลอง source code, test code, prompts, configurations และเอกสารประกอบผ่าน GitHub และ Google Classroom อ้างอิงจาก [โจทย์รายวิชา](docs/reference/SQA_Project_2026_Assignment.pdf). การนำเสนอและสาธิตให้ใช้ผลและสถานะจาก snapshot เดียวกับรายงาน.
-
+ส่งรายงานฉบับสมบูรณ์ ผลการทดลอง source code, test code, prompts, configurations และเอกสารประกอบผ่าน GitHub และ Google Classroom ตาม [โจทย์รายวิชา](docs/reference/SQA_Project_2026_Assignment.pdf) การนำเสนอและเดโมควรใช้ตัวเลขจาก snapshot เดียวกับรายงาน และระบุให้ชัดว่าแสดงผลสดหรือผลที่บันทึกไว้ก่อนหน้า

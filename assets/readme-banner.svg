@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="480" viewBox="0 0 1600 480" role="img" aria-labelledby="title desc">
+  <title id="title">Project SQA — Automatic Test Generation and AI-Assisted Testing</title>
+  <desc id="desc">A comparison of Native IPO, MIO, DeepSeek and Gemini across 17 Java projects and 854 bugs in Defects4J.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101e3b"/><stop offset="1" stop-color="#06101f"/></linearGradient>
+    <linearGradient id="accent"><stop stop-color="#56e1e0"/><stop offset="1" stop-color="#5d8bff"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#2379a5" stop-opacity=".35"/><stop offset="1" stop-color="#2379a5" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7fa7cc" stroke-opacity=".055"/></pattern>
+  </defs>
+  <rect width="1600" height="480" rx="24" fill="url(#bg)"/>
+  <rect width="1600" height="480" rx="24" fill="url(#grid)"/>
+  <ellipse cx="1320" cy="170" rx="430" ry="370" fill="url(#glow)"/>
+  <path d="M64 65H112" stroke="url(#accent)" stroke-width="5"/>
+  <text x="130" y="71" fill="#9ab1cf" font-family="Arial, sans-serif" font-size="19" letter-spacing="4">SOFTWARE QUALITY ASSURANCE</text>
+  <text x="60" y="190" fill="#f6f9ff" font-family="Arial, sans-serif" font-weight="700" font-size="94" letter-spacing="-3">Project <tspan fill="#61dfdf">SQA</tspan></text>
+  <text x="65" y="244" fill="#d5e0ef" font-family="Arial, sans-serif" font-size="27">Automatic Test Generation &amp; AI-Assisted Testing</text>
+  <text x="65" y="282" fill="#8096b6" font-family="Arial, sans-serif" font-size="20">Comparative evaluation on Java Defects4J</text>
+  <g font-family="Arial, sans-serif" font-size="19" font-weight="700">
+    <rect x="65" y="326" width="155" height="44" rx="22" fill="#182f4d" stroke="#365675"/><text x="91" y="354" fill="#bdd9fb">Native IPO</text>
+    <rect x="232" y="326" width="105" height="44" rx="22" fill="#292447" stroke="#514474"/><text x="264" y="354" fill="#d1baff">MIO</text>
+    <rect x="349" y="326" width="155" height="44" rx="22" fill="#382c28" stroke="#745342"/><text x="377" y="354" fill="#f2bd8c">DeepSeek</text>
+    <rect x="516" y="326" width="135" height="44" rx="22" fill="#12383e" stroke="#286970"/><text x="548" y="354" fill="#77e2d8">Gemini</text>
+  </g>
+  <path d="M935 85V355" stroke="#33506e" stroke-opacity=".6"/>
+  <g font-family="Arial, sans-serif">
+    <text x="1000" y="119" fill="#819bbc" font-size="16" letter-spacing="3">EXPERIMENT SCOPE</text>
+    <text x="996" y="203" fill="#f6f9ff" font-size="68" font-weight="700">17</text><text x="1110" y="185" fill="#c1d2e5" font-size="23">Java projects</text><text x="1110" y="212" fill="#7893b5" font-size="17">Defects4J dataset</text>
+    <path d="M1000 238H1490" stroke="#284059"/>
+    <text x="996" y="317" fill="#61dfdf" font-size="68" font-weight="700">854</text><text x="1170" y="299" fill="#c1d2e5" font-size="23">bugs in catalog</text><text x="1170" y="326" fill="#7893b5" font-size="17">4 techniques compared</text>
+  </g>
+  <path d="M65 412H1535" stroke="#284059"/>
+  <text x="65" y="450" fill="#8da8c7" font-family="Arial, sans-serif" font-size="16" letter-spacing="2">COVERAGE  /  FAULT DETECTION  /  REPRODUCIBILITY</text>
+  <text x="1535" y="450" text-anchor="end" fill="#8da8c7" font-family="Arial, sans-serif" font-size="16">KHON KAEN UNIVERSITY</text>
+</svg>
