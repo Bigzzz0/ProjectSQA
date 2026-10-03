@@ -76,6 +76,22 @@ docker exec defects4j_sqa defects4j info -p Math -b 2
 .\scripts\demo_four_techniques.ps1
 ```
 
+หาก PowerShell แจ้งว่า running scripts is disabled ให้รันเฉพาะครั้งนี้ด้วย:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\demo_four_techniques.ps1"
+```
+
+เมื่อจบ จะมีตาราง **LIVE DEMO SUMMARY** แสดง Line/Branch coverage, จำนวน test fail บน buggy/fixed และสถานะผล โดยสีเขียวคือ `BUG_DETECTED` สีเหลืองคือ `NOT_DETECTED` และสีแดงคือผลผิดพลาดหรือสถานะอื่น
+
+ระหว่างรัน แต่ละกรณีแสดงขั้นตอนใน terminal แบบสด: **[1/6] target classes → [2/6] checkout buggy และ suite → [3/6] coverage → [4/6] buggy test → [5/6] fixed test → [6/6] ผลลัพธ์** พร้อมจำนวน test fail, เวลาที่ใช้, suite SHA-256 และ run ID เมื่อเสร็จ หากต้องการรายละเอียด runner ทั้งหมด ให้เพิ่ม `-ShowRunnerOutput` ท้ายคำสั่ง
+
+คอลัมน์ Buggy/Fixed ในตารางคือ **จำนวน test ที่ fail**; `BUG_DETECTED` ต้องมี test fail บน buggy และผ่านบน fixed ค่า coverage ที่วัดไม่ได้แสดง `N/A` ตัวอย่างทั้งสี่เป็นคนละบั๊ก จึงใช้สาธิตกระบวนการ ไม่ใช้จัดอันดับเทคนิค
+
+ในขั้นตอน buggy/fixed จะแสดงผล **JUnit PASS/FAIL**, ข้อความสรุปจาก Defects4J และชื่อ test ที่ fail พร้อมสาเหตุจาก `failing_tests` จริง โดยแสดงไม่เกิน 3 รายการต่อเวอร์ชันเพื่อให้อ่านบนจอได้ง่าย ผลดิบ stdout/stderr และ failure traces ทั้งหมดเก็บใน `.local/demo/<session>/junit/<project-bug-technique>/` ไม่ประมาณจำนวน test ที่ผ่านหรือจำนวน test ทั้งหมดจากจำนวน fail
+
+ผลทั้งหมดแสดงใน terminal โดยไม่มี HTML หลักฐานแยกแต่ละรอบอยู่ใน `.local/demo/<session>/`: `results.json` บันทึกหลังแต่ละกรณี, `results.csv` เมื่อรันครบ และ `run.log` เก็บในเครื่องโดยไม่ติดตามใน Git หากหยุดก่อนครบ JSON มีเฉพาะกรณีที่บันทึกแล้ว ส่วนขั้นตอนที่ค้างตรวจได้จาก log
+
 สคริปต์ประเมินหนึ่ง suite ต่อเทคนิคตามลำดับนี้:
 
 | เทคนิค | ตัวอย่าง | Suite ที่ runner ใช้ | ผลที่คาดจากการทดสอบรอบยืนยัน |

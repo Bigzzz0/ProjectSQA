@@ -465,12 +465,36 @@ def count_failing_tests(work_dir: str) -> Tuple[int, List[str]]:
                 failures.append(line[4:].strip())
     return len(failures), failures
 
+def show_junit_output(version: str, work_dir: str, stdout: str, stderr: str, output_dir: str) -> None:
+    """Show real Defects4J/JUnit evidence and retain the complete output."""
+    os.makedirs(output_dir, exist_ok=True)
+    with open(os.path.join(output_dir, f"{version.lower()}-output.log"), "w", encoding="utf-8") as log:
+        log.write("STDOUT\n" + stdout + "\nSTDERR\n" + stderr)
+    for line in stdout.splitlines():
+        if "Failing tests:" in line or "Tests run:" in line or "OK (" in line or "FAILURES!!!" in line:
+            print(f"[JUNIT] {version} | {line.strip()}")
+    failure_path = os.path.join(work_dir, "failing_tests")
+    if os.path.isfile(failure_path):
+        shutil.copyfile(failure_path, os.path.join(output_dir, f"{version.lower()}-failing_tests.txt"))
+        with open(failure_path, encoding="utf-8", errors="replace") as failure_log:
+            blocks = failure_log.read().split("--- ")[1:]
+        for block in blocks[:3]:
+            lines = [line.strip() for line in block.splitlines() if line.strip()]
+            if lines:
+                print(f"[JUNIT] {version} | FAIL: {lines[0]}")
+            if len(lines) > 1:
+                print(f"[JUNIT] {version} | Reason: {lines[1]}")
+        if len(blocks) > 3:
+            print(f"[JUNIT] {version} | Showing 3 of {len(blocks)} failures; full details saved in JUnit logs.")
+
+
 def evaluate_technique_on_bug(
     project: str,
     bug_id: int,
     technique: str,
     csv_path: str,
-    clean_tmp: bool = True
+    clean_tmp: bool = True,
+    junit_output_dir: str = ""
 ) -> Dict[str, Any]:
     """
     Evaluate a single technique on a specific bug using Defects4J native external test suite workflow (-s).
@@ -620,6 +644,8 @@ def evaluate_technique_on_bug(
     # 6. Test on Buggy version
     print(f"[{state_key}] Running test on Buggy version to verify failure exposure...")
     test_b_code, test_b_out, test_b_err = d4j_meta.run_cmd(["defects4j", "test", "-w", work_buggy, "-s", archive_buggy], timeout=240)
+    if junit_output_dir:
+        show_junit_output("BUGGY", work_buggy, test_b_out, test_b_err, os.path.join(junit_output_dir, state_key))
     if "timed out" in test_b_err.lower():
         res_dict = {
             "status": "TIMEOUT",
@@ -679,6 +705,8 @@ def evaluate_technique_on_bug(
         })
     print(f"[{state_key}] Running test on Fixed version to verify fix passing...")
     test_f_code, test_f_out, test_f_err = d4j_meta.run_cmd(["defects4j", "test", "-w", work_fixed, "-s", archive_fixed], timeout=240)
+    if junit_output_dir:
+        show_junit_output("FIXED", work_fixed, test_f_out, test_f_err, os.path.join(junit_output_dir, state_key))
     if "timed out" in test_f_err.lower():
         res_dict = {
             "status": "TIMEOUT",
@@ -787,6 +815,7 @@ def main():
     parser.add_argument("--resume", action="store_true", help="Resume from progress.json")
     parser.add_argument("--csv", type=str, default=DEFAULT_CSV, help="Output CSV path")
     parser.add_argument("--no-clean", action="store_true", help="Do not delete /tmp folders after evaluation")
+    parser.add_argument("--junit-output-dir", default="", help="Show JUnit evidence and save complete test output in this directory")
     args = parser.parse_args()
 
     init_csv(args.csv)
@@ -843,7 +872,7 @@ def main():
                 
             try:
                 res = evaluate_technique_on_bug(
-                    proj, bid, tech, args.csv, clean_tmp=(not args.no_clean)
+                    proj, bid, tech, args.csv, clean_tmp=(not args.no_clean), junit_output_dir=args.junit_output_dir
                 )
                 progress[key] = res
                 save_progress(progress)
