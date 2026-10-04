@@ -100,10 +100,12 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\demo_four_tec
 |---|---|---|---|
 | Native IPO | Jsoup-40 | `Combinatorial_IPO/TestCode/Jsoup_40b/org/jsoup/nodes/DocumentType_IPOTest.java` | line 41.18%, branch 0.00%; buggy fail 18, fixed fail 0; `BUG_DETECTED` |
 | MIO / EvoSuite | Jsoup-40 | `MIO_Algorithm/TestCode/Jsoup_40b/DocumentType_ESTest.java` | line 88.24%, branch 66.67%; buggy fail 0, fixed fail 0; `NOT_DETECTED` |
-| DeepSeek V4 Flash | Jsoup-40 | `Deepseek-v4_flash/TestCode/Jsoup_40b/DocumentTypeDeepseekTest.java` | line 100.00%, branch 100.00%; buggy fail 6, fixed fail 5; `FLAKY_OR_REGRESSION` |
+| DeepSeek V4 Flash | Jsoup-40 | `Deepseek-v4_flash/TestCode/Jsoup_40b/DocumentTypeDeepseekTest.java` | line 100.00%, branch 100.00%; buggy fail 6, fixed fail 5; `FIXED_FAILED` |
 | Gemini 3.8 Flash | Jsoup-40 | `Gemini-3_8_flash/TestCode/Jsoup_40b/DocumentTypeGeminiTest.java` | line 100.00%, branch 100.00%; buggy fail 2, fixed fail 0; `BUG_DETECTED` |
 
 ตัวเลขในตารางเป็นผลที่คาดจากการรันยืนยันก่อนหน้า การรันสดจะสร้าง run ID และเวลาใหม่ ให้ใช้ค่าที่สคริปต์พิมพ์ออกมาบนเวที หากผลต่างจากตาราง ให้ยึด output สดและเก็บ log ไว้ตรวจสอบ ไม่แก้ตัวเลขให้ตรงตาราง
+
+เดโมแสดงชื่อ `FIXED_FAILED` เมื่อยังมี test fail บน fixed โดยไม่สรุปว่าเป็น flaky หรือ regression ส่วนข้อมูลดิบ JSON/CSV ของ benchmark ยังคงชื่อเดิม `FLAKY_OR_REGRESSION` เพื่อให้เทียบกับข้อมูลและรายงานเดิมได้ ทั้งสองชื่ออ้างถึงกลุ่มผลเดียวกัน
 
 ### สิ่งที่สคริปต์ทำเพื่อรักษาผลเดิม
 

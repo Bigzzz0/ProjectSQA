@@ -109,6 +109,7 @@ try {
             throw "Target class mismatch: expected $expectedTarget, received $($result.target_classes)."
         }
         $label = if ($result.status -eq 'DONE') { $result.fault_detected } else { $result.status }
+        if ($label -eq 'FLAKY_OR_REGRESSION') { $label = 'FIXED_FAILED' }
         $color = if ($label -eq 'BUG_DETECTED') { 'Green' } elseif ($label -eq 'NOT_DETECTED') { 'Yellow' } else { 'Red' }
         Write-Host "  [6/6] RESULT: $label | elapsed $([math]::Round(((Get-Date) - $caseStart).TotalSeconds, 1)) s" -ForegroundColor $color
         if ($result.error) { Write-Host "        Detail: $($result.error)" -ForegroundColor Red }
@@ -135,12 +136,13 @@ try {
         $buggy = if ($r.status -eq 'DONE' -and $null -ne $r.buggy_failures) { @($r.buggy_failures).Count } else { 'N/A' }
         $fixed = if ($r.status -eq 'DONE' -and $null -ne $r.fixed_failures) { @($r.fixed_failures).Count } else { 'N/A' }
         $label = if ($r.status -eq 'DONE') { $r.fault_detected } else { $r.status }
+        if ($label -eq 'FLAKY_OR_REGRESSION') { $label = 'FIXED_FAILED' }
         $color = if ($label -eq 'BUG_DETECTED') { 'Green' } elseif ($label -eq 'NOT_DETECTED') { 'Yellow' } else { 'Red' }
         Write-Host ('{0,-24} {1,9} {2,9} {3,8} {4,8}  {5}' -f "$($record.technique) / $($record.project)-$($record.bug_id)", $line, $branch, $buggy, $fixed, $label) -ForegroundColor $color
     }
     Write-Host ''
     Write-Host 'GREEN: BUG_DETECTED | YELLOW: NOT_DETECTED | RED: evaluation problem'
-    Write-Host 'FLAKY_OR_REGRESSION: tests also fail on FIXED; this label alone does not prove flakiness.'
+    Write-Host 'FIXED_FAILED: tests also fail on FIXED; the cause must be checked in the JUnit logs.'
     Write-Host 'Same bug and target class for all four suites. This single case is not an overall ranking.'
 }
 finally {

@@ -210,7 +210,7 @@ MIO n = 1,023 / 989 records ที่ 30 / 120 วินาที; AI n = 1,082 
 |---|---:|---|
 | IPO / Jsoup-40 | 18 → 0 | BUG_DETECTED |
 | MIO / Jsoup-40 | 0 → 0 | NOT_DETECTED |
-| DeepSeek / Jsoup-40 | 6 → 5 | FLAKY_OR_REGRESSION |
+| DeepSeek / Jsoup-40 | 6 → 5 | FIXED_FAILED |
 | Gemini / Jsoup-40 | 2 → 0 | BUG_DETECTED |
 
 **ชี้ให้เห็น:** suite ที่ใช้ · coverage · buggy/fixed · run ID และ hash
@@ -261,7 +261,7 @@ MIO n = 1,023 / 989 records ที่ 30 / 120 วินาที; AI n = 1,082 
 | DeepSeek | 853 | 1 | 192 | 78.02% / 70.22% | 11 | 1.29% | 1.29% |
 | Gemini | 853 | 1 | 424 | 86.29% / 79.54% | 107 | 12.54% | 12.53% |
 
-`NOT_DETECTED`: test ผ่านทั้งสองเวอร์ชัน; `FLAKY_OR_REGRESSION`: fixed version ไม่ผ่าน รวมกรณี buggy ผ่านแต่ fixed fail ด้วย ชื่อสถานะนี้ไม่ได้พิสูจน์ว่าทดสอบแล้วเกิดความไม่แน่นอนซ้ำหลายรอบ `TIMEOUT`: คำสั่ง coverage/test เกิน 240 วินาที ซึ่งต่างจาก timeout ของ test method ที่ 4 วินาที
+`NOT_DETECTED`: test ผ่านทั้งสองเวอร์ชัน; `FIXED_FAILED`: fixed version ไม่ผ่าน รวมกรณี buggy ผ่านแต่ fixed fail ด้วย ต้องตรวจ log เพื่อหาสาเหตุ ข้อมูลดิบใช้ชื่อเดิม `FLAKY_OR_REGRESSION` ซึ่งไม่ได้พิสูจน์ว่าเกิด flaky หรือ regression จริง `TIMEOUT`: คำสั่ง coverage/test เกิน 240 วินาที ซึ่งต่างจาก timeout ของ test method ที่ 4 วินาที
 
 Runner จำแนกจาก buggy/fixed ไม่ได้ยืนยันเชิงความหมายว่า failure ตรงกับ root cause ที่รายงานใน Defects4J
 
