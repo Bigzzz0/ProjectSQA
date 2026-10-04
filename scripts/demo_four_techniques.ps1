@@ -44,12 +44,16 @@ $saved = @()
 try {
     foreach ($index in 0..($relativeFiles.Count - 1)) {
         $source = Join-Path $repoRoot $relativeFiles[$index]
-        if (-not (Test-Path -LiteralPath $source -PathType Leaf)) {
-            throw "Required result file is missing: $($relativeFiles[$index])"
-        }
         $backup = Join-Path $backupDir "$index.bak"
+        if (-not (Test-Path -LiteralPath $source -PathType Leaf)) {
+            if (Test-Path -LiteralPath $source) {
+                throw "Expected a file, but found another path type: $($relativeFiles[$index])"
+            }
+            $saved += ,([pscustomobject]@{ Source = $source; Backup = $backup; Existed = $false })
+            continue
+        }
         Copy-Item -LiteralPath $source -Destination $backup
-        $saved += ,([pscustomobject]@{ Source = $source; Backup = $backup })
+        $saved += ,([pscustomobject]@{ Source = $source; Backup = $backup; Existed = $true })
         if ($index -gt 0) {
             $lastRunIds[$relativeFiles[$index]] = (Get-Content -LiteralPath $source -Raw | ConvertFrom-Json).run_id
         }
@@ -135,8 +139,10 @@ try {
 }
 finally {
     foreach ($item in $saved) {
-        if (Test-Path -LiteralPath $item.Backup -PathType Leaf) {
+        if ($item.Existed -and (Test-Path -LiteralPath $item.Backup -PathType Leaf)) {
             Copy-Item -LiteralPath $item.Backup -Destination $item.Source -Force
+        } elseif (-not $item.Existed -and (Test-Path -LiteralPath $item.Source -PathType Leaf)) {
+            Remove-Item -LiteralPath $item.Source -Force
         }
     }
 

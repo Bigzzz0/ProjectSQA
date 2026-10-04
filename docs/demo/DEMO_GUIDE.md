@@ -84,6 +84,8 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\demo_four_tec
 
 เมื่อจบ จะมีตาราง **LIVE DEMO SUMMARY** แสดง Line/Branch coverage, จำนวน test fail บน buggy/fixed และสถานะผล โดยสีเขียวคือ `BUG_DETECTED` สีเหลืองคือ `NOT_DETECTED` และสีแดงคือผลผิดพลาดหรือสถานะอื่น
 
+เครื่องที่ clone ใหม่ไม่ต้องสร้างหรือคัดลอก `progress.json` เพราะเป็นไฟล์สถานะเฉพาะเครื่อง สคริปต์รองรับกรณีไม่มีไฟล์นี้หรือไม่มีผล JSON เดิมแล้ว หลังเดโมจะคืนไฟล์ที่มีอยู่ก่อนรัน และนำไฟล์สถานะ/ผลชั่วคราวที่เกิดใหม่ออก โดยเก็บหลักฐานรอบเดโมไว้ใน `.local/demo/<session>/`
+
 ระหว่างรัน แต่ละกรณีแสดงขั้นตอนใน terminal แบบสด: **[1/6] target classes → [2/6] checkout buggy และ suite → [3/6] coverage → [4/6] buggy test → [5/6] fixed test → [6/6] ผลลัพธ์** พร้อมจำนวน test fail, เวลาที่ใช้, suite SHA-256 และ run ID เมื่อเสร็จ หากต้องการรายละเอียด runner ทั้งหมด ให้เพิ่ม `-ShowRunnerOutput` ท้ายคำสั่ง
 
 คอลัมน์ Buggy/Fixed ในตารางคือ **จำนวน test ที่ fail**; `BUG_DETECTED` ต้องมี test fail บน buggy และผ่านบน fixed ค่า coverage ที่วัดไม่ได้แสดง `N/A` ตัวอย่างทั้งสี่เป็นคนละบั๊ก จึงใช้สาธิตกระบวนการ ไม่ใช้จัดอันดับเทคนิค
