@@ -6,7 +6,7 @@
 
 ## เดโมนี้แสดงอะไร
 
-เดโมนี้รัน **suite ที่สร้างไว้แล้ว** ของ Native IPO, MIO/EvoSuite, DeepSeek และ Gemini ผ่าน benchmark runner จริงทีละชุด โดยรัน test กับ Defects4J เวอร์ชัน buggy และ fixed แล้วแสดง coverage, จำนวน test ที่ fail, สถานะ fault detection, run ID และ suite hash ใน terminal
+เดโมนี้ใช้ **Jsoup-40 และคลาส `org.jsoup.nodes.DocumentType` เดียวกันทั้งสี่เทคนิค** รัน **suite ที่สร้างไว้แล้ว** ของ Native IPO, MIO/EvoSuite, DeepSeek และ Gemini ผ่าน benchmark runner จริงทีละชุด โดยรัน test กับ Defects4J เวอร์ชัน buggy และ fixed แล้วแสดง coverage, จำนวน test ที่ fail, สถานะ fault detection, run ID และ suite hash ใน terminal
 
 จึงเป็นเดโมการ **ประเมิน suite แบบสด** และการตรวจว่า suite แยกเวอร์ชัน buggy/fixed ได้หรือไม่ ไม่ใช่การสร้าง suite ใหม่หรือเรียก AI API ต่อหน้า การสร้าง suite เป็นขั้นตอนก่อนหน้าและไฟล์ที่ใช้จะระบุไว้ในตารางด้านล่าง
 
@@ -29,10 +29,10 @@
 
 ```powershell
 $demoSavedPaths = @(
-    'results/Chart/14/ipo.json',
-    'results/Jsoup/45/mio.json',
-    'results/Closure/105/deepseek.json',
-    'results/Chart/3/gemini.json'
+    'results/Jsoup/40/ipo.json',
+    'results/Jsoup/40/mio.json',
+    'results/Jsoup/40/deepseek.json',
+    'results/Jsoup/40/gemini.json'
 )
 $demoSavedResults = foreach ($path in $demoSavedPaths) {
     $r = Get-Content -LiteralPath $path -Raw | ConvertFrom-Json
@@ -88,7 +88,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\demo_four_tec
 
 ระหว่างรัน แต่ละกรณีแสดงขั้นตอนใน terminal แบบสด: **[1/6] target classes → [2/6] checkout buggy และ suite → [3/6] coverage → [4/6] buggy test → [5/6] fixed test → [6/6] ผลลัพธ์** พร้อมจำนวน test fail, เวลาที่ใช้, suite SHA-256 และ run ID เมื่อเสร็จ หากต้องการรายละเอียด runner ทั้งหมด ให้เพิ่ม `-ShowRunnerOutput` ท้ายคำสั่ง
 
-คอลัมน์ Buggy/Fixed ในตารางคือ **จำนวน test ที่ fail**; `BUG_DETECTED` ต้องมี test fail บน buggy และผ่านบน fixed ค่า coverage ที่วัดไม่ได้แสดง `N/A` ตัวอย่างทั้งสี่เป็นคนละบั๊ก จึงใช้สาธิตกระบวนการ ไม่ใช้จัดอันดับเทคนิค
+คอลัมน์ Buggy/Fixed ในตารางคือ **จำนวน test ที่ fail**; `BUG_DETECTED` ต้องมี test fail บน buggy และผ่านบน fixed ค่า coverage ที่วัดไม่ได้แสดง `N/A` ตัวอย่างทั้งสี่ใช้บั๊กและคลาสเดียวกัน จึงเปรียบเทียบผลของ suite ในกรณีนี้ได้ แต่ไม่ใช้จัดอันดับเทคนิคโดยรวม
 
 ในขั้นตอน buggy/fixed จะแสดงผล **JUnit PASS/FAIL**, ข้อความสรุปจาก Defects4J และชื่อ test ที่ fail พร้อมสาเหตุจาก `failing_tests` จริง โดยแสดงไม่เกิน 3 รายการต่อเวอร์ชันเพื่อให้อ่านบนจอได้ง่าย ผลดิบ stdout/stderr และ failure traces ทั้งหมดเก็บใน `.local/demo/<session>/junit/<project-bug-technique>/` ไม่ประมาณจำนวน test ที่ผ่านหรือจำนวน test ทั้งหมดจากจำนวน fail
 
@@ -98,10 +98,10 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\demo_four_tec
 
 | เทคนิค | ตัวอย่าง | Suite ที่ runner ใช้ | ผลที่คาดจากการทดสอบรอบยืนยัน |
 |---|---|---|---|
-| Native IPO | Chart-14 | `Combinatorial_IPO/TestCode/Chart_14b/org/jfree/chart/plot/XYPlot_IPOTest.java` | line 4.41%, branch 1.74%; buggy fail 48, fixed fail 0; `BUG_DETECTED` |
-| MIO / EvoSuite | Jsoup-45 | `MIO_Algorithm/TestCode/Jsoup_45b/HtmlTreeBuilder_ESTest.java` | line 93.35%, branch 86.14%; buggy fail 0, fixed fail 0; `NOT_DETECTED` |
-| DeepSeek V4 Flash | Closure-105 | `Deepseek-v4_flash/TestCode/Closure_105b/FoldConstantsDeepseekTest.java` | line 26.49%, branch 25.44%; buggy fail 2, fixed fail 0; `BUG_DETECTED` |
-| Gemini 3.8 Flash | Chart-3 | `Gemini-3_8_flash/TestCode/Chart_3b/TimeSeriesGeminiTest.java` | line 94.74%, branch 87.63%; buggy fail 2, fixed fail 0; `BUG_DETECTED` |
+| Native IPO | Jsoup-40 | `Combinatorial_IPO/TestCode/Jsoup_40b/org/jsoup/nodes/DocumentType_IPOTest.java` | line 41.18%, branch 0.00%; buggy fail 18, fixed fail 0; `BUG_DETECTED` |
+| MIO / EvoSuite | Jsoup-40 | `MIO_Algorithm/TestCode/Jsoup_40b/DocumentType_ESTest.java` | line 88.24%, branch 66.67%; buggy fail 0, fixed fail 0; `NOT_DETECTED` |
+| DeepSeek V4 Flash | Jsoup-40 | `Deepseek-v4_flash/TestCode/Jsoup_40b/DocumentTypeDeepseekTest.java` | line 100.00%, branch 100.00%; buggy fail 6, fixed fail 5; `FLAKY_OR_REGRESSION` |
+| Gemini 3.8 Flash | Jsoup-40 | `Gemini-3_8_flash/TestCode/Jsoup_40b/DocumentTypeGeminiTest.java` | line 100.00%, branch 100.00%; buggy fail 2, fixed fail 0; `BUG_DETECTED` |
 
 ตัวเลขในตารางเป็นผลที่คาดจากการรันยืนยันก่อนหน้า การรันสดจะสร้าง run ID และเวลาใหม่ ให้ใช้ค่าที่สคริปต์พิมพ์ออกมาบนเวที หากผลต่างจากตาราง ให้ยึด output สดและเก็บ log ไว้ตรวจสอบ ไม่แก้ตัวเลขให้ตรงตาราง
 
@@ -118,9 +118,10 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\scripts\demo_four_tec
 
 1. runner ใช้ suite เดียวกันทดสอบทั้ง buggy และ fixed version
 2. `BUG_DETECTED` หมายถึงมี test fail บน buggy และไม่มี test fail บน fixed
-3. MIO/Jsoup-45 แสดงว่า coverage สูงอย่างเดียวไม่ได้แปลว่าจะตรวจพบ bug: กรณีนี้ coverage สูงแต่ test ไม่ fail บน buggy
+3. MIO/Jsoup-40 แสดงว่า coverage สูงอย่างเดียวไม่ได้แปลว่าจะตรวจพบ bug: กรณีนี้ coverage สูงแต่ test ไม่ fail บน buggy
 4. ผลที่รายงานเป็นการประเมิน suite ที่สร้างไว้ก่อน ไม่ใช่การเทียบเวลาหรือคุณภาพของขั้นตอน generation แบบสด
-5. ผลรวมที่นำไปอ้างอิงอยู่ใน master dataset; สี่กรณีนี้เป็นตัวอย่างสาธิต ไม่ใช่ตัวแทนผลครบทุก 854 บั๊ก
+5. DeepSeek/Jsoup-40 มี test fail บน fixed ด้วย จึงไม่นับเป็นตรวจพบบั๊กตามเกณฑ์นี้ แม้ coverage 100%; สาเหตุต้องดู assertions และ log ไม่สรุปว่าเป็น flaky แน่นอนจากการรันครั้งเดียว
+6. ผลรวมที่นำไปอ้างอิงอยู่ใน master dataset; สี่กรณีนี้เป็นตัวอย่างสาธิต ไม่ใช่ตัวแทนผลครบทุก 854 บั๊ก
 
 กรณี MIO ที่ตรวจพบ bug (`Jsoup-14`) ใช้เป็นตัวอย่างเสริมได้: ผลที่บันทึกไว้มี buggy failures 31, fixed failures 0 แต่ coverage เป็น 0.00% ทั้ง line และ branch จึงควรอธิบายข้อจำกัดและไม่ใช้เป็นตัวอย่าง coverage
 

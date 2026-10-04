@@ -16,17 +16,18 @@ $demoCsv = "/tmp/project_sqa_demo_$([guid]::NewGuid().ToString('N')).csv"
 $backupDir = Join-Path ([System.IO.Path]::GetTempPath()) "project-sqa-demo-$([guid]::NewGuid().ToString('N'))"
 $relativeFiles = @(
     'progress.json',
-    'results/Chart/14/ipo.json',
-    'results/Jsoup/45/mio.json',
-    'results/Closure/105/deepseek.json',
-    'results/Chart/3/gemini.json'
+    'results/Jsoup/40/ipo.json',
+    'results/Jsoup/40/mio.json',
+    'results/Jsoup/40/deepseek.json',
+    'results/Jsoup/40/gemini.json'
 )
 $cases = @(
-    @{ Project = 'Chart'; Bug = 14; Technique = 'ipo' },
-    @{ Project = 'Jsoup'; Bug = 45; Technique = 'mio' },
-    @{ Project = 'Closure'; Bug = 105; Technique = 'deepseek' },
-    @{ Project = 'Chart'; Bug = 3; Technique = 'gemini' }
+    @{ Project = 'Jsoup'; Bug = 40; Technique = 'ipo' },
+    @{ Project = 'Jsoup'; Bug = 40; Technique = 'mio' },
+    @{ Project = 'Jsoup'; Bug = 40; Technique = 'deepseek' },
+    @{ Project = 'Jsoup'; Bug = 40; Technique = 'gemini' }
 )
+$expectedTarget = 'org.jsoup.nodes.DocumentType'
 
 docker info *> $null
 if ($LASTEXITCODE -ne 0) {
@@ -60,6 +61,7 @@ try {
     }
 
     Write-Host 'LIVE DEMO | 4 techniques | real buggy / fixed evaluation' -ForegroundColor Cyan
+    Write-Host "SAME BUG: Jsoup-40 | SAME TARGET CLASS: $expectedTarget" -ForegroundColor Cyan
     Write-Host 'Steps: suite -> checkout -> coverage -> buggy test -> fixed test -> result'
     Write-Host 'BUG_DETECTED = buggy has failing tests and fixed passes. N/A = not measured.'
     $caseNumber = 0
@@ -103,6 +105,9 @@ try {
         if (-not $result.run_id -or $result.run_id -eq $lastRunIds[$resultRelative]) {
             throw "No fresh result was produced for $resultRelative. Old results will not be displayed as live."
         }
+        if ($result.target_classes -ne $expectedTarget) {
+            throw "Target class mismatch: expected $expectedTarget, received $($result.target_classes)."
+        }
         $label = if ($result.status -eq 'DONE') { $result.fault_detected } else { $result.status }
         $color = if ($label -eq 'BUG_DETECTED') { 'Green' } elseif ($label -eq 'NOT_DETECTED') { 'Yellow' } else { 'Red' }
         Write-Host "  [6/6] RESULT: $label | elapsed $([math]::Round(((Get-Date) - $caseStart).TotalSeconds, 1)) s" -ForegroundColor $color
@@ -135,7 +140,8 @@ try {
     }
     Write-Host ''
     Write-Host 'GREEN: BUG_DETECTED | YELLOW: NOT_DETECTED | RED: evaluation problem'
-    Write-Host 'These are four different example bugs, not a ranking of technique performance.'
+    Write-Host 'FLAKY_OR_REGRESSION: tests also fail on FIXED; this label alone does not prove flakiness.'
+    Write-Host 'Same bug and target class for all four suites. This single case is not an overall ranking.'
 }
 finally {
     foreach ($item in $saved) {
